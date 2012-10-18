@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/vendor/modernizr-2.6.1.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <header class="page-header">
+        <div class="logo"><img src="img/logo-dark.png" alt=" cockpit 360" /></div>
+        <nav>
+            <ul>
+                <li>Welcome back, John</li>
+                <li><a href="#">My Account</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="app-header">
+        <div class="profile-progress">
+            <div class="progress-bar">
+                <span class="progress" style="width: 66%"></span>
+            </div>
+            <span>60%</span>
+        </div>
+        <a href="#" class="btn">Finish up your profile</a>
+        <h1>Apple</h1>
+    </div>
+
+    <div class="app-subheader">
+        <div class="proximity">
+            <label for="prox-slider">Proximity</label>
+            <div class="prox-slider"></div>
+            <label for="location">50 Miles from</label>
+            <select name="" id="location">
+                <option value="">Your Location</option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+            </select>
+        </div>
+        <input class="searchbox" type="text" value="search" />
+    </div>
+
+    <div class="app">
+        <div class="main">
+            <h2 class="title">Apple vs Peers <span class="highlight">From July 2012 to August 2012</span></h2>
+            <ul class="tabs">
+                <li><a class="active" href="#">Performance Ranking</a></li>
+                <li><a href="#">Graph</a></li>
+            </ul>
+            <div class="tab" id="performance-rank">
+               <table class="data-table">
+                    <tr>
+                        <th scope="row">
+                            <h3>Revenue <a class="hint" href="#">?</a></h3>
+                            <p>How much money do I have left after I pay everything?</p>
+                        </th>
+                        <td>
+                            <h3>25th <span>out of 255</span></h3>
+                            <p class="highlight">For revenue</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <h3>Cost <a class="hint" href="#">?</a></h3>
+                            <p>How much money do I have left after I pay everything?</p>
+                        </th>
+                        <td>
+                            <h3>19th <span>out of 255</span></h3>
+                            <p class="highlight">For Cost</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <h3>Annual Revenue <a class="hint" href="#">?</a></h3>
+                            <p>How much money do I have left after I pay everything?</p>
+                        </th>
+                        <td>
+                            <h3>3rd <span>out of 255</span></h3>
+                            <p class="highlight">For Annual Revenue</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <h3>Employee Size <a class="hint" href="#">?</a></h3>
+                            <p>How much money do I have left after I pay everything?</p>
+                        </th>
+                        <td>
+                            <h3>15th <span>out of 255</span></h3>
+                            <p class="highlight">For Employee Size</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <h3>Net Profit Margin <a class="hint" href="#">?</a></h3>
+                            <p>How much money do I have left after I pay everything?</p>
+                        </th>
+                        <td>
+                            <h3>2nd <span>out of 255</span></h3>
+                            <p class="highlight">For Net Profit Margin</p>
+                        </td>
+                    </tr>
+               </table>
+               <div class="alert warning">
+                    <p>Your data is stale, please update to get reliable information</p>
+                    <a class="right btn">Update your data</a>
+               </div>
+            </div>
+        </div>
+
+        <aside>
+
+            <div class="widget">
+                <h2>General KPI</h2>
+                <ul class="widget-content">
+                    <li><label for="rev">Revenue</label><input type="radio"></li>
+                    <li><label for="cost">Cost</label><input type="radio"></li>
+                    <li><label for="an-rev">Annual Revenue</label><input type="radio"></li>
+                    <li><label for="em-size">Employee Size</label><input type="radio"></li>
+                    <li>
+                        <label for="cat">Category</label><input type="radio">
+                        <ul>
+                            <li><label for="">Construction</label><input type="checkbox"></li>
+                            <li><label for="">Education</label><input type="checkbox"></li>
+                            <li><label for="">Leisure</label><input type="checkbox"></li>
+                            <li><label for="">Entertainment</label><input type="checkbox"></li>
+                        </ul>
+                    </li>
+                    <li><label for="net">Net Profit Margin</label><input type="radio"></li>
+                </ul>
+            </div>
+
+            <div class="widget">
+                <h2>Invite Others</h2>
+                <form action="" class="widget-content">
+                    <input type="text" placeholder="Their Email">
+                    <input type="text" placeholder="Their Name">
+                    <input type="submit" class="btn btn-blue" value="Invite">
+                    <textarea placeholder="Add a note..."></textarea>
+                </form>
+            </div>
+
+        </aside>
+    </div>
+
+    <footer>
+        <div class="links">
+            <h3>360 Blog</h3>
+            <ul>
+                <li><a href="#">First Blog Title</a></li>
+                <li><a href="#">Another Story</a></li>
+                <li><a href="#">SOmething Different</a></li>
+                <li><a href="#">More</a></li>
+            </ul>
+        </div>
+        <div class="links">
+            <h3>360 Wiki</h3>
+            <ul>
+                <li><a href="#">Help Article </a></li>
+                <li><a href="#">The History of C360</a></li>
+                <li><a href="#">Another one</a></li>
+                <li><a href="#">Fourth thing</a></li>
+            </ul>
+        </div>
+        <div class="links">
+            <h3>Cockpit360</h3>
+            <ul>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Who are we?</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+</body>
+</html>
