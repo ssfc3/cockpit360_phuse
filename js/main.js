@@ -24,6 +24,33 @@ $(document).ready(function(){
     $( "#prox-input" ).val( $( "#prox-range" ).slider( "values", 0 ) +
         $( "#prox-range" ).slider( "values", 1 ) );
 
+    $("#revenue-range").slider({
+    	range: true,
+    	min: 10000,
+    	max: 100000,
+    	values: [10000, 60000],
+    	step: 1000,
+    	slide: function(event, ui) {
+    		$("#revenue-input").val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+    	}
+    });
+
+    $("#revenue-input").val( "$" + $("#revenue-range").slider("values", 0) + " - $" + $( "#revenue-range" ).slider( "values", 1 ) );
+
+
+    $("#empl-range").slider({
+    	range: true,
+    	min: 0,
+    	max: 500,
+    	values: [0, 150],
+    	step: 1,
+    	slide: function(event, ui) {
+    		$("#empl-input").val( ui.values[ 0 ] + " - " + ui.values[ 1 ] );
+    	}
+    });
+
+    $("#empl-input").val( $("#empl-range").slider("values", 0) + $( "#empl-range" ).slider( "values", 1 ) );
+
     $("#performance-rank").tooltip({
     	 position: {
             my: "center top+10",

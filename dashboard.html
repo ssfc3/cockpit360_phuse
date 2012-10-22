@@ -44,8 +44,8 @@
     <div class="app-subheader">
         <div class="proximity">
             <label for="prox-input">Proximity</label>
-            <div id="prox-range"></div>
-            <input type="text" id="prox-input" />
+            <div class="range" id="prox-range"></div>
+            <input type="text" id="prox-input" class="range-input"/>
             <label for="location">Miles from</label>
             <select name="" id="location">
                 <option value="">Your Location</option>
@@ -178,22 +178,34 @@
         <aside>
 
             <div class="widget">
-                <h2>General KPI</h2>
+                <h2>Business Metrics</h2>
                 <ul class="widget-content">
-                    <li><label for="rev">Revenue</label><input type="radio"></li>
+                    <li>
+                        <label for="rev">Revenue</label><input type="radio">
+                        <div class="slider">
+                            <div class="range" id="revenue-range"></div>
+                            <input class="range-input" type="text" id="revenue-input" />
+                        </div>
+                    </li>
                     <li><label for="cost">Cost</label><input type="radio"></li>
                     <li><label for="an-rev">Annual Revenue</label><input type="radio"></li>
-                    <li><label for="em-size">Employee Size</label><input type="radio"></li>
-                    <li>
-                        <label for="cat">Category</label><input type="radio">
-                        <ul class="styled-checks">
-                            <li><label for="1">Construction</label><input id="1" type="checkbox"></li>
-                            <li><label for="2">Education</label><input id="2" type="checkbox"></li>
-                            <li><label for="3">Leisure</label><input id="3" type="checkbox"></li>
-                            <li><label for="4">Entertainment</label><input id="4" type="checkbox"></li>
-                        </ul>
+                    <li><label for="em-size">Employee Size</label><input type="radio">
+                        <div class="slider">
+                            <div class="range" id="empl-range"></div>
+                            <input class="range-input" type="text" id="empl-input" />
+                        </div>
                     </li>
                     <li><label for="net">Net Profit Margin</label><input type="radio"></li>
+                </ul>
+            </div>
+
+            <div class="widget">
+                <h2>Category</h2>
+                 <ul class="widget-content">
+                    <li><label for="1">Construction</label><input id="1" type="checkbox"></li>
+                    <li><label for="2">Education</label><input id="2" type="checkbox"></li>
+                    <li><label for="3">Leisure</label><input id="3" type="checkbox"></li>
+                    <li><label for="4">Entertainment</label><input id="4" type="checkbox"></li>
                 </ul>
             </div>
 

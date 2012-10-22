@@ -124,6 +124,8 @@ p {
 	box-shadow: inset 0 1px 2px #f1f1f1;
 }
 
+$highlight: #17c2e7;
+
 /* ==========================================================================
    custom styles
    ========================================================================== */
@@ -134,18 +136,37 @@ p {
 	text-decoration:none;
 	font-weight:bold;
 	color:#8b8b8b;
+	box-shadow: inset 0 -2px 3px #ededed;
 	@extend %inline-block;
 	@include gradient(#fdfdfd, #f6f6f6);
+	&:hover {
+		@include gradient(#fdfdfd, #eeeded);
+		box-shadow: inset 0 -2px 3px #e3e3e3;
+		color:#747474;
+	}
+	&:active {
+		background: #eeeded;
+		box-shadow: inset 0 1px 2px #d1d1d1;
+	}
 	&.blue {
 		@include gradient(#5dc9f2, #3cb2dd);
 		border-color:#2386b0;
 		color:#fff;
 		text-shadow:0 -1px 1px #2386b0;
+		box-shadow: inset 0 -2px 3px #3cb2dd;
+		&:hover {
+			@include gradient(#5dc9f2, #38a1c8);
+			box-shadow: inset 0 -2px 3px #319fc7;
+		}
+		&:active {
+			background: #38a1c8;
+			box-shadow: inset 0 1px 2px #2886a8;
+		}
 	}
 }
 
 .highlight {
-	color:#17c2e7;
+	color:$highlight;
 }
 
 .selectbox {
@@ -300,16 +321,12 @@ p {
 	}
 }
 
-#prox-range {
-	@extend %inline-block;
-	width:325px;
+.range {
 	background:#28323a;
 	border:none;
 	box-shadow: inset 0 1px 2px #1d252a, 0 1px 2px #495761;
 	border-radius:5px;
 	height:11px;
-	margin-left:15px;
-	margin-right:5px;
 	*overflow: hidden;
 	.ui-widget-header {
 		@include gradient(#fbfbfc, #e6e6e6);
@@ -327,15 +344,25 @@ p {
 	}
 }
 
-#prox-input {
+.range-input {
 	background:none;
 	border:none;
-	width: 55px;
-	color:#c4c7c8;
-	text-align:right;
 	&:focus {outline:none;}
 }
 
+#prox-range {
+	@extend %inline-block;
+	width:325px;
+	margin-left:15px;
+	margin-right:5px;
+}
+
+#prox-input {
+	width: 55px;
+	color:#c4c7c8;
+	text-align:right;
+	
+}
 .searchbox {
 	background: #222b31;
 	border: 1px solid #192025;
@@ -555,6 +582,25 @@ p {
 		display:block;
 		width:100%;
 		margin-bottom:15px;
+	}
+	.slider {
+		clear: both;
+		padding-top:10px;
+		input[type="text"] {
+			border:none;
+			margin-bottom:0;
+			padding-right:0;
+			text-align:right;
+			font-size:.9em;
+			color:$highlight;
+		}
+	}
+	.range {
+		background:#939393;
+		box-shadow: inset 0 3px 3px #797979;
+		height:11px;
+		margin-left:11px;
+		margin-right:5px;
 	}
 }
 
