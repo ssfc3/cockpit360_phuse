@@ -388,8 +388,8 @@ $highlight: #17c2e7;
 }
 
 .main {
-	width:690px;
-	padding:30px 40px;
+	width:730px;
+	padding:20px;
 	float: left;
 	border-right:1px solid #e6e6e6;
 }
@@ -398,12 +398,31 @@ $highlight: #17c2e7;
 	font-size:1em;
 	font-weight:normal;
 	float: right;
+	input[type="text"] {
+		border:none;
+		padding:0;
+		width: auto;
+		box-shadow: none;
+		max-width:90px;
+		color:$highlight;
+		text-decoration:underline;
+		&:focus {
+			outline:none;
+		}
+	}
+}
+
+.tab-container {
+	clear:both;
+	margin-top:40px;
 }
 
 .tabs {
 	@extend %clearfix;
 	@extend %h-list;
-	padding-bottom:30px;
+	padding-bottom:4px;
+	margin-left:30px;
+	margin-top: 10px;
 	li {
 		margin-right:0;
 		a {
@@ -415,6 +434,8 @@ $highlight: #17c2e7;
 			background:#f7f7f7;
 			border-left:none;
 			border-right:none;
+			position: relative;
+			z-index: 12;
 			&.active {
 				background:#fff;
 				padding-top:10px;
@@ -432,6 +453,12 @@ $highlight: #17c2e7;
 	}
 }
 
+.tab {
+	border:1px solid #d3d3d3;
+	padding:30px 20px 30px 30px;
+	border-radius:5px;
+	position: relative;
+}
 
 .data-list {
 	@extend %clean-list;
@@ -460,7 +487,7 @@ $highlight: #17c2e7;
 		float: left;
 	}
 	.key {
-		width:325px;
+		width:313px;
 		padding-right:15px;
 		border-right: 1px dashed #ECECEC;
 		p {
@@ -651,31 +678,14 @@ footer {
 .discussion {
 	@extend %clearfix;
 	margin-top:70px;
+	padding:0 30px 0 20px;
 }
 
 .comments {
 	width:430px;
 	float: left;
-	.tabs {
-		margin-top:40px;
-		margin-left:17px;
-		padding-bottom:0;
-		a {
-			z-index: 9;
-			&.active {
-				z-index: 11;
-			}
-		}
-	}
-	.tab {
-		border:1px solid #d3d3d3;
-		padding:40px;
-		border-radius:5px 5px 0 0;
-		position: relative;
-		background:#fff;
-		margin-top:3px;
-		z-index: 10;
-	}
+	
+	
 	
 }
 
@@ -710,7 +720,7 @@ footer {
 
 .members {
 	width: 210px;
-	padding-left:50px;
+	padding-left:40px;
 	float: left;
 	color:#5c6266;
 	h4 {

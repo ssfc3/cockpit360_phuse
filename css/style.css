@@ -320,8 +320,8 @@ p {
     padding: 30px 40px 0 40px; }
 
 .main {
-  width: 690px;
-  padding: 30px 40px;
+  width: 730px;
+  padding: 20px;
   float: left;
   border-right: 1px solid #e6e6e6; }
 
@@ -329,9 +329,25 @@ p {
   font-size: 1em;
   font-weight: normal;
   float: right; }
+  .title input[type="text"] {
+    border: none;
+    padding: 0;
+    width: auto;
+    box-shadow: none;
+    max-width: 90px;
+    color: #17c2e7;
+    text-decoration: underline; }
+    .title input[type="text"]:focus {
+      outline: none; }
+
+.tab-container {
+  clear: both;
+  margin-top: 40px; }
 
 .tabs {
-  padding-bottom: 30px; }
+  padding-bottom: 4px;
+  margin-left: 30px;
+  margin-top: 10px; }
   .tabs li {
     margin-right: 0; }
     .tabs li a {
@@ -342,7 +358,9 @@ p {
       position: relative;
       background: #f7f7f7;
       border-left: none;
-      border-right: none; }
+      border-right: none;
+      position: relative;
+      z-index: 12; }
       .tabs li a.active {
         background: #fff;
         padding-top: 10px;
@@ -354,6 +372,12 @@ p {
         border-right: 1px solid #d3d3d3; }
     .tabs li:last-child a {
       border-right: 1px solid #d3d3d3; }
+
+.tab {
+  border: 1px solid #d3d3d3;
+  padding: 30px 20px 30px 30px;
+  border-radius: 5px;
+  position: relative; }
 
 .data-list {
   width: 100%; }
@@ -375,7 +399,7 @@ p {
     padding: 30px 40px;
     float: left; }
   .data-list .key {
-    width: 325px;
+    width: 313px;
     padding-right: 15px;
     border-right: 1px dashed #ECECEC; }
     .data-list .key p {
@@ -528,27 +552,12 @@ footer {
     margin-left: 24px; }
 
 .discussion {
-  margin-top: 70px; }
+  margin-top: 70px;
+  padding: 0 30px 0 20px; }
 
 .comments {
   width: 430px;
   float: left; }
-  .comments .tabs {
-    margin-top: 40px;
-    margin-left: 17px;
-    padding-bottom: 0; }
-    .comments .tabs a {
-      z-index: 9; }
-      .comments .tabs a.active {
-        z-index: 11; }
-  .comments .tab {
-    border: 1px solid #d3d3d3;
-    padding: 40px;
-    border-radius: 5px 5px 0 0;
-    position: relative;
-    background: #fff;
-    margin-top: 3px;
-    z-index: 10; }
 
 .comment {
   color: #b0b0b0; }
@@ -568,7 +577,7 @@ footer {
 
 .members {
   width: 210px;
-  padding-left: 50px;
+  padding-left: 40px;
   float: left;
   color: #5c6266; }
   .members h4 {
