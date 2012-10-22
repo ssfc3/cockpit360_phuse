@@ -43,14 +43,14 @@
 
     <div class="app-subheader">
         <div class="proximity">
-            <label for="prox-slider">Proximity</label>
-            <div class="prox-slider"></div>
-            <label for="location">50 Miles from</label>
+            <label for="prox-input">Proximity</label>
+            <div id="prox-range"></div>
+            <input type="text" id="prox-input" />
+            <label for="location">Miles from</label>
             <select name="" id="location">
                 <option value="">Your Location</option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
+                <option value="">Specific ZIP</option>
+                <option value="">Nationwide</option>
             </select>
         </div>
         <input class="searchbox" type="text" value="search" />
@@ -59,69 +59,121 @@
     <div class="app">
         <div class="main">
             <h2 class="title">Apple vs Peers <span class="highlight">From July 2012 to August 2012</span></h2>
-            <ul class="tabs">
-                <li><a class="active" href="#">Performance Ranking</a></li>
-                <li><a href="#">Graph</a></li>
+            <div class="tab-container">
+                <ul class="tabs">
+                <li><a class="active" href="#performance-rank">Performance Ranking</a></li>
+                <li><a href="#graph">Graph</a></li>
             </ul>
             <div class="tab" id="performance-rank">
-               <table class="data-table">
-                    <tr>
-                        <th scope="row">
-                            <h3>Revenue <a class="hint" href="#">?</a></h3>
+               <ul class="data-list">
+                    <li>
+                        <div class="key">
+                            <h3>Revenue <a class="hint" title="How was this calculated?" href="#">?</a></h3>
                             <p>How much money do I have left after I pay everything?</p>
-                        </th>
-                        <td>
+                        </div>
+                        <div class="value">
                             <h3>25th <span>out of 255</span></h3>
                             <p class="highlight">For revenue</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">
-                            <h3>Cost <a class="hint" href="#">?</a></h3>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="key">
+                            <h3>Cost <a class="hint" title="How was this calculated?" href="#">?</a></h3>
                             <p>How much money do I have left after I pay everything?</p>
-                        </th>
-                        <td>
+                        </div>
+                        <div class="value">
                             <h3>19th <span>out of 255</span></h3>
                             <p class="highlight">For Cost</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">
-                            <h3>Annual Revenue <a class="hint" href="#">?</a></h3>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="key">
+                            <h3>Annual Revenue <a class="hint" title="How was this calculated?" href="#">?</a></h3>
                             <p>How much money do I have left after I pay everything?</p>
-                        </th>
-                        <td>
+                        </div>
+                        <div class="value">
                             <h3>3rd <span>out of 255</span></h3>
                             <p class="highlight">For Annual Revenue</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">
-                            <h3>Employee Size <a class="hint" href="#">?</a></h3>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="key">
+                            <h3>Employee Size <a class="hint" title="How was this calculated?" href="#">?</a></h3>
                             <p>How much money do I have left after I pay everything?</p>
-                        </th>
-                        <td>
+                        </div>
+                        <div class="value">
                             <h3>15th <span>out of 255</span></h3>
                             <p class="highlight">For Employee Size</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">
-                            <h3>Net Profit Margin <a class="hint" href="#">?</a></h3>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="key">
+                            <h3>Net Profit Margin <a class="hint" title="How was this calculated?" href="#">?</a></h3>
                             <p>How much money do I have left after I pay everything?</p>
-                        </th>
-                        <td>
+                        </div>
+                        <div class="value">
                             <h3>2nd <span>out of 255</span></h3>
                             <p class="highlight">For Net Profit Margin</p>
-                        </td>
-                    </tr>
-               </table>
-               <div class="alert warning">
-                    <p>Your data is stale, please update to get reliable information</p>
-                    <a class="right btn">Update your data</a>
-               </div>
+                        </div>
+                    </li>
+               </ul>
+               
+            </div><!-- tab -->
+            <div class="tab" id="graph">
+                <img src="img/graph.jpg" />
             </div>
         </div>
+
+            <div class="alert warning">
+                <p>Your data is stale, please update to get reliable information</p>
+                <a class="right btn">Update your data</a>
+            </div>
+
+            <div class="discussion">
+                <div class="comments">
+                    <form id="post-comment">
+                        <textarea></textarea>
+                        <a href="#" class="btn">Post Comment</a>
+                    </form>
+                      <ul class="tabs">
+                        <li><a class="active" href="#">Internal</a></li>
+                        <li><a href="#">External</a></li>
+                    </ul>
+                    <div class="tab">
+                        <div class="comment">
+                            <h3>John Smith <span class="highlight">64</span><a href="#"><img src="img/thumb-up.jpg" /></a><a href="#"><img src="img/thumb-down.jpg" /></a></h3>
+                            <p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia?</p>
+                        </div>
+                         <div class="comment">
+                            <h3>John Smith <span class="highlight">64</span><a href="#"><img src="img/thumb-up.jpg" /></a><a href="#"><img src="img/thumb-down.jpg" /></a></h3>
+                            <p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia?</p>
+                        </div>
+                         <div class="comment">
+                            <h3>John Smith <span class="highlight">64</span><a href="#"><img src="img/thumb-up.jpg" /></a><a href="#"><img src="img/thumb-down.jpg" /></a></h3>
+                            <p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia?</p>
+                        </div>
+                         <div class="comment">
+                            <h3>John Smith <span class="highlight">64</span><a href="#"><img src="img/thumb-up.jpg" /></a><a href="#"><img src="img/thumb-down.jpg" /></a></h3>
+                            <p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="members">
+                    <h4>In the conversation</h4>
+                    <ul>
+                        <li>John Smith</li>
+                        <li>Jack Jackson</li>
+                        <li>Colin Colinson</li>
+                        <li>Mary Marison</li>
+                        <li>Time Jones</li>
+                        <li><a href="#" class="highlight">Ask more people + </a></li>
+                    </ul>
+                    <input type="email" placeholder="Their Email" />
+                    <a href="#" class="btn">Ask to Comment</a>
+                </div>
+            </div>
+
+        </div><!-- main -->
 
         <aside>
 
@@ -134,11 +186,11 @@
                     <li><label for="em-size">Employee Size</label><input type="radio"></li>
                     <li>
                         <label for="cat">Category</label><input type="radio">
-                        <ul>
-                            <li><label for="">Construction</label><input type="checkbox"></li>
-                            <li><label for="">Education</label><input type="checkbox"></li>
-                            <li><label for="">Leisure</label><input type="checkbox"></li>
-                            <li><label for="">Entertainment</label><input type="checkbox"></li>
+                        <ul class="styled-checks">
+                            <li><label for="1">Construction</label><input id="1" type="checkbox"></li>
+                            <li><label for="2">Education</label><input id="2" type="checkbox"></li>
+                            <li><label for="3">Leisure</label><input id="3" type="checkbox"></li>
+                            <li><label for="4">Entertainment</label><input id="4" type="checkbox"></li>
                         </ul>
                     </li>
                     <li><label for="net">Net Profit Margin</label><input type="radio"></li>
@@ -150,8 +202,8 @@
                 <form action="" class="widget-content">
                     <input type="text" placeholder="Their Email">
                     <input type="text" placeholder="Their Name">
-                    <input type="submit" class="btn btn-blue" value="Invite">
-                    <textarea placeholder="Add a note..."></textarea>
+                    <input type="submit" class="btn blue" value="Invite">
+                    <textarea class="well" placeholder="Add a note..."></textarea>
                 </form>
             </div>
 
@@ -188,16 +240,26 @@
         </div>
     </footer>
 
+    <div class="sub-footer">
+        <strong>&copy; 2012 Cockpit 360</strong>
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Product</a></li>
+        </ul>
+    </div>
+
 </div>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="js/jquery-ui-1.9.0.custom.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>
-    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+    var _gaq=[['_setAccount','UA-XXXXX-X'],['_liackPageview']];
     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
     g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
     s.parentNode.insertBefore(g,s)}(document,'script'));
