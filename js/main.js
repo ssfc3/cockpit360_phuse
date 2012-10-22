@@ -70,6 +70,15 @@ $(document).ready(function(){
     	$(tab).siblings(".tab").hide();
     	$(tab).show();
     	e.preventDefault();
-    })
+    });
+
+    /*$(".slider").hide();
+
+    $("#metrics input[type='radio']").click(function() {
+    	$(".slider").slideUp();
+    	if($(this).is(":checked")) {
+    		$(this).next(".slider").slideDown();
+    	}
+    });*/
 
 });
