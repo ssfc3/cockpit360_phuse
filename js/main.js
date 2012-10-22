@@ -81,4 +81,39 @@ $(document).ready(function(){
     	}
     });*/
 
+  $('.slider').each(function(){
+        var slider = $(this),
+            slides = slider.find('.slide'),
+            currentSlide = 0;
+            
+        slides.show();
+        $(slides[currentSlide]).addClass('active');
+        $('.next,.prev', slider).show();
+
+        $('.slide-nav a').on('click', function(){
+        	slides.removeClass('active');
+        	$('.slide-nav a').removeClass('active-nav');
+        	$(this).addClass('active-nav');
+        	theSlide = $(this).attr("href");
+        	$(theSlide).addClass('active');
+        	return false;
+        })
+            
+     /*   $('.prev', slider).on('click', function(){
+            slides.removeClass('active');
+            currentSlide--;
+            if(currentSlide < 0) currentSlide = slides.length - 1;
+            $(slides[currentSlide]).addClass('active');
+            return false;
+        });
+        
+        $('.next', slider).on('click', function(){
+            slides.removeClass('active');
+            currentSlide++;
+            if(currentSlide > slides.length - 1) currentSlide = 0;
+            $(slides[currentSlide]).addClass('active');
+            return false;
+        });*/
+    });
+
 });
