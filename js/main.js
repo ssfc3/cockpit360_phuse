@@ -96,22 +96,7 @@ $(document).ready(function(){
         	$(theSlide).addClass('active');
         	return false;
         })
-            
-     /*   $('.prev', slider).on('click', function(){
-            slides.removeClass('active');
-            currentSlide--;
-            if(currentSlide < 0) currentSlide = slides.length - 1;
-            $(slides[currentSlide]).addClass('active');
-            return false;
-        });
-        
-        $('.next', slider).on('click', function(){
-            slides.removeClass('active');
-            currentSlide++;
-            if(currentSlide > slides.length - 1) currentSlide = 0;
-            $(slides[currentSlide]).addClass('active');
-            return false;
-        });*/
+    
     });
 
 });

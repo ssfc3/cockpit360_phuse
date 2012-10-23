@@ -71,14 +71,14 @@ p {
   float: right;
   display: block; }
 
-.page-header nav ul, .tabs, .sub-footer ul, .slider .slide-nav {
+.page-header nav ul, .tabs, .sub-footer ul, .slide-nav {
   list-style: none; }
-  .page-header nav ul > li, .tabs > li, .sub-footer ul > li, .slider .slide-nav > li {
+  .page-header nav ul > li, .tabs > li, .sub-footer ul > li, .slide-nav > li {
     float: left;
     margin-right: 17px; }
-    .page-header nav ul > li:last-child, .tabs > li:last-child, .sub-footer ul > li:last-child, .slider .slide-nav > li:last-child {
+    .page-header nav ul > li:last-child, .tabs > li:last-child, .sub-footer ul > li:last-child, .slide-nav > li:last-child {
       margin-right: 0; }
-  .page-header nav ul a, .tabs a, .sub-footer ul a, .slider .slide-nav a {
+  .page-header nav ul a, .tabs a, .sub-footer ul a, .slide-nav a {
     text-decoration: none; }
 
 .data-list, .widget-content, footer .links ul, .members ul {
@@ -91,7 +91,7 @@ p {
   *display: inline;
   zoom: 1; }
 
-.app input[type="text"], .app input[type="email"], .app textarea, .widget-content input[type="text"], .widget-content input[type="email"], .widget-content textarea, .slide input[type="email"] {
+.app input[type="text"], .app input[type="email"], .app textarea, .widget-content input[type="text"], .widget-content input[type="email"], .widget-content textarea, .slide input[type="text"] {
   border-radius: 5px;
   border: 1px solid #c8c8c8;
   padding: 8px 12px;
@@ -205,7 +205,8 @@ p {
   width: 1040px;
   margin: 0 auto;
   position: relative;
-  z-index: 2; }
+  z-index: 2;
+  overflow-x: hidden; }
 
 .home-container {
   width: 1260px;
@@ -228,7 +229,11 @@ p {
 
 .pre-launch.page-header {
   color: #f6f8fa;
-  z-index: 5; }
+  z-index: 5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; }
   .pre-launch.page-header label {
     margin-right: 12px; }
 
@@ -516,7 +521,10 @@ p {
   .widget-content li {
     overflow: hidden;
     clear: both;
-    padding-bottom: 13px; }
+    padding-bottom: 13px;
+    position: relative; }
+    .widget-content li .slider {
+      top: 1em; }
     .widget-content li label {
       float: left; }
     .widget-content li input {
@@ -539,10 +547,10 @@ p {
     display: block;
     width: 100%;
     margin-bottom: 15px; }
-  .widget-content .slider {
+  .widget-content .range-slider {
     clear: both;
     padding-top: 10px; }
-    .widget-content .slider input[type="text"] {
+    .widget-content .range-slider input[type="text"] {
       border: none;
       margin-bottom: 0;
       padding-right: 0;
@@ -633,25 +641,24 @@ footer {
 
 .slider {
   width: 100%;
-  height: 660px;
-  overflow: hidden;
+  height: 650px;
+  position: relative; }
+
+.slide-nav {
   position: absolute;
-  top: 0; }
-  .slider .slide-nav {
-    position: absolute;
-    bottom: 20px;
-    left: 45%;
-    z-index: 100; }
-    .slider .slide-nav li {
-      margin: 0; }
-    .slider .slide-nav a {
-      display: inline-block;
-      background: url(../img/slider-nav.png) no-repeat top right;
-      width: 28px;
-      height: 28px;
-      text-indent: -9999px; }
-      .slider .slide-nav a.active-nav {
-        background-position: top left; }
+  bottom: 50px;
+  left: 45%;
+  z-index: 100; }
+  .slide-nav li {
+    margin: 0; }
+  .slide-nav a {
+    display: block;
+    background: url(../img/slider-nav.png) no-repeat top right;
+    width: 28px;
+    height: 28px;
+    text-indent: -9999px; }
+    .slide-nav a.active-nav {
+      background-position: top left; }
 
 .slide {
   width: 100%;
@@ -681,7 +688,7 @@ footer {
     z-index: 3; }
   .slide .container {
     padding-top: 230px; }
-  .slide input[type="email"] {
+  .slide input[type="text"] {
     display: block;
     width: 324px;
     margin-bottom: 15px;
@@ -718,7 +725,8 @@ footer {
         padding-left: 8px; }
 
 #slide1 {
-  background: url(../img/slide1.jpg) no-repeat 50% 50%; }
+  background: url(../img/slide1.jpg) no-repeat 50% 50%;
+  overflow-x: hidden; }
 
 #slide2 {
   background: url(../img/slide2.jpg) no-repeat 50% 50%; }
@@ -730,12 +738,11 @@ footer {
   background: url(../img/slide4.jpg) no-repeat 50% 50%; }
 
 .prelaunch-twitter {
-  padding-top: 600px;
   padding-bottom: 25px;
   text-align: center;
   font-size: 1.285714286em;
   background: url(../img/tweet.png) no-repeat bottom center;
-  margin-bottom: 140px; }
+  margin: 140px auto; }
   .prelaunch-twitter p {
     color: #636363;
     margin-bottom: 50px; }
