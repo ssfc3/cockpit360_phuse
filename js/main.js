@@ -86,9 +86,7 @@ $(document).ready(function(){
             slides = slider.find('.slide'),
             currentSlide = 0;
             
-        slides.show();
         $(slides[currentSlide]).addClass('active');
-        $('.next,.prev', slider).show();
 
         $('.slide-nav a').on('click', function(){
         	slides.removeClass('active');
