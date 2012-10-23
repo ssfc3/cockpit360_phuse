@@ -72,6 +72,17 @@ $(document).ready(function(){
     	e.preventDefault();
     });
 
+    $("#login-trigger").click(function(e){
+    	e.preventDefault();
+    	$(this).next("form").toggle();
+    	$("#overlay").fadeToggle();
+    });
+
+    $("#overlay").click(function(){
+    	$(this).fadeOut();
+    	$(".login form").fadeOut();
+    })
+
     /*$(".slider").hide();
 
     $("#metrics input[type='radio']").click(function() {
