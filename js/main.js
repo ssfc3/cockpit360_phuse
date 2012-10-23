@@ -1,5 +1,30 @@
 $(document).ready(function(){
 
+	if(!Modernizr.input.placeholder){
+
+		$('[placeholder]').focus(function() {
+		  var input = $(this);
+		  if (input.val() == input.attr('placeholder')) {
+			input.val('');
+			input.removeClass('placeholder');
+		  }
+		}).blur(function() {
+		  var input = $(this);
+		  if (input.val() == '' || input.val() == input.attr('placeholder')) {
+			input.addClass('placeholder');
+			input.val(input.attr('placeholder'));
+		  }
+		}).blur();
+		$('[placeholder]').parents('form').submit(function() {
+		  $(this).find('[placeholder]').each(function() {
+			var input = $(this);
+			if (input.val() == input.attr('placeholder')) {
+			  input.val('');
+			}
+		  })
+		});
+	}
+	
 	$(".app-subheader select").each(function(){
 	  $(this).wrap('<div class="selectbox"/>');
 		$(this).after("<span class='selecttext'></span><span class='select-arrow'></span>");
@@ -61,6 +86,8 @@ $(document).ready(function(){
         }
     });
 
+
+
     $("#graph").hide();
 
     $(".tabs a").click(function(e){
@@ -74,14 +101,23 @@ $(document).ready(function(){
 
     $("#login-trigger").click(function(e){
     	e.preventDefault();
-    	$(this).next("form").toggle();
+    	$(this).next("#prelaunch-login").toggle();
     	$("#overlay").fadeToggle();
     });
 
-    $("#overlay").click(function(){
-    	$(this).fadeOut();
-    	$(".login form").fadeOut();
-    })
+  	$("#overlay").click(function(){
+  		$(this).fadeOut();
+  		$("#prelaunch-login").hide();
+  	});
+
+  	$(".page-header").click(function(){
+  		$("#overlay").fadeOut();
+  		$("#prelaunch-login").hide();
+  	});
+
+  	$(".login").click(function(event){
+  		event.stopPropagation();
+  	});
 
     /*$(".slider").hide();
 

@@ -288,6 +288,15 @@ p {
   background-image: linear-gradient(top, #5eb1eb, #0079d9);
   box-shadow: inset 0 1px 10px rgba(255, 255, 255, 0.3);
   text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.5); }
+  .pre-launch .btn.blue:hover, .slide .btn:hover {
+    background-color: #5eb1eb;
+    background-image: -moz-linear-gradient(top, #5eb1eb, #3e9ee5);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #5eb1eb), color-stop(1, #3e9ee5));
+    background-image: linear-gradient(top, #5eb1eb, #3e9ee5);
+    box-shadow: inset 0 1px 10px rgba(255, 255, 255, 0.2); }
+  .pre-launch .btn.blue:active, .slide .btn:active {
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.7); }
 
 .app-header {
   padding: 0 25px;
@@ -684,7 +693,8 @@ footer {
 .slider {
   width: 100%;
   height: 650px;
-  position: relative; }
+  position: relative;
+  background: #000; }
 
 .slide-nav {
   position: absolute;
@@ -720,9 +730,6 @@ footer {
   -ms-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   z-index: 2; }
-  .slide:first-child {
-    opacity: 1;
-    -moz-opacity: 1; }
   .slide.active {
     opacity: 1;
     -moz-opacity: 1;

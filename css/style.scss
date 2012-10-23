@@ -348,6 +348,14 @@ $highlight: #17c2e7;
 	@include gradient(#5eb1eb, #0079d9);
 	box-shadow: inset 0 1px 10px rgba(255,255,255,0.3);
 	text-shadow: 0 -1px 1px rgba(0,0,0,0.5);
+	&:hover {
+		@include gradient(#5eb1eb, #3e9ee5);
+		box-shadow: inset 0 1px 10px rgba(255,255,255,0.2);
+	}
+	&:active {
+		box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);
+		border: 1px solid rgba(0,0,0,0.7);
+	}
 }
 
 .app-header {
@@ -850,7 +858,7 @@ footer {
 	width:100%;
 	height:650px;
 	position: relative;
-	
+	background:#000;
 }
 .slide-nav {
 	position: absolute;
@@ -890,15 +898,13 @@ footer {
     -ms-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
     z-index: 2;
-	&:first-child {
-		opacity:1;
-		-moz-opacity:1;
-	}
+	
 	&.active {
 		opacity: 1;
 		-moz-opacity:1;
 		display:block;
 		z-index: 3;
+
 	}
 	.container {
 		padding-top:230px;
