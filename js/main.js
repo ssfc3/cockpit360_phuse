@@ -166,5 +166,17 @@ $(document).ready(function(){
         }
     });
 
+    $("#category-select ul ul").hide();
+
+    $("#category-select input[type=checkbox]").each(function(){
+        $(this).bind("click", function() {
+            var listId = $(this).attr("name");
+        if ($(this).is(':checked')) {
+            $("#" + listId).fadeIn();
+        } else {
+            $("#" + listId).fadeOut();
+        }
+    });
+    });
 
 });

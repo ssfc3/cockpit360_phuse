@@ -648,6 +648,21 @@ legend, .legend {
 	display:block;
 }
 
+#category-select > ul {
+	& >li {
+		margin-bottom:10px;
+		color:#6B6B6B;
+	}
+	ul {
+		margin-top:5px;
+		margin-left:20px;
+		margin-bottom:10px;
+		li {
+			color:#9f9f9f;
+		}
+	}
+}
+
 .main {
 	width:730px;
 	padding:20px;
