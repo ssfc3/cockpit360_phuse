@@ -260,6 +260,8 @@ $medgrey: #c8c8c8;
     z-index: 2;
 }
 
+/** $HEADER **/
+
 .page-header {
 	@extend %clearfix;
 	padding:70px 0 20px 0;
@@ -312,6 +314,8 @@ $medgrey: #c8c8c8;
 	position: relative;
 	z-index: 5;
 }
+
+/** $LOGIN **/
 
 .login {
 	@extend %right; 
@@ -367,6 +371,7 @@ $medgrey: #c8c8c8;
 	display:none;
 }
 
+/** DASHBOARD HEADER **/
 
 .app-header {
 	@extend %clearfix;
@@ -486,6 +491,8 @@ $medgrey: #c8c8c8;
 	padding:7px;
 }
 
+/** $APP **/
+
 .app {
 	border:1px solid $ltgrey;
 	background:#fff;
@@ -560,66 +567,110 @@ $medgrey: #c8c8c8;
 	}
 }
 
-.signup-step {
-	p {
-		margin-bottom:30px;
-		clear:both;
-		input, select {
-			display:inline-block;
-			&:last-child {
-				margin-left:32px;
-			}
-		}
-		input[type="text"], input[type="email"], input[type="password"] {
-			width:218px;
-			&:focus {
-				border-color:#3fb3de;
-				outline:none;
-			}
-		}
-		select {width:242px;}
-		textarea {
-			width: 496px;
-			&:focus {
-				border-color:#3fb3de;
-				outline:none;
-			}
-		}
-	}
-	.mixed-input {
-		margin-bottom:30px;
-		.input {
-			display:inline-block;
-			width:242px;
-			label {
-				display:inline-block;
-				padding-left:10px;
-			}
-		}
-		input[type="text"] {
-			margin-left:30px;
-			width: 218px;
-		}
-	}
-	label {
-			display:inline-block;
-			padding-left:10px;
-		}
-}
+/** $SIGNUP **/
 
-fieldset {
+.signup-step {
+	input[type="text"], input[type="email"], input[type="password"] {
+		&:focus {
+			border-color:#3fb3de;
+			outline:none;
+			background: #F9FDFF;
+		}
+	}
+	> ul {
+		@extend %clearfix;
+		
+	}
 	ul {
 		list-style: none;
-		li {
-			margin-bottom:5px;
-		}
-		&.choose-many {
-			li {
-				width: 33%;
-				float: left;
-			}
+	}
+	p {
+		margin-bottom:30px;
+	}
+
+}
+
+.field {
+	width: 242px;
+	float: left;
+	padding: 0 0 30px 0;
+	position: relative;
+	&.full {
+		width: 100%;
+		float: none;
+		clear:both;
+		input[type="text"], input[type="email"], input[type="password"], textarea{
+			width: 492px;
 		}
 	}
+	&.left {
+		clear:left;
+	}
+	&.right {
+		float: right;
+		padding-left:36px;
+	}
+	input[type="text"], input[type="email"], input[type="password"], textarea {
+		width: 214px;
+		&.error {
+			border-color: red;
+			background: #fef7f7;
+		}
+	}
+	select {
+		width: 238px;
+	}
+	input[type="checkbox"] + label,
+	input[type="radio"] + label {
+		@extend %inline-block;
+		padding-left: 10px;
+	}
+}
+
+.field-text {
+	width: 220px;
+	position: absolute;
+	left: -240px;
+	text-align:right;
+	top: 7px;
+	font-size:.9em;
+	&:after {
+		width: 0;
+		height: 0;
+		border-top: 3px solid transparent;
+		border-left: 6px solid #444;
+		border-bottom: 3px solid transparent;
+		content: ' ';
+		display:block;
+		position: absolute;
+		right:-10px;
+		top: 6px;
+	}
+	&.error {
+		color:#ff0000;
+		&:after {
+			border-left-color:#ff0000;
+		}
+	}
+}
+
+.right .field-text {
+	right: -240px;
+	left: auto;
+	text-align:left;
+	&:after {
+		border-right:6px solid #444;
+		border-left: none;
+		right: auto;
+		left: -10px;
+	}
+	&.error:after {border-right-color:#ff0000;}
+}
+
+legend, .legend {
+	color:#6B6B6B;
+	margin-bottom:8px;
+	display:block;
 }
 
 .linkedin {
@@ -642,11 +693,7 @@ fieldset {
 	}
 }
 
-legend, .legend {
-	color:#6B6B6B;
-	margin-bottom:8px;
-	display:block;
-}
+
 
 #category-select > ul {
 	& >li {
@@ -662,6 +709,8 @@ legend, .legend {
 		}
 	}
 }
+
+/** MAIN **/
 
 .main {
 	width:730px;
@@ -688,9 +737,13 @@ legend, .legend {
 	}
 }
 
+/** $TABS **/
+
 .tab-container {
 	clear:both;
-	margin-top:40px;
+	border:1px solid $ltltgrey;
+	padding:30px 20px 30px 30px;
+	border-radius:5px;
 }
 
 .tabs {
@@ -698,7 +751,7 @@ legend, .legend {
 	@extend %h-list;
 	padding-bottom:4px;
 	margin-left:30px;
-	margin-top: 10px;
+	margin-top: 40px;
 	li {
 		margin-right:0;
 		a {
@@ -730,9 +783,7 @@ legend, .legend {
 }
 
 .tab {
-	border:1px solid $ltltgrey;
-	padding:30px 20px 30px 30px;
-	border-radius:5px;
+	
 	position: relative;
 }
 
@@ -788,7 +839,7 @@ legend, .legend {
 	width:16px;
 	border-radius:15px;
 	border: 1px solid #c4c4c4;
-	display:inline-block;
+	@extend %inline-block;
 	text-align:center;
 	font-weight:normal;
 	padding-top:1px;
@@ -822,6 +873,7 @@ legend, .legend {
 	font-size: .857142857em;
 	text-transform:uppercase;
 	font-weight:bold;
+	margin-top:15px;
 	&.warning {color:#e8b59e;}
 	p {
 		float: left;
@@ -831,6 +883,8 @@ legend, .legend {
 		float: right;
 	}
 }
+
+/** $WIDGETS **/
 
 .widget {
 	margin-bottom:40px;
@@ -911,52 +965,6 @@ legend, .legend {
 	}
 }
 
-footer {
-	@extend %clearfix;
-	background:#fff;
-	border-radius:0 0 5px 5px;
-	border:1px solid $ltgrey;
-	border-top:none;
-	padding:80px 40px;
-	color:#b2b2b2;
-	.links {
-		float: left;
-		width:185px;
-		h3 {
-			margin-bottom:24px;
-		}
-		a {
-			&:hover {text-decoration:underline;}
-		}
-		ul {
-			@extend %clean-list;
-		}
-		li {
-			margin-bottom:10px;
-		}
-		&:first-child {
-			margin-left:220px;
-		}
-		&:last-child {
-			border-left:1px solid #e6e6e6;
-			padding-left:65px;
-		}
-	}
-}
-
-.sub-footer {
-	margin-bottom:20px;
-	margin-top:40px;
-	ul {
-		@extend %h-list;
-		@extend %inline-block;
-		vertical-align:middle;
-		margin-left:24px;
-	}
-	&.container {
-		text-align:center;
-	}
-}
 
 .discussion {
 	@extend %clearfix;
@@ -1020,6 +1028,56 @@ footer {
 		width:125px;
 		margin-bottom:8px;
 		padding:6px 12px;
+	}
+}
+
+
+/** FOOTER **/
+
+footer {
+	@extend %clearfix;
+	background:#fff;
+	border-radius:0 0 5px 5px;
+	border:1px solid $ltgrey;
+	border-top:none;
+	padding:80px 40px;
+	color:#b2b2b2;
+	.links {
+		float: left;
+		width:185px;
+		h3 {
+			margin-bottom:24px;
+		}
+		a {
+			&:hover {text-decoration:underline;}
+		}
+		ul {
+			@extend %clean-list;
+		}
+		li {
+			margin-bottom:10px;
+		}
+		&:first-child {
+			margin-left:220px;
+		}
+		&:last-child {
+			border-left:1px solid #e6e6e6;
+			padding-left:65px;
+		}
+	}
+}
+
+.sub-footer {
+	margin-bottom:20px;
+	margin-top:40px;
+	ul {
+		@extend %h-list;
+		@extend %inline-block;
+		vertical-align:middle;
+		margin-left:24px;
+	}
+	&.container {
+		text-align:center;
 	}
 }
 
@@ -1121,7 +1179,7 @@ footer {
 			padding:12px;
 			text-align:center;
 			img {
-				display:inline-block;
+				@extend %inline-block;
 				padding-left:8px;
 			}
 		}

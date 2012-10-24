@@ -48,16 +48,21 @@
             </div>
             <form class="signup-step">
                 <p class="center"><a href="#" class="btn linkedin">Connect to LinkedIn</a></p>
-                <p><input type="text" placeholder="Business Short Name"><input type="text" placeholder="Legal formation of business"></p>
-                <p><input type="text" placeholder="Incorporation date"><input type="text" placeholder="Your organization's Tax ID"></p>
-                <div class="mixed-input">
-                    <div class="input"><input type="checkbox" id="multiloc"/><label for="multiloc">We operate from multiple locations</label></div>
+               <ul>
+                 <li class="field left"><input type="text" placeholder="Business Short Name"></li><li class="field right"><input type="text" placeholder="Legal formation of business"></li>
+                <li class="field left"><input type="text" placeholder="Incorporation date"></li><li class="field right"><input type="text" placeholder="Your organization's Tax ID"></li>
+                <li class="field left">
+                    <input type="checkbox" id="multiloc"/><label for="multiloc">We operate from multiple locations</label>
+                </li>
+                <li class="field right">
                     <input type="text" placeholder="Headquarters ZIP code">
-                </div>
-                <div class="mixed-input">
-                    <div class="input"><input type="checkbox" id="franchise"/><label for="franchise">We are a franchise</label></div>
+                </li>
+                <li class="field left">
+                    <div class="input"><input type="checkbox" id="franchise"/><label for="franchise">We are a franchise</label></li>
+                <li class="field right">
                     <input type="text" placeholder="What is the franchise?"/>
-                </div>
+                </li>
+            </ul>
                 <p><a href="signup4.html" class="btn green primary">Continue to Step 4</a></p>
                 <p>If you want to skip the next few steps and get going now, then <a href="dashboard.html" class="btn">Finish Profile</a></p>
             </form>

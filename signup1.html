@@ -29,7 +29,7 @@
                 <a href="#" class="highlight">Having trouble?</a>
                 <input type="submit" class="btn" value="Go" />
             </form>
-        </div>
+        </div>s
     </header>
 
     <div class="app signup">
@@ -47,24 +47,46 @@
                 </ul>
             </div>
             <form class="signup-step">
-                <p><input type="email" placeholder="Email Address" value="email@alreadyfilled.com"><input type="password" placeholder="Password"></p>
-                <p><input type="text" placeholder="First Name"><input type="text" placeholder="Last Name"></p>
-                <p><input type="text" placeholder="Company Name"><input type="text" placeholder="Your Organization's Tax ID"></p>
-                <p><select name="category" id="category">
-                        <option value="">Your Business Category</option>
-                        <option value="">Foodservice</option>
-                        <option value="">Retail</option>
-                        <option value="">Something Else</option>
-                        <option value="">Something Else</option>
-                    </select>
-                    <select name="role" id="role">
-                        <option value="">I am the Owner</option>
-                        <option value="">I am the Co-Owner</option>
-                        <option value="">I am the Founder</option>
-                        <option value="">I am the Co-Founder</option>
-                        <option value="">I am the CEO</option>
-                    </select>
-                </p>
+                <ul>
+                    <li class="field left">
+                        <input type="email" placeholder="Email Address" value="email@alreadyfilled.com">
+                    </li>
+                    <li class="field right">
+                        <input type="password" placeholder="Password">
+                    </li>
+                    <li class="field left">
+                        <input type="text" placeholder="First Name">
+                    </li>
+                    <li class="field right">
+                        <input type="text" placeholder="Last Name">
+                    </li>
+                    <li class="field left">
+                        <input type="text" placeholder="Company Name">
+                    </li>
+                    <li class="field right">
+                        <input class="error" type="text" placeholder="Your Organization's Tax ID">
+                        <span class="field-text error">Please enter a valid Tax ID</span>
+                    </li>
+                    <li class="field left">
+                        <select name="category" id="category">
+                            <option value="">Your Business Category</option>
+                            <option value="">Foodservice</option>
+                            <option value="">Retail</option>
+                            <option value="">Something Else</option>
+                            <option value="">Something Else</option>
+                        </select>
+                    </li>
+                    <li class="field right">
+                        <select name="role" id="role">
+                            <option value="">I am the Owner</option>
+                            <option value="">I am the Co-Owner</option>
+                            <option value="">I am the Founder</option>
+                            <option value="">I am the Co-Founder</option>
+                            <option value="">I am the CEO</option>
+                        </select>
+                    </li>
+                </ul>   
+                
                 <p><a href="signup2.html" class="btn green primary">Continue to Step 2</a></p>
                 <p>If you want to skip the next few steps and get going now, then <a href="dashboard.html" class="btn">Skip for Now</a></p>
             </form>

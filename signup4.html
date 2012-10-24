@@ -50,8 +50,9 @@
                 <p>
                     <fieldset id="category-select">
                         <legend><strong>Category</strong>&mdash;Check all that apply</legend>
-                        <ul>
-                            <li><input type="checkbox" name="pro-services" id="pro-service-cat"/><label for="pro-service-cat">Professional Services</label>
+                        <!-- The show/hide functionality should be easy to integrate: just make sure that the 'data-cat' attribute of the *parent category checkbox* matches the ID of the child UL -->
+                        <ul class="field full">
+                            <li><input type="checkbox" data-cat="pro-services" id="pro-service-cat"/><label for="pro-service-cat">Professional Services</label>
                                 <ul id="pro-services">
                                     <li><input type="checkbox" id="leg"/><label for="leg">Legal Services</label></li>
                                     <li><input type="checkbox" id="cpa"/><label for="cpa">CPA</label></li>
@@ -62,7 +63,7 @@
                                     <li><input type="checkbox" id="conman"/><label for="conman">Construction Management</label></li>
                                 </ul>
                             </li>
-                            <li><input type="checkbox" name="digital-services" id="digital-services-cat"><label for="digital-services-cat">Digital Products and Services</label>
+                            <li><input type="checkbox" data-cat="digital-services" id="digital-services-cat"><label for="digital-services-cat">Digital Products and Services</label>
                                 <ul id="digital-services">
                                     <li><input type="checkbox"><label>Web Design</label></li>
                                     <li><input type="checkbox"><label>Web Development</label></li>
@@ -73,7 +74,7 @@
                                     <li><input type="checkbox"><label>Internet Software (SaaS)</label></li>
                                     <li><input type="checkbox"><label>Platform Software (PaaS)</label></li>
                                     <li><input type="checkbox"><label>IaaS</label></li>
-                                    <li><input type="checkbox" name="ecommerce"><label>ecommerce</label>
+                                    <li><input type="checkbox" data-cat="ecommerce"><label>ecommerce</label>
                                         <ul id="ecommerce">
                                             <li><input type="checkbox"><label>Dating</label></li>
                                             <li><input type="checkbox"><label>Retail</label></li>
@@ -81,13 +82,13 @@
                                     </li>
                                 </ul>   
                             </li>
-                            <li><input type="checkbox" name="retail" id="retail-cat"><label for="retail-cat">Retail</label>
+                            <li><input type="checkbox" data-cat="retail" id="retail-cat"><label for="retail-cat">Retail</label>
                                <ul id="retail">
                                     <li><input type="checkbox" id="boutique"><label for="boutique">Boutique</label></li>
                                     <li><input type="checkbox" id="auto"><label for="boutique">Auto Dealership</label></li>
                                 </ul>
                             </li>
-                            <li><input type="checkbox" name="healthcare" id="healthcare-cat"><label for="healthcare-cat">Healthcare</label>
+                            <li><input type="checkbox" data-cat="healthcare" id="healthcare-cat"><label for="healthcare-cat">Healthcare</label>
                                 <ul id="healthcare">
                                     <li><input type="checkbox" id=""><label for="">All</label></li>
                                     <li><input type="checkbox" id=""><label for="">Audiologists</label></li>
@@ -114,8 +115,8 @@
                                     <li><input type="checkbox" id=""><label for="">Veterinarian</label></li>
                                 </ul>
                             </li>
-                            <li><input type="checkbox" name="homecare" id="homecare-cat"><label for="homecare-cat">Homecare</label></li>
-                            <li><input type="checkbox" name="tech" id="tech-cat"><label for="tech-cat">Technology</label>
+                            <li><input type="checkbox" data-cat="homecare" id="homecare-cat"><label for="homecare-cat">Homecare</label></li>
+                            <li><input type="checkbox" data-cat="tech" id="tech-cat"><label for="tech-cat">Technology</label>
                                 <ul id="tech">
                                     <li><input type="checkbox" id=""><label for="">Web Development</label></li>
                                     <li><input type="checkbox" id=""><label for="">Web Design</label></li>
@@ -123,7 +124,7 @@
                                     <li><input type="checkbox" id=""><label for="">Internet Software</label></li>
                                 </ul>
                             </li>
-                            <li><input type="checkbox" name="restaurant" id="restaurant-cat"><label for="restaurant-cat">Restaurants</label>
+                            <li><input type="checkbox" data-cat="restaurant" id="restaurant-cat"><label for="restaurant-cat">Restaurants</label>
                                 <ul id="restaurant">
                                     <li><input type="checkbox" id=""><label for="">Bakery / Café</label></li>
                                     <li><input type="checkbox" id=""><label for="">Breakfast</label></li>
@@ -145,9 +146,9 @@
                                     <li><input type="checkbox" id=""><label for="">Franchise</label></li>
                                 </ul>
                             </li>
-                            <li><input type="checkbox" name="real-estate" id="real-estate-cat"><label for="real-estate-cat">Real Estate, Rental and Leasing</label></li>
-                            <li><input type="checkbox" name="auto-care" id="auto-care-cat"><label for="auto-care-cat">Auto Care</label></li>
-                            <li><input type="checkbox" name="personal-care" id="personal-care-cat"><label for="personal-care-cat">Personal Care</label></li>
+                            <li><input type="checkbox" data-cat="real-estate" id="real-estate-cat"><label for="real-estate-cat">Real Estate, Rental and Leasing</label></li>
+                            <li><input type="checkbox" data-cat="auto-care" id="auto-care-cat"><label for="auto-care-cat">Auto Care</label></li>
+                            <li><input type="checkbox" data-cat="personal-care" id="personal-care-cat"><label for="personal-care-cat">Personal Care</label></li>
                         </ul>
                     </fieldset>
                 </p>

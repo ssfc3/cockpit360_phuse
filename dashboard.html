@@ -98,11 +98,14 @@
                     <option>2012</option>
                 </select>
         </span></h2>
-            <div class="tab-container">
-                <ul class="tabs">
+
+        <!-- I imagine you guys will want to implement the tabs using rails & ajax, rather than simple jquery hide/show. Let me know if you'd rather I do this differently next time -->   
+
+            <ul class="tabs">
                 <li><a class="active" href="#performance-rank">Performance Ranking</a></li>
                 <li><a href="#graph">Graph</a></li>
             </ul>
+             <div class="tab-container">
             <div class="tab" id="performance-rank">
                <ul class="data-list">
                     <li>
@@ -157,14 +160,15 @@
                     </li>
                </ul>
 
-               <div class="alert warning">
-                <p>Your data is stale, please update to get reliable information</p>
-                <a class="right btn">Update your data</a>
-            </div>
+           
                
             </div><!-- tab -->
             <div class="tab" id="graph">
                 <img src="img/graph.jpg" />
+            </div>
+             <div class="alert warning">
+                <p>Your data is stale, please update to get reliable information</p>
+                <a class="right btn">Update your data</a>
             </div>
         </div>
             <div class="discussion">
@@ -215,7 +219,7 @@
 
         <aside>
 
-            <div class="widget">
+            <div class="widget" id="metrics-widget">
                 <h2>Business Metrics</h2>
                 <ul class="widget-content" id="metrics">
                     <li>
