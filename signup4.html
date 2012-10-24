@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Sign Up</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/vendor/modernizr-2.6.1.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <header class="page-header">
+        <div class="logo"><img src="img/logo-dark.png" alt=" cockpit 360" /></div>
+        <div class="login">
+            <label for="signin">Already have an account?</label>
+            <a href="#" id="login-trigger" class="btn blue">Sign In</a>
+            <form id="prelaunch-login" action="dashboard.html">
+                <input type="text" value="Your Email" placeholder="Your Email" />
+                <input type="text" value="Password" placeholder="Password" />
+                <a href="#" class="highlight">Having trouble?</a>
+                <input type="submit" class="btn" value="Go" />
+            </form>
+        </div>
+    </header>
+
+    <div class="app signup">
+        <div class="focused">
+            <h1>Sign up to Cockpit360 for free today!</h1>
+            <h2 class="highlight">Categorize your business</h2>
+            <div class="steps">
+                <h3>Step 4 <span>of 5</h3>
+                <ul>
+                    <li><a  href="signup1.html">One</a></li>
+                    <li><a href="signup2.html">Two</a></li>
+                    <li><a  href="signup3.html">Three</a></li>
+                    <li><a class="active" href="signup4.html">Four</a></li>
+                    <li><a href="signup5.html">Five</a></li>
+                </ul>
+            </div>
+            <form class="signup-step">
+                <p>
+                    <fieldset>
+                        <legend><strong>Industry</strong>&mdash;Check all that apply</legend>
+                        <ul class="choose-many">
+                            <li><input type="checkbox" id="owner"><label for="owner">Owner</label></li>
+                            <li><input type="checkbox" id="coowner"><label for="coowner">Co-Owner</label></li>
+                            <li><input type="checkbox" id="founder"><label for="founder">Founder</label></li>
+                            <li><input type="checkbox" id="cofounder"><label for="cofounder">Co-founder</label></li>
+                            <li><input type="checkbox" id="ce"><label for="ce">Chief Executive</label></li>
+                            <li><input type="checkbox" id="decmaker"><label for="decmaker">Decision-maker</label></li>
+                        </ul>
+                    </fieldset>
+                </p>
+                <p>
+                    <fieldset>
+                        <legend><strong>Sector</strong>&mdash;Check all that apply</legend>
+                        <ul class="choose-many">
+                            <li><input type="radio" name="delegate" id="delegate-yes"><label for="delegate-yes">Yes</label></li>
+                            <li><input type="radio" name="delegate" id="no"><label for="no">No</label></li>
+                            <li><input type="radio" name="delegate" id="later"><label for="later">Later</label></li>
+                        </ul>
+                    </fieldset>
+                </p>
+                <p id="delegate-conditional"><input type="text" placeholder="Delegate First Name"><input type="email" placeholder="Delegate Email Address"></p>
+                <p>
+                    <label for="desc" class="legend">Description of Business</label>
+                    <textarea id="desc"></textarea>
+                <p><a href="signup5.html" class="btn green primary">Continue to Step 5</a></p>
+                <p>If you want to skip the next few steps and get going now, then <a href="dashboard.html" class="btn">Skip for Now</a></p>
+            </form>
+        </div>
+        
+    </div>
+
+    <div class="sub-footer">
+        <strong>&copy; 2012 Cockpit 360</strong>
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Product</a></li>
+        </ul>
+    </div>
+
+</div>
+<div class="stripe"></div>
+<div id="overlay"></div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="js/jquery-ui-1.9.0.custom.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.0.min.js"><\/script>')</script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+    var _gaq=[['_setAccount','UA-XXXXX-X'],['_liackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+</body>
+</html>

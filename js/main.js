@@ -146,4 +146,25 @@ $(document).ready(function(){
     
     });
 
+    $(".conditional-field").hide();
+
+    $("input[name=delegate]").click(function(){
+        var value = $(this).filter(':checked').val();
+        if (value === "yes") {
+            $("#delegate-conditional").fadeIn();
+        } else {
+            $("#delegate-conditional").fadeOut();
+        }
+    });
+
+    $("input[name=collect-data]").click(function(){
+        var value = $(this).filter(':checked').val();
+        if (value === "auto") {
+            $("#software-conditional").fadeIn();
+        } else {
+            $("#software-conditional").fadeOut();
+        }
+    });
+
+
 });

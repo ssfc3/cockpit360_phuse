@@ -170,11 +170,31 @@ $medgrey: #c8c8c8;
 			box-shadow: inset 0 1px 2px #2886a8;
 		}
 	}
+	&.green {
+		@include gradient(#9bcb18, #8cc216);
+		box-shadow: inset 0 -2px 6px #75b735, inset 0 1px 2px #c1df6f;
+		border-color:#4e7c07;
+		color:#fff;
+		text-shadow:0 0px 2px rgba(0,0,0,0.4);
+		&:hover {
+			@include gradient(#a7d91e, #9bcb18);
+			box-shadow: inset 0 1px 2px #c1df6f;
+		}
+		&:active {
+			box-shadow: inset 0 1px 2px #75b735;
+		}
+	}
+	&.primary {
+		display:block;
+		text-align:center;
+	}
 }
 
 .highlight {
 	color:$highlight;
 }
+
+.center {text-align:center;}
 
 .selectbox {
 	position: relative; 
@@ -243,6 +263,8 @@ $medgrey: #c8c8c8;
 .page-header {
 	@extend %clearfix;
 	padding:70px 0 20px 0;
+	position: relative;
+	z-index: 7;
 	nav {
 		@extend %right;
 		padding-top:30px;
@@ -259,7 +281,6 @@ $medgrey: #c8c8c8;
 
 .pre-launch.page-header {
 	color:#f6f8fa;
-	z-index: 7;
 	position: absolute;
 	top: 0;
 	left:0;
@@ -297,6 +318,7 @@ $medgrey: #c8c8c8;
 	margin-bottom:0;
 	position: relative;
 	z-index: 500;
+	padding-top: 20px;
 	form {
 		background: #f3f3f2;
 		position: absolute;
@@ -307,6 +329,7 @@ $medgrey: #c8c8c8;
 		width:164px;
 		z-index: 300;
 		display:none;
+		box-shadow: 0 1px 6px rgba(0,0,0,0.5);
 		&:before {
 			content:' ';
 			display:block;
@@ -472,9 +495,157 @@ $medgrey: #c8c8c8;
 		float: left;
 		padding:30px 40px 0 40px;
 	}
-	input[type="text"], input[type="email"], textarea {
+	input[type="text"], input[type="email"], textarea, input[type="password"] {
 		@extend %field;
 	}
+	&.signup {
+		border-radius:5px;
+		box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+	}
+}
+
+.focused {
+	width:520px;
+	margin:80px auto;
+	h1 {
+		color:#717171;
+		text-shadow:inset 0 3px 4px #303030;
+		text-align:center;
+		margin-bottom:25px;
+	}
+	h2 {
+		font-weight:normal;
+		font-size:1.285714286em;
+		text-align:center;
+	}
+}
+
+.steps {
+	margin-top:65px;
+	margin-bottom:75px;
+	text-align:center;
+	overflow: hidden;
+	h3 {
+		color:#6e6e6e;
+		font-size:1.714285714em;
+		span {
+			color:#A8A8A8;
+		}
+	}
+	ul {
+		@extend %h-list;
+		list-style:none;
+		margin-top:40px;
+		text-align:center;
+		li {
+			margin:0 2px;
+		}
+		a {
+			display:block;
+			width:98px;
+			height:11px;
+			
+			background:#363636;
+			box-shadow: inset 0 2px 2px #2d3133;
+			border: 1px solid #404648;
+			text-indent:-9999px;
+			&.active {
+				border-color:#d9dbdd;
+				@include gradient(#fefeff, #d9dbdd);
+				box-shadow: none;
+			}
+		}
+		li:first-child a {border-radius:6px 0 0 6px;}
+		li:last-child a {border-radius:0 6px 6px 0;}
+	}
+}
+
+.signup-step {
+	p {
+		margin-bottom:30px;
+		clear:both;
+		input, select {
+			display:inline-block;
+			&:last-child {
+				margin-left:32px;
+			}
+		}
+		input[type="text"], input[type="email"], input[type="password"] {
+			width:218px;
+			&:focus {
+				border-color:#3fb3de;
+				outline:none;
+			}
+		}
+		select {width:242px;}
+		textarea {
+			width: 496px;
+			&:focus {
+				border-color:#3fb3de;
+				outline:none;
+			}
+		}
+	}
+	.mixed-input {
+		margin-bottom:30px;
+		.input {
+			display:inline-block;
+			width:242px;
+			label {
+				display:inline-block;
+				padding-left:10px;
+			}
+		}
+		input[type="text"] {
+			margin-left:30px;
+			width: 218px;
+		}
+	}
+	label {
+			display:inline-block;
+			padding-left:10px;
+		}
+}
+
+fieldset {
+	ul {
+		list-style: none;
+		li {
+			margin-bottom:5px;
+		}
+		&.choose-many {
+			li {
+				width: 33%;
+				float: left;
+			}
+		}
+	}
+}
+
+.linkedin {
+	@include gradient(#6ebbdf, #57a6cb);
+	box-shadow: inset 0 -2px 6px #499ac0, inset 0 1px 1px #a6d7ed;
+	border-color:#1c6384;
+	color:#fff;
+	text-shadow:0 0px 2px rgba(0,0,0,0.4);
+	text-align:center;
+	padding:10px 50px;
+	margin:0 auto;
+	&:hover {
+		@include gradient(#73bfe2, #65b3d7);
+		box-shadow: inset 0 1px 1px #a6d7ed;
+		color:#fff;
+	}
+	&:active {
+		@include gradient(#73bfe2, #65b3d7);
+		box-shadow: inset 0 1px 2px #499ac0;
+	}
+}
+
+legend, .legend {
+	color:#6B6B6B;
+	margin-bottom:8px;
+	display:block;
 }
 
 .main {
@@ -731,7 +902,6 @@ footer {
 	border-radius:0 0 5px 5px;
 	border:1px solid $ltgrey;
 	border-top:none;
-	margin-bottom:40px;
 	padding:80px 40px;
 	color:#b2b2b2;
 	.links {
@@ -761,6 +931,7 @@ footer {
 
 .sub-footer {
 	margin-bottom:20px;
+	margin-top:40px;
 	ul {
 		@extend %h-list;
 		@extend %inline-block;
@@ -927,6 +1098,7 @@ footer {
 			background:rgba(0,0,0,0.7);
 			padding:10px;
 			border-radius:5px;
+			text-align:center;
 		}
 		.btn {
 			display:block;
