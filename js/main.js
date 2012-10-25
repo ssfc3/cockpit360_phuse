@@ -25,7 +25,7 @@ $(document).ready(function(){
 		});
 	}
 	
-	$(".app-subheader select").each(function(){
+	$("select").each(function(){
 	  $(this).wrap('<div class="selectbox"/>');
 		$(this).after("<span class='selecttext'></span><span class='select-arrow'></span>");
 		var val = $(this).children("option:selected").text();
@@ -90,6 +90,8 @@ $(document).ready(function(){
 
     $("#graph").hide();
 
+    $("#metrics-widget").hide();
+
     $(".tabs a").click(function(e){
     	$(this).parent().siblings().children().removeClass("active");
     	$(this).addClass("active");
@@ -98,7 +100,7 @@ $(document).ready(function(){
     	$(tab).show();
     	e.preventDefault();
         if ($("#graph").css("display") === "block") {
-            $("#metrics-widget").show();
+            $("#metrics-widget").fadeIn('slow');
         } else {
             $("#metrics-widget").hide();
         }
@@ -175,7 +177,6 @@ $(document).ready(function(){
         });
     });
 
-    $("#metrics-widget").hide();
 
 
 
