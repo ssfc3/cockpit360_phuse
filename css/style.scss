@@ -124,6 +124,14 @@ p {
 	border: 1px solid #c8c8c8;
 	border-radius:5px;
 	box-shadow: inset 0 1px 2px #f1f1f1;
+	&.error {
+		border-color: #ff0000;
+		background-color: #fef7f7;
+	}
+	&.success {
+		border-color: #13a1d5;
+		background-color: #e3f6fc;
+	}
 }
 
 $highlight: #17c2e7;
@@ -193,6 +201,32 @@ $medgrey: #c8c8c8;
 
 .highlight {
 	color:$highlight;
+}
+
+%alert {
+	padding: 6px 12px;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+
+.error {
+	color: #ff0000;
+}
+
+.success {
+	color: #02a9e7;
+}
+
+p.error {
+	@extend %alert;
+	border: 1px solid #ff0000;
+	background: #fef7f7;
+}
+
+p.success {
+	@extend %alert; 
+	border: 1px solid #02a9e7;
+	background: #e3f6fc;
 }
 
 .center {text-align:center;}
@@ -649,10 +683,6 @@ $medgrey: #c8c8c8;
 	}
 	input[type="text"], input[type="email"], input[type="password"], textarea {
 		width: 214px;
-		&.error {
-			border-color: red;
-			background: #fef7f7;
-		}
 	}
 	select {
 		width: 238px;
@@ -710,7 +740,6 @@ $medgrey: #c8c8c8;
 		content: ' ';
 	}
 	&.error {
-		color:#ff0000;
 		&:after {
 			border-left-color:#ff0000;
 		}
@@ -1084,6 +1113,10 @@ legend, .legend {
 		margin-left:27px;
 		padding:6px 12px;
 		width:125px;
+	}
+
+	.error, .success {
+		margin-left: 27px;
 	}
 }
 

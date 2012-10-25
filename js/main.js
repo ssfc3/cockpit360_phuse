@@ -68,7 +68,7 @@ $(document).ready(function(){
     	min: 0,
     	max: 500,
     	values: [0, 150],
-    	step: 1,
+    	step: 5,
     	slide: function(event, ui) {
     		$("#empl-input").val( ui.values[ 0 ] + " - " + ui.values[ 1 ] );
     	}
