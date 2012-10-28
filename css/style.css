@@ -1,5 +1,4 @@
 @import url(smoothness/jquery-ui-1.9.0.custom.min.css);
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000037}}
 html,
 button,
 input,
@@ -7,7 +6,6 @@ select,
 textarea {
   color: #222; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\0000311}}
 body {
   background: white url(../img/bg-tile.jpg) repeat;
   color: #9f9f9f;
@@ -16,21 +14,17 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.4; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\0000320}}
 a {
   color: #9f9f9f; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\0000324}}
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\0000329}}
 ::selection {
   background: #b3d4fc;
   text-shadow: none; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\0000335}}
 hr {
   display: block;
   margin: 1em 0;
@@ -39,29 +33,28 @@ hr {
   border: 0;
   border-top: 1px solid #ccc; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\0000344}}
 img {
   vertical-align: middle; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\0000346}}
 fieldset {
   margin: 0;
   padding: 0;
   border: 0; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\0000352}}
 textarea {
   resize: vertical; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\0000354}}
 h3 {
   font-size: 1.285714286em; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\0000358}}
+h4 {
+  font-size: 1.35em;
+  margin-bottom: 20px;
+  color: #9F9F9F; }
+
 p {
   line-height: 1.5; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\0000364}}
 .chromeframe {
   margin: 0.2em 0;
   padding: 0.2em 0;
@@ -71,61 +64,47 @@ p {
 /* ==========================================================================
    mixins and placeholders
    ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\0000382}}
-.page-header, .app-header, .app-subheader, .app, .signup-step > ul, .tabs, .data-list li, .alert, .discussion, #post-comment, footer, .slide .container {
+.page-header, .app-header, .app-subheader, .app, .tabs, .data-list li, .alert, .discussion, #post-comment, .signup-step > ul, footer, .slide .container {
   *zoom: 1; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\0000384}}
-  .page-header:before, .app-header:before, .app-subheader:before, .app:before, .signup-step > ul:before, .tabs:before, .data-list li:before, .alert:before, .discussion:before, #post-comment:before, footer:before, .slide .container:before, .page-header:after, .app-header:after, .app-subheader:after, .app:after, .signup-step > ul:after, .tabs:after, .data-list li:after, .alert:after, .discussion:after, #post-comment:after, footer:after, .slide .container:after {
+  .page-header:before, .app-header:before, .app-subheader:before, .app:before, .tabs:before, .data-list li:before, .alert:before, .discussion:before, #post-comment:before, .signup-step > ul:before, footer:before, .slide .container:before, .page-header:after, .app-header:after, .app-subheader:after, .app:after, .tabs:after, .data-list li:after, .alert:after, .discussion:after, #post-comment:after, .signup-step > ul:after, footer:after, .slide .container:after {
     display: table;
     content: " "; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\0000388}}
-  .page-header:after, .app-header:after, .app-subheader:after, .app:after, .signup-step > ul:after, .tabs:after, .data-list li:after, .alert:after, .discussion:after, #post-comment:after, footer:after, .slide .container:after {
+  .page-header:after, .app-header:after, .app-subheader:after, .app:after, .tabs:after, .data-list li:after, .alert:after, .discussion:after, #post-comment:after, .signup-step > ul:after, footer:after, .slide .container:after {
     clear: both; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\0000393}}
 .page-header nav, .login, #post-comment .btn {
   display: block;
   float: right; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\0000398}}
-.page-header nav ul, .steps ul, .tabs, .sub-footer ul, .slide-nav {
+.page-header nav ul, .tabs, .steps ul, .sub-footer ul, .slide-nav {
   list-style: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003100}}
-  .page-header nav ul > li, .steps ul > li, .tabs > li, .sub-footer ul > li, .slide-nav > li {
+  .page-header nav ul > li, .tabs > li, .steps ul > li, .sub-footer ul > li, .slide-nav > li {
     float: left;
     margin-right: 17px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003103}}
-    .page-header nav ul > li:last-child, .steps ul > li:last-child, .tabs > li:last-child, .sub-footer ul > li:last-child, .slide-nav > li:last-child {
+    .page-header nav ul > li:last-child, .tabs > li:last-child, .steps ul > li:last-child, .sub-footer ul > li:last-child, .slide-nav > li:last-child {
       margin-right: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003107}}
-  .page-header nav ul a, .steps ul a, .tabs a, .sub-footer ul a, .slide-nav a {
+  .page-header nav ul a, .tabs a, .steps ul a, .sub-footer ul a, .slide-nav a {
     text-decoration: none; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003110}}
-.data-list, .widget-content, .members ul, footer .links ul {
+.data-list, .members ul, .widget-content, footer .links ul {
   list-style: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003112}}
-  .data-list a, .widget-content a, .members ul a, footer .links ul a {
+  .data-list a, .members ul a, .widget-content a, footer .links ul a {
     text-decoration: none; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003115}}
-.btn, .selectbox, .selecttext, .select-arrow, .login form .highlight, .proximity label, .proximity select, .proximity .prox-slider, #prox-range, .field input[type="checkbox"] + label,
-.field input[type="radio"] + label, .hint, .comment h3 span, .comment h3 a, .sub-footer ul, .slide .cta .btn img {
+.btn, .selectbox, .selecttext, .select-arrow, .login form .highlight, .proximity label, .proximity select, .proximity .prox-slider, #prox-range, .date-select, .date-select .selectbox + span, .hint, .comment h3 span, .comment h3 a, .field input[type="checkbox"] + label,
+.field input[type="radio"] + label, .sub-footer ul, .slide .cta .btn img {
   display: inline-block;
   zoom: 1;
   *display: inline; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003122}}
 .login form input[type="text"], .app input[type="text"], .app input[type="email"], .app textarea, .app input[type="password"], .widget-content input[type="text"], .widget-content input[type="email"], .widget-content textarea, .slide input[type="text"] {
   padding: 8px 12px;
   border: 1px solid #c8c8c8;
   border-radius: 5px;
   box-shadow: inset 0 1px 2px #f1f1f1; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003127}}
   .login form input.error[type="text"], .app input.error[type="text"], .app input.error[type="email"], .app textarea.error, .app input.error[type="password"], .widget-content input.error[type="text"], .widget-content input.error[type="email"], .widget-content textarea.error, .slide input.error[type="text"] {
     border-color: #ff0000;
     background-color: #fef7f7; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003131}}
   .login form input.success[type="text"], .app input.success[type="text"], .app input.success[type="email"], .app textarea.success, .app input.success[type="password"], .widget-content input.success[type="text"], .widget-content input.success[type="email"], .widget-content textarea.success, .slide input.success[type="text"] {
     border-color: #13a1d5;
     background-color: #e3f6fc; }
@@ -133,7 +112,7 @@ p {
 /* ==========================================================================
    custom styles
    ========================================================================== */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003148}}
+/** REUSABLES **/
 .btn {
   padding: 6px 16px;
   border: 1px solid #d3d3d3;
@@ -146,7 +125,6 @@ p {
   background-image: -moz-linear-gradient(top, #fdfdfd, #f6f6f6);
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fdfdfd), color-stop(1, #f6f6f6));
   background-image: linear-gradient(top, #fdfdfd, #f6f6f6); }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003157}}
   .btn:hover {
     background-color: #fdfdfd;
     background-image: -moz-linear-gradient(top, #fdfdfd, #eeeded);
@@ -154,11 +132,9 @@ p {
     background-image: linear-gradient(top, #fdfdfd, #eeeded);
     box-shadow: inset 0 -2px 3px #e3e3e3;
     color: #747474; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003162}}
   .btn:active {
     background: #eeeded;
     box-shadow: inset 0 1px 2px #d1d1d1; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003166}}
   .btn.blue {
     background-color: #5dc9f2;
     background-image: -moz-linear-gradient(top, #5dc9f2, #3cb2dd);
@@ -168,18 +144,15 @@ p {
     box-shadow: inset 0 -2px 3px #3cb2dd;
     color: #fff;
     text-shadow: 0 -1px 1px #2386b0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003172}}
     .btn.blue:hover {
       background-color: #5dc9f2;
       background-image: -moz-linear-gradient(top, #5dc9f2, #38a1c8);
       background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #5dc9f2), color-stop(1, #38a1c8));
       background-image: linear-gradient(top, #5dc9f2, #38a1c8);
       box-shadow: inset 0 -2px 3px #319fc7; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003176}}
     .btn.blue:active {
       background: #38a1c8;
       box-shadow: inset 0 1px 2px #2886a8; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003181}}
   .btn.green {
     background-color: #9bcb18;
     background-image: -moz-linear-gradient(top, #9bcb18, #8cc216);
@@ -189,57 +162,55 @@ p {
     box-shadow: inset 0 -2px 6px #75b735, inset 0 1px 2px #c1df6f;
     color: #fff;
     text-shadow: 0 0px 2px rgba(0, 0, 0, 0.4); }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003187}}
     .btn.green:hover {
       background-color: #a7d91e;
       background-image: -moz-linear-gradient(top, #a7d91e, #9bcb18);
       background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #a7d91e), color-stop(1, #9bcb18));
       background-image: linear-gradient(top, #a7d91e, #9bcb18);
       box-shadow: inset 0 1px 2px #c1df6f; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003191}}
     .btn.green:active {
       box-shadow: inset 0 1px 2px #75b735; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003195}}
   .btn.primary {
     display: block;
     text-align: center; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003202}}
 .highlight {
   color: #17c2e7; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003206}}
 p.error, p.success {
   padding: 6px 12px;
   border-radius: 5px;
   margin-bottom: 10px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003212}}
 .error {
-  color: #ff0000; }
+  color: #B94A48; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003216}}
 .success {
-  color: #02a9e7; }
+  color: #468847; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003220}}
 p.error {
-  border: 1px solid #ff0000;
-  background: #fef7f7; }
+  border: 1px solid #E6B4B3;
+  background: #F2DEDE; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003226}}
 p.success {
-  border: 1px solid #02a9e7;
-  background: #e3f6fc; }
+  border: 1px solid #B3D8B4;
+  background: #DFF0D8; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003232}}
 .center {
   text-align: center; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003234}}
+.well {
+  background: #f4f4f4;
+  box-shadow: inset 0 1px 2px #ddd; }
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  width: 1040px; }
+
+/** FORM ELEMENTS **/
 .selectbox {
   position: relative; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003237}}
   .selectbox select {
     position: relative;
     z-index: 10;
@@ -251,7 +222,6 @@ p.success {
     filter: alpha(opacity=0);
     -webkit-appearance: none; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003251}}
 .selecttext {
   position: absolute;
   left: 18px;
@@ -261,235 +231,14 @@ p.success {
   color: #757f83;
   font-weight: bold; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003262}}
 .select-arrow {
   position: absolute;
   top: 0;
   right: 0;
   width: 6px;
   height: 100%;
-  background: url(../img/dark-caret.gif) no-repeat right; }
+  background: url(../img/grey-caret.png) no-repeat right; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003273}}
-.app-subheader .selectbox {
-  border: 1px solid #313e48;
-  border-radius: 5px;
-  background: #606e79;
-  box-shadow: inset 0 1px 2px #6d7b85; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003278}}
-  .app-subheader .selectbox .selecttext {
-    color: #f4f4f4;
-    text-shadow: 0 -1px 1px #313e48;
-    font-weight: normal; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003283}}
-  .app-subheader .selectbox .select-arrow {
-    width: 26px;
-    background: url(../img/caret.gif) no-repeat 40% 45%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003287}}
-  .app-subheader .selectbox select {
-    padding-right: 18px; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003290}}
-.well {
-  background: #f4f4f4;
-  box-shadow: inset 0 1px 2px #ddd; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003295}}
-.stripe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  width: 100%;
-  height: 260px;
-  border-bottom: 1px solid #f0f0f0;
-  background: #fff; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003306}}
-.container {
-  position: relative;
-  margin: 0 auto;
-  width: 1040px; }
-
-/** $HEADER **/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003315}}
-.page-header {
-  position: relative;
-  z-index: 7;
-  padding: 70px 0 20px 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003320}}
-  .page-header nav {
-    padding-top: 30px;
-    font-weight: bold; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003325}}
-    .page-header nav a {
-      text-decoration: none;
-      font-weight: normal; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003328}}
-      .page-header nav a:hover {
-        text-decoration: underline; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003334}}
-.pre-launch.page-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  color: #f6f8fa; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003340}}
-  .pre-launch.page-header label {
-    margin-right: 12px; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003346}}
-.pre-launch .btn.blue, .slide .btn {
-  background-color: #5eb1eb;
-  background-image: -moz-linear-gradient(top, #5eb1eb, #0079d9);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #5eb1eb), color-stop(1, #0079d9));
-  background-image: linear-gradient(top, #5eb1eb, #0079d9);
-  border: 1px solid rgba(0, 0, 0, 0.5);
-  box-shadow: inset 0 1px 10px rgba(255, 255, 255, 0.3);
-  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.5);
-  font-size: 1.142857143em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003352}}
-  .pre-launch .btn.blue:hover, .slide .btn:hover {
-    background-color: #3e9ee5;
-    background-image: -moz-linear-gradient(top, #3e9ee5, #368ed0);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #3e9ee5), color-stop(1, #368ed0));
-    background-image: linear-gradient(top, #3e9ee5, #368ed0);
-    box-shadow: inset 0 1px 10px rgba(255, 255, 255, 0.2); }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003356}}
-  .pre-launch .btn.blue:active, .slide .btn:active {
-    border: 1px solid rgba(0, 0, 0, 0.7);
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5); }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003362}}
-.logo {
-  position: relative;
-  z-index: 5;
-  float: left; }
-
-/** $LOGIN **/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003370}}
-.login {
-  position: relative;
-  z-index: 500;
-  margin-bottom: 0;
-  padding-top: 20px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003376}}
-  .login form {
-    position: absolute;
-    top: 150%;
-    right: 0;
-    z-index: 300;
-    display: none;
-    padding: 23px;
-    width: 164px;
-    border-radius: 5px;
-    background: #f3f3f2;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5); }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003387}}
-    .login form:before {
-      position: absolute;
-      top: -5px;
-      right: 35px;
-      display: block;
-      border-right: 5px solid transparent;
-      border-bottom: 5px solid #f3f3f2;
-      border-left: 5px solid transparent;
-      content: ' '; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003397}}
-    .login form input[type="text"] {
-      margin-bottom: 15px;
-      width: 137px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003402}}
-    .login form .highlight {
-      padding-top: 5px;
-      text-decoration: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003407}}
-    .login form .btn {
-      float: right; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003413}}
-#overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 6;
-  display: none;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6); }
-
-/** DASHBOARD HEADER **/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003426}}
-.app-header {
-  padding: 0 25px;
-  border: 1px solid #e6e6e6;
-  border-radius: 5px 5px 0 0;
-  background: #fff;
-  box-shadow: inset 0 -4px 8px #f0f1f2;
-  position: relative;
-  z-index: 2; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003435}}
-  .app-header h1 {
-    float: right;
-    padding-top: 18px;
-    color: #a4a4a4;
-    font-size: 1.285714286em;
-    line-height: 1; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003442}}
-  .app-header .btn {
-    float: left;
-    margin: 12px 0 0 0; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003448}}
-.profile-progress {
-  float: left;
-  margin-right: 20px;
-  padding: 20px 20px 16px 12px;
-  width: 200px;
-  border-right: 1px solid #e6e6e6;
-  font-weight: bold; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003457}}
-.progress-bar {
-  position: relative;
-  float: left;
-  margin-right: 10px;
-  padding: 5px;
-  width: 150px;
-  height: 11px;
-  border-radius: 10px;
-  background: #3f4e59;
-  box-shadow: inset 0 2px 3px #20272d; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003469}}
-.progress {
-  background-color: #b2dbf8;
-  background-image: -moz-linear-gradient(top, #b2dbf8, #60a9e1);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #b2dbf8), color-stop(1, #60a9e1));
-  background-image: linear-gradient(top, #b2dbf8, #60a9e1);
-  position: relative;
-  display: block;
-  height: 100%;
-  border-radius: 10px; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003477}}
-.app-subheader {
-  padding: 20px 15px;
-  background: #36444f;
-  color: #cdd2d5;
-  position: relative;
-  z-index: 2; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003484}}
-  .app-subheader .searchbox {
-    float: right; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003489}}
-.proximity {
-  float: left; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003496}}
 .range {
   margin-right: 5px;
   margin-left: 11px;
@@ -501,7 +250,6 @@ p.success {
   background: #f7f7f7;
   box-shadow: inset 0 2px 3px #ebebeb;
   *overflow: hidden; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003507}}
   .range .ui-widget-header {
     background-color: #90a9ba;
     background-image: -moz-linear-gradient(top, #90a9ba, #5e6d78);
@@ -509,7 +257,6 @@ p.success {
     background-image: linear-gradient(top, #90a9ba, #5e6d78);
     top: 3px;
     height: 5px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003512}}
   .range .ui-slider-handle {
     top: -2px;
     width: 4px;
@@ -518,45 +265,232 @@ p.success {
     border-radius: 6px;
     background: #bebfc0;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003520}}
     .range .ui-slider-handle:focus {
       outline: none; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003524}}
 .range-input {
   border: none;
   background: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003527}}
   .range-input:focus {
     outline: none; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003530}}
+legend, .legend {
+  display: block;
+  margin-bottom: 8px;
+  color: #6B6B6B; }
+
+.stripe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 260px;
+  border-bottom: 1px solid #f0f0f0;
+  background: #fff; }
+
+/** $HEADER **/
+.page-header {
+  position: relative;
+  z-index: 7;
+  padding: 70px 0 20px 0; }
+  .page-header nav {
+    padding-top: 30px;
+    font-weight: bold; }
+    .page-header nav a {
+      text-decoration: none;
+      font-weight: normal; }
+      .page-header nav a:hover {
+        text-decoration: underline; }
+
+.pre-launch.page-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: #f6f8fa; }
+  .pre-launch.page-header label {
+    margin-right: 12px; }
+
+.pre-launch .btn.blue, .slide .btn {
+  background-color: #5eb1eb;
+  background-image: -moz-linear-gradient(top, #5eb1eb, #0079d9);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #5eb1eb), color-stop(1, #0079d9));
+  background-image: linear-gradient(top, #5eb1eb, #0079d9);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 1px 10px rgba(255, 255, 255, 0.3);
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.5);
+  font-size: 1.142857143em; }
+  .pre-launch .btn.blue:hover, .slide .btn:hover {
+    background-color: #3e9ee5;
+    background-image: -moz-linear-gradient(top, #3e9ee5, #368ed0);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #3e9ee5), color-stop(1, #368ed0));
+    background-image: linear-gradient(top, #3e9ee5, #368ed0);
+    box-shadow: inset 0 1px 10px rgba(255, 255, 255, 0.2); }
+  .pre-launch .btn.blue:active, .slide .btn:active {
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5); }
+
+.logo {
+  position: relative;
+  z-index: 5;
+  float: left; }
+
+/** $LOGIN **/
+.login {
+  position: relative;
+  z-index: 500;
+  margin-bottom: 0;
+  padding-top: 20px; }
+  .login form {
+    position: absolute;
+    top: 150%;
+    right: 0;
+    z-index: 300;
+    display: none;
+    padding: 23px;
+    width: 164px;
+    border-radius: 5px;
+    background: #f3f3f2;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5); }
+    .login form:before {
+      position: absolute;
+      top: -5px;
+      right: 35px;
+      display: block;
+      border-right: 5px solid transparent;
+      border-bottom: 5px solid #f3f3f2;
+      border-left: 5px solid transparent;
+      content: ' '; }
+    .login form input[type="text"] {
+      margin-bottom: 15px;
+      width: 137px; }
+    .login form .highlight {
+      padding-top: 5px;
+      text-decoration: none; }
+    .login form .btn {
+      float: right; }
+
+#overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 6;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); }
+
+/** DASHBOARD HEADER **/
+.app-header {
+  padding: 0 25px;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px 5px 0 0;
+  background: #fff;
+  box-shadow: inset 0 -4px 8px #f0f1f2;
+  position: relative;
+  z-index: 2; }
+  .app-header h1 {
+    float: right;
+    padding-top: 18px;
+    color: #a4a4a4;
+    font-size: 1.285714286em;
+    line-height: 1; }
+  .app-header .btn {
+    float: left;
+    margin: 12px 0 0 0; }
+
+.profile-progress {
+  float: left;
+  margin-right: 20px;
+  padding: 20px 20px 16px 12px;
+  width: 200px;
+  border-right: 1px solid #e6e6e6;
+  font-weight: bold; }
+
+.progress-bar {
+  position: relative;
+  float: left;
+  margin-right: 10px;
+  padding: 5px;
+  width: 150px;
+  height: 11px;
+  border-radius: 10px;
+  background: #3f4e59;
+  box-shadow: inset 0 2px 3px #20272d; }
+
+.progress {
+  background-color: #b2dbf8;
+  background-image: -moz-linear-gradient(top, #b2dbf8, #60a9e1);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #b2dbf8), color-stop(1, #60a9e1));
+  background-image: linear-gradient(top, #b2dbf8, #60a9e1);
+  position: relative;
+  display: block;
+  height: 100%;
+  border-radius: 10px; }
+
+.app-subheader {
+  padding: 20px 15px;
+  background: #36444f;
+  color: #cdd2d5;
+  position: relative;
+  z-index: 2; }
+  .app-subheader .searchbox {
+    float: right; }
+
+.app-subheader .selectbox {
+  border: 1px solid #313e48;
+  border-radius: 5px;
+  background: #606e79;
+  box-shadow: inset 0 1px 2px #6d7b85; }
+  .app-subheader .selectbox .selecttext {
+    color: #f4f4f4;
+    text-shadow: 0 -1px 1px #313e48;
+    font-weight: normal; }
+  .app-subheader .selectbox .select-arrow {
+    width: 26px;
+    background: url(../img/caret.gif) no-repeat 40% 45%; }
+  .app-subheader .selectbox select {
+    padding-right: 18px; }
+
+.proximity {
+  float: left; }
+
 #prox-range {
   margin-right: 5px;
   margin-left: 15px;
   width: 325px;
   background: #28323a;
   box-shadow: inset 0 1px 2px #1d252a, 0 1px 2px #495761; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003537}}
   #prox-range .ui-widget-header {
     background-color: #fbfbfc;
     background-image: -moz-linear-gradient(top, #fbfbfc, #e6e6e6);
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fbfbfc), color-stop(1, #e6e6e6));
     background-image: linear-gradient(top, #fbfbfc, #e6e6e6); }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003540}}
   #prox-range .ui-slider-handle {
     border: 5px solid #f1f5f7;
     background: #b9b9b9;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.8); }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003547}}
+.nationwide #prox-range {
+  background: #404C55;
+  box-shadow: none; }
+  .nationwide #prox-range .ui-widget-header {
+    background: #545F68;
+    box-shadow: none; }
+  .nationwide #prox-range .ui-slider-handle {
+    border-color: #545F68;
+    background: #545F68;
+    box-shadow: none; }
+.nationwide label, .nationwide #prox-input {
+  color: #696F74; }
+
 #prox-input {
   width: 55px;
   color: #c4c7c8;
   text-align: right; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003553}}
-.searchbox {
+.searchbox, #prox-zip-code {
   padding: 7px;
   border: 1px solid #192025;
   border-bottom-color: #232c33;
@@ -565,287 +499,80 @@ p.success {
   box-shadow: inset 0 1px 1px #232c33;
   color: #797f83; }
 
+#prox-zip-code {
+  width: 90px; }
+
 /** $APP **/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003565}}
 .app {
   position: relative;
   z-index: 2;
   border: 1px solid #e6e6e6;
   background: #fff; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003571}}
   .app > aside {
     float: left;
     padding: 30px 40px 0 40px;
     width: 187px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003579}}
   .app.signup {
     border-radius: 5px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003585}}
-.focused {
+.narrow {
   margin: 80px auto;
   width: 520px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003588}}
-  .focused h1 {
+  .narrow h1 {
     margin-bottom: 25px;
     color: #717171;
     text-align: center;
     text-shadow: inset 0 3px 4px #303030; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003594}}
-  .focused h2 {
+  .narrow h2 {
     text-align: center;
     font-weight: normal;
     font-size: 1.285714286em; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003601}}
-.steps {
-  overflow: hidden;
-  margin-top: 65px;
-  margin-bottom: 75px;
-  text-align: center; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003606}}
-  .steps h3 {
-    color: #6e6e6e;
-    font-size: 1.714285714em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003609}}
-    .steps h3 span {
-      color: #A8A8A8; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003613}}
-  .steps ul {
-    margin-top: 40px;
-    list-style: none;
-    text-align: center; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003618}}
-    .steps ul li {
-      margin: 0 2px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003621}}
-    .steps ul a {
-      display: block;
-      width: 98px;
-      height: 11px;
-      border: 1px solid #404648;
-      background: #363636;
-      box-shadow: inset 0 2px 2px #2d3133;
-      text-indent: -9999px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003630}}
-      .steps ul a.active {
-        background-color: #fefeff;
-        background-image: -moz-linear-gradient(top, #fefeff, #d9dbdd);
-        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fefeff), color-stop(1, #d9dbdd));
-        background-image: linear-gradient(top, #fefeff, #d9dbdd);
-        border-color: #d9dbdd;
-        box-shadow: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003636}}
-    .steps ul li:first-child a {
-      border-radius: 6px 0 0 6px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003637}}
-    .steps ul li:last-child a {
-      border-radius: 0 6px 6px 0; }
-
-/** $SIGNUP **/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003645}}
-.signup-step input[type="text"]:focus, .signup-step input[type="email"]:focus, .signup-step input[type="password"]:focus {
-  outline: none;
-  border-color: #3fb3de;
-  background: #F9FDFF; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003655}}
-.signup-step ul {
-  list-style: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003658}}
-.signup-step p {
-  margin-bottom: 30px; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003664}}
-.field {
-  position: relative;
-  float: left;
-  padding: 0 0 30px 0;
-  width: 242px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003669}}
-  .field.full {
-    float: none;
-    clear: both;
-    width: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003673}}
-    .field.full input[type="text"], .field.full input[type="email"], .field.full input[type="password"], .field.full textarea {
-      width: 492px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003677}}
-  .field.left {
-    clear: left; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003680}}
-  .field.right {
-    float: right;
-    padding-left: 36px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003684}}
-  .field input[type="text"], .field input[type="email"], .field input[type="password"], .field textarea {
-    width: 214px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003687}}
-  .field select {
-    width: 238px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003691}}
-  .field input[type="checkbox"] + label,
-  .field input[type="radio"] + label {
-    padding-left: 10px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003695}}
-  .field .selectbox {
-    border: 1px solid #c8c8c8;
-    border-radius: 5px;
-    box-shadow: inset 0 -1px 2px #f1f1f1; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003700}}
-  .field .selecttext {
-    color: #a5a5a5;
-    text-shadow: none;
-    font-weight: normal; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003705}}
-  .field .select-arrow {
-    padding: 0 10px;
-    background-position: center center;
-    background-color: #fafafa;
-    background-image: -moz-linear-gradient(top, #fafafa, #f2f2f2);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fafafa), color-stop(1, #f2f2f2));
-    background-image: linear-gradient(top, #fafafa, #f2f2f2);
-    border-left: 1px solid #c8c8c8;
-    border-radius: 0 5px 5px 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003711}}
-    .field .select-arrow:after {
-      background: url(../img/dark-caret.gif) no-repeat right;
-      content: ' ';
-      width: 6px;
-      height: 4px;
-      position: absolute;
-      right: 35%;
-      top: 50%; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003723}}
-.field-text {
-  position: absolute;
-  top: 7px;
-  left: -240px;
-  width: 220px;
-  text-align: right;
-  font-size: .9em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003730}}
-  .field-text:after {
-    position: absolute;
-    top: 6px;
-    right: -10px;
-    display: block;
-    width: 0;
-    height: 0;
-    border-top: 3px solid transparent;
-    border-bottom: 3px solid transparent;
-    border-left: 6px solid #444;
-    content: ' '; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003743}}
-  .field-text.error:after {
-    border-left-color: #ff0000; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003749}}
-.right .field-text {
-  right: -240px;
-  left: auto;
-  text-align: left; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003753}}
-  .right .field-text:after {
-    right: auto;
-    left: -10px;
-    border-right: 6px solid #444;
-    border-left: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003759}}
-  .right .field-text.error:after {
-    border-right-color: #ff0000; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003762}}
-legend, .legend {
-  display: block;
-  margin-bottom: 8px;
-  color: #6B6B6B; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003768}}
-.linkedin {
-  background-color: #6ebbdf;
-  background-image: -moz-linear-gradient(top, #6ebbdf, #57a6cb);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #6ebbdf), color-stop(1, #57a6cb));
-  background-image: linear-gradient(top, #6ebbdf, #57a6cb);
-  margin: 0 auto;
-  padding: 10px 50px;
-  border-color: #1c6384;
-  box-shadow: inset 0 -2px 6px #499ac0, inset 0 1px 1px #a6d7ed;
-  color: #fff;
-  text-align: center;
-  text-shadow: 0 0px 2px rgba(0, 0, 0, 0.4); }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003777}}
-  .linkedin:hover {
-    background-color: #73bfe2;
-    background-image: -moz-linear-gradient(top, #73bfe2, #65b3d7);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #73bfe2), color-stop(1, #65b3d7));
-    background-image: linear-gradient(top, #73bfe2, #65b3d7);
-    box-shadow: inset 0 1px 1px #a6d7ed;
-    color: #fff; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003782}}
-  .linkedin:active {
-    background-color: #73bfe2;
-    background-image: -moz-linear-gradient(top, #73bfe2, #65b3d7);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #73bfe2), color-stop(1, #65b3d7));
-    background-image: linear-gradient(top, #73bfe2, #65b3d7);
-    box-shadow: inset 0 1px 2px #499ac0; }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003791}}
-#category-select > ul > li {
-  margin-bottom: 10px;
-  color: #6B6B6B; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003795}}
-#category-select > ul ul {
-  margin-top: 5px;
-  margin-bottom: 10px;
-  margin-left: 20px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003799}}
-  #category-select > ul ul li {
-    color: #9f9f9f; }
-
 /** MAIN **/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003807}}
 .main {
   float: left;
-  padding: 20px;
+  padding: 30px 20px 20px 20px;
   width: 730px;
   border-right: 1px solid #e6e6e6; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003814}}
 .title {
-  margin-top: 10px;
-  text-align: right;
   font-weight: normal;
-  font-size: 1em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003819}}
-  .title .selectbox + .selectbox {
-    margin-left: 12px;
-    border-left: 1px solid #DFDFDF; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003823}}
-  .title span + .selectbox {
-    margin-left: 8px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003826}}
-  .title .selectbox + span {
-    margin-left: 12px; }
+  color: #17c2e7;
+  display: inline-block; }
+
+.date-select {
+  float: right; }
+  .date-select .selectbox {
+    border: 1px solid #dfdfdf;
+    padding-right: 10px;
+    border-radius: 5px 0 0 5px;
+    background-color: white;
+    background-image: -moz-linear-gradient(top, white, whitesmoke);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, white), color-stop(1, whitesmoke));
+    background-image: linear-gradient(top, white, whitesmoke); }
+  .date-select .selectbox + .selectbox {
+    margin-left: -5px;
+    border-radius: 0 5px 5px 0; }
+  .date-select .select-arrow {
+    right: 8px; }
+  .date-select .selectbox + span {
+    margin: 0 8px; }
 
 /** $TABS **/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003833}}
 .tab-container {
   clear: both;
   padding: 30px 20px 30px 30px;
   border: 1px solid lightgrey;
   border-radius: 5px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003840}}
 .tabs {
   margin-top: 40px;
   margin-left: 30px;
-  padding-bottom: 4px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003845}}
+  padding-bottom: 4px;
+  clear: both; }
   .tabs li {
     margin-right: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003847}}
     .tabs li a {
       position: relative;
       position: relative;
@@ -857,69 +584,53 @@ legend, .legend {
       background: #f7f7f7;
       text-decoration: none;
       font-weight: bold; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003858}}
       .tabs li a.active {
         padding-top: 10px;
         border-bottom-color: #fff;
         border-left: 1px solid lightgrey;
         background: #fff; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003865}}
     .tabs li:first-child a {
       border-left: 1px solid lightgrey; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003867}}
       .tabs li:first-child a.active {
         border-right: 1px solid lightgrey; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003869}}
     .tabs li:last-child a {
       border-right: 1px solid lightgrey; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003876}}
 .tab {
   position: relative; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003881}}
 .data-list {
   width: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003884}}
   .data-list li {
     margin-bottom: 17px;
     border: 1px solid #ECECEC;
     border-radius: 5px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003889}}
     .data-list li h3 {
       position: relative;
       margin-bottom: 12px;
       color: #6e6e6e;
       line-height: 1; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003894}}
       .data-list li h3 .hint {
         position: absolute;
         right: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003898}}
       .data-list li h3 span {
         color: #A8A8A8; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003903}}
   .data-list .key, .data-list .value {
     float: left;
     padding: 30px 40px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003907}}
   .data-list .key {
     padding-right: 15px;
     width: 313px;
     border-right: 1px dashed #ECECEC; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003911}}
     .data-list .key p {
       color: #A8A8A8;
       font-size: .857142857em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003916}}
   .data-list .value {
     width: 226px;
     text-align: center; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003919}}
     .data-list .value p {
       font-weight: bold; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003925}}
 .hint {
   background-color: #fefefe;
   background-image: -moz-linear-gradient(top, #fefefe, #f3f3f3);
@@ -936,7 +647,6 @@ legend, .legend {
   font-weight: normal;
   font-size: .785714286em; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003940}}
 .ui-tooltip {
   max-width: 105px;
   border: none;
@@ -947,7 +657,6 @@ legend, .legend {
   text-align: center;
   text-shadow: none;
   font-size: 13px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003950}}
   .ui-tooltip:before {
     position: absolute;
     top: -4px;
@@ -958,29 +667,70 @@ legend, .legend {
     background: url(../img/tooltip-caret.gif) no-repeat top;
     content: " "; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003962}}
 .alert {
   margin-top: 15px;
   text-transform: uppercase;
   font-weight: bold;
   font-size: .857142857em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003968}}
   .alert.warning {
     color: #e8b59e; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003969}}
   .alert p {
     float: left;
     padding-top: 6px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003973}}
   .alert .btn {
     float: right; }
 
+/** DISCUSSION **/
+.discussion {
+  margin-top: 70px;
+  padding: 0 30px 0 20px; }
+
+.comments {
+  float: left;
+  width: 430px; }
+
+.comment {
+  color: #b0b0b0; }
+  .comment h3 {
+    margin-bottom: 18px;
+    color: #8b8b8b;
+    font-size: 1.142857143em; }
+    .comment h3 span, .comment h3 a {
+      padding-left: 15px; }
+  .comment + .comment {
+    margin-top: 45px; }
+
+#post-comment textarea {
+  margin-bottom: 15px;
+  min-height: 80px;
+  width: 404px; }
+
+.members {
+  float: left;
+  padding-left: 40px;
+  width: 210px;
+  color: #5c6266; }
+  .members h4 {
+    margin-bottom: 30px;
+    padding-left: 27px;
+    background: url(../img/user.png) no-repeat left 4px;
+    font-size: 1.142857143em; }
+  .members ul {
+    padding-left: 27px; }
+    .members ul li {
+      margin-bottom: 20px; }
+  .members input[type="email"], .members .btn {
+    margin-bottom: 8px;
+    margin-left: 27px;
+    padding: 6px 12px;
+    width: 125px; }
+  .members .error, .members .success {
+    margin-left: 27px; }
+
 /** $WIDGETS **/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003980}}
 .widget {
   overflow: hidden;
   margin-bottom: 40px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003983}}
   .widget h2 {
     background-color: white;
     background-image: -moz-linear-gradient(top, white, whitesmoke);
@@ -993,53 +743,41 @@ legend, .legend {
     text-align: center;
     font-size: 1em; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003994}}
 .widget-content {
   padding: 20px;
   border: 1px solid #c8c8c8;
   border-top: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\00003999}}
   .widget-content li {
     position: relative;
     clear: both;
     overflow: hidden;
     padding-bottom: 13px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031004}}
     .widget-content li .slider {
       top: 1em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031007}}
     .widget-content li label {
-      float: left; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031010}}
+      display: inline-block;
+      padding-left: 10px; }
     .widget-content li input {
-      display: block;
-      float: right;
       margin: 1px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031015}}
     .widget-content li ul {
       clear: both;
       padding-top: 13px;
       list-style: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031020}}
     .widget-content li li {
       margin-left: 20px;
       padding-bottom: 6px;
       text-transform: uppercase;
       font-size: .8em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031028}}
   .widget-content input[type="text"], .widget-content input[type="email"], .widget-content textarea {
     margin-bottom: 15px;
     width: 121px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031033}}
   .widget-content .btn {
     display: block;
     margin-bottom: 15px;
     width: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031038}}
   .widget-content .range-slider {
     clear: both;
     padding-top: 10px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031041}}
     .widget-content .range-slider input[type="text"] {
       margin-bottom: 0;
       padding-right: 0;
@@ -1049,67 +787,204 @@ legend, .legend {
       text-align: right;
       font-size: .9em; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031054}}
-.discussion {
-  margin-top: 70px;
-  padding: 0 30px 0 20px; }
+/** $SIGNUP **/
+.signup h3 {
+  color: #6e6e6e;
+  font-size: 1.714285714em; }
+  .signup h3 span {
+    color: #A8A8A8; }
+.signup .success {
+  margin-bottom: 20px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031060}}
-.comments {
+.steps {
+  overflow: hidden;
+  margin-top: 65px;
+  margin-bottom: 65px;
+  text-align: center; }
+  .steps ul {
+    margin-top: 40px;
+    list-style: none;
+    text-align: center; }
+    .steps ul li {
+      margin: 0 2px; }
+    .steps ul a {
+      display: block;
+      width: 254px;
+      height: 11px;
+      border: 1px solid #404648;
+      background: #363636;
+      box-shadow: inset 0 2px 2px #2d3133;
+      text-indent: -9999px; }
+      .steps ul a.active {
+        background-color: #fefeff;
+        background-image: -moz-linear-gradient(top, #fefeff, #d9dbdd);
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fefeff), color-stop(1, #d9dbdd));
+        background-image: linear-gradient(top, #fefeff, #d9dbdd);
+        border-color: #d9dbdd;
+        box-shadow: none; }
+    .steps ul li:first-child a {
+      border-radius: 6px 0 0 6px; }
+    .steps ul li:last-child a {
+      border-radius: 0 6px 6px 0; }
+
+.signup-step input[type="text"]:focus, .signup-step input[type="email"]:focus, .signup-step input[type="password"]:focus {
+  outline: none;
+  border-color: #3fb3de;
+  background: #F9FDFF; }
+.signup-step ul {
+  list-style: none; }
+  .signup-step ul li {
+    margin-bottom: 7px; }
+.signup-step p {
+  margin-bottom: 30px; }
+  .signup-step p.social span {
+    display: block;
+    margin-top: 15px; }
+.signup-step h3 {
+  margin-bottom: 20px; }
+
+.field {
+  position: relative;
   float: left;
-  width: 430px; }
+  padding: 0 0 30px 0;
+  width: 242px; }
+  .field.full {
+    float: none;
+    clear: both;
+    width: 100%; }
+    .field.full input[type="text"], .field.full input[type="email"], .field.full input[type="password"], .field.full textarea {
+      width: 492px; }
+  .field.left {
+    clear: left; }
+  .field.right {
+    float: right;
+    padding-left: 36px; }
+  .field input[type="text"], .field input[type="email"], .field input[type="password"], .field textarea {
+    width: 214px; }
+  .field select {
+    width: 238px; }
+  .field input[type="checkbox"] + label,
+  .field input[type="radio"] + label {
+    padding-left: 10px; }
+  .field .selectbox {
+    border: 1px solid #c8c8c8;
+    border-radius: 5px;
+    box-shadow: inset 0 -1px 2px #f1f1f1; }
+  .field .selecttext {
+    color: #a5a5a5;
+    text-shadow: none;
+    font-weight: normal; }
+  .field .select-arrow {
+    padding: 0 10px;
+    background-position: center center;
+    background-color: #fafafa;
+    background-image: -moz-linear-gradient(top, #fafafa, #f2f2f2);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fafafa), color-stop(1, #f2f2f2));
+    background-image: linear-gradient(top, #fafafa, #f2f2f2);
+    border-left: 1px solid #c8c8c8;
+    border-radius: 0 5px 5px 0; }
+    .field .select-arrow:after {
+      background: url(../img/grey-caret.png) no-repeat right;
+      content: ' ';
+      width: 6px;
+      height: 4px;
+      position: absolute;
+      right: 35%;
+      top: 50%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031065}}
-.comment {
-  color: #b0b0b0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031067}}
-  .comment h3 {
-    margin-bottom: 18px;
-    color: #8b8b8b;
-    font-size: 1.142857143em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031071}}
-    .comment h3 span, .comment h3 a {
-      padding-left: 15px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031076}}
-  .comment + .comment {
-    margin-top: 45px; }
+.field-text {
+  position: absolute;
+  top: 7px;
+  left: -240px;
+  width: 220px;
+  text-align: right;
+  font-size: .9em; }
+  .field-text:after {
+    position: absolute;
+    top: 6px;
+    right: -10px;
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-left: 6px solid #444;
+    content: ' '; }
+  .field-text.error:after {
+    border-left-color: #ff0000; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031083}}
-#post-comment textarea {
-  margin-bottom: 15px;
-  min-height: 80px;
-  width: 404px; }
+.right .field-text {
+  right: -240px;
+  left: auto;
+  text-align: left; }
+  .right .field-text:after {
+    right: auto;
+    left: -10px;
+    border-right: 6px solid #444;
+    border-left: none; }
+  .right .field-text.error:after {
+    border-right-color: #ff0000; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031093}}
-.members {
-  float: left;
-  padding-left: 40px;
-  width: 210px;
-  color: #5c6266; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031098}}
-  .members h4 {
-    margin-bottom: 30px;
-    padding-left: 27px;
-    background: url(../img/user.png) no-repeat left 4px;
-    font-size: 1.142857143em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031104}}
-  .members ul {
-    padding-left: 27px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031107}}
-    .members ul li {
-      margin-bottom: 20px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031111}}
-  .members input[type="email"], .members .btn {
-    margin-bottom: 8px;
-    margin-left: 27px;
-    padding: 6px 12px;
-    width: 125px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031118}}
-  .members .error, .members .success {
-    margin-left: 27px; }
+.linkedin {
+  background-color: #6ebbdf;
+  background-image: -moz-linear-gradient(top, #6ebbdf, #57a6cb);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #6ebbdf), color-stop(1, #57a6cb));
+  background-image: linear-gradient(top, #6ebbdf, #57a6cb);
+  padding: 10px 30px;
+  border-color: #1c6384;
+  box-shadow: inset 0 -2px 6px #499ac0, inset 0 1px 1px #a6d7ed;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 0px 2px rgba(0, 0, 0, 0.4); }
+  .linkedin:hover {
+    background-color: #73bfe2;
+    background-image: -moz-linear-gradient(top, #73bfe2, #65b3d7);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #73bfe2), color-stop(1, #65b3d7));
+    background-image: linear-gradient(top, #73bfe2, #65b3d7);
+    box-shadow: inset 0 1px 1px #a6d7ed;
+    color: #fff; }
+  .linkedin:active {
+    background-color: #73bfe2;
+    background-image: -moz-linear-gradient(top, #73bfe2, #65b3d7);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #73bfe2), color-stop(1, #65b3d7));
+    background-image: linear-gradient(top, #73bfe2, #65b3d7);
+    box-shadow: inset 0 1px 2px #499ac0; }
+
+.yelp {
+  background-color: #e53a3e;
+  background-image: -moz-linear-gradient(top, #e53a3e, #e7383b);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #e53a3e), color-stop(1, #e7383b));
+  background-image: linear-gradient(top, #e53a3e, #e7383b);
+  box-shadow: inset 0 -2px 6px #e80b0e, inset 0 1px 1px #ef8487;
+  border-color: #a7181a;
+  padding: 10px 30px;
+  color: #fff;
+  text-shadow: 0 0px 2px rgba(0, 0, 0, 0.4); }
+  .yelp:hover {
+    background-color: #f24a4e;
+    background-image: -moz-linear-gradient(top, #f24a4e, #f54447);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f24a4e), color-stop(1, #f54447));
+    background-image: linear-gradient(top, #f24a4e, #f54447);
+    box-shadow: inset 0 1px 1px #ef8487;
+    color: #fff; }
+  .yelp:active {
+    background-color: #f24a4e;
+    background-image: -moz-linear-gradient(top, #f24a4e, #f54447);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f24a4e), color-stop(1, #f54447));
+    background-image: linear-gradient(top, #f24a4e, #f54447);
+    box-shadow: inset 0 1px 2px #c90a0d; }
+
+#category-select > ul > li {
+  margin-bottom: 10px;
+  color: #6B6B6B; }
+#category-select > ul ul {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  margin-left: 20px; }
+  #category-select > ul ul li {
+    color: #9f9f9f; }
 
 /** FOOTER **/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031126}}
 footer {
   padding: 80px 40px;
   border: 1px solid #e6e6e6;
@@ -1117,67 +992,53 @@ footer {
   border-radius: 0 0 5px 5px;
   background: #fff;
   color: #b2b2b2; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031134}}
   footer .links {
     float: left;
     width: 185px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031137}}
     footer .links h3 {
       margin-bottom: 24px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031141}}
     footer .links a:hover {
       text-decoration: underline; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031146}}
     footer .links li {
       margin-bottom: 10px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031149}}
     footer .links:first-child {
       margin-left: 220px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031152}}
     footer .links:last-child {
       padding-left: 65px;
       border-left: 1px solid #e6e6e6; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031159}}
 .sub-footer {
   margin-top: 40px;
   margin-bottom: 20px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031162}}
   .sub-footer ul {
     margin-left: 24px;
     vertical-align: middle; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031168}}
   .sub-footer.container {
     text-align: center; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031173}}
+/** SLIDER **/
 .slider {
   position: relative;
   width: 100%;
   height: 650px;
   background: #000; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031180}}
 .slide-nav {
   position: absolute;
   bottom: 50px;
   left: 45%;
   z-index: 5; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031186}}
   .slide-nav li {
     margin: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031189}}
   .slide-nav a {
     display: block;
     width: 28px;
     height: 28px;
     background: url(../img/slider-nav.png) no-repeat top right;
     text-indent: -9999px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031195}}
     .slide-nav a.active-nav {
       background-position: top left; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031201}}
 .slide {
   position: absolute;
   top: 0;
@@ -1196,16 +1057,13 @@ footer {
   -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   -moz-opacity: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031219}}
   .slide.active {
     z-index: 3;
     display: block;
     opacity: 1;
     -moz-opacity: 1; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031226}}
   .slide .container {
     padding-top: 230px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031230}}
   .slide input[type="text"] {
     display: block;
     margin-bottom: 15px;
@@ -1215,65 +1073,52 @@ footer {
     box-shadow: 0 1px 1px rgba(255, 255, 255, 0.3);
     color: #a7a7a7;
     font-size: 1.142857143em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031241}}
   .slide h1 {
     margin-bottom: 20px;
     color: #fff;
     font-size: 2.6em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031246}}
   .slide p {
     color: #c2c3c8;
     font-size: 1.5em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031250}}
   .slide .hero {
     float: left;
     width: 560px;
     text-shadow: 0 0 6px rgba(0, 0, 0, 0.5); }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031255}}
   .slide .cta {
     float: right;
     width: 350px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031258}}
     .slide .cta p {
       padding: 10px;
       border-radius: 5px;
       background: rgba(0, 0, 0, 0.7);
       text-align: center;
       font-size: .857142857em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031265}}
     .slide .cta .btn {
       display: block;
       margin-bottom: 15px;
       padding: 12px;
       text-align: center; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031270}}
       .slide .cta .btn img {
         padding-left: 8px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031279}}
 #slide1 {
   background: url(../img/slide1.jpg) no-repeat 50% 50%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031281}}
 #slide2 {
   background: url(../img/slide2.jpg) no-repeat 50% 50%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031283}}
 #slide3 {
   background: url(../img/slide3.jpg) no-repeat 50% 50%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031285}}
 #slide4 {
   background: url(../img/slide4.jpg) no-repeat 50% 50%; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031287}}
 .prelaunch-twitter {
   margin: 115px auto;
   padding-bottom: 25px;
   background: url(../img/tweet.png) no-repeat bottom center;
   text-align: center;
   font-size: 1.285714286em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031293}}
   .prelaunch-twitter p {
     position: relative;
     margin-bottom: 25px;
@@ -1282,7 +1127,6 @@ footer {
     border-radius: 5px;
     background: #fff;
     color: #636363; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031301}}
     .prelaunch-twitter p:after {
       position: absolute;
       bottom: -10px;
@@ -1292,7 +1136,6 @@ footer {
       height: 10px;
       background: url(../img/fff-bordered-caret.png) no-repeat top left;
       content: ' '; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/cockpit360\/css\/style\.scss}line{font-family:\000031313}}
   .prelaunch-twitter a {
     color: #209be2;
     text-decoration: none;

@@ -29,28 +29,57 @@
                 <a href="#" class="highlight">Having trouble?</a>
                 <input type="submit" class="btn" value="Go" />
             </form>
-        </div>
+        </div>s
     </header>
 
     <div class="app signup">
         <div class="narrow">
             <h1>Sign up to Cockpit360 for free today!</h1>
-            <h2 class="highlight">Collect Business Data</h2>
+            <h2 class="highlight">Get your hands on this revolutionary platform in 2 easy steps</h2>
             <div class="steps">
-                <h3>Step 4 <span>of 5</h3>
+                <h3>Step 2: <span>Configure Options</h3>
                 <ul>
-                    <li><a  href="signup1.html">One</a></li>
-                    <li><a href="signup2.html">Two</a></li>
-                    <li><a  href="signup3.html">Three</a></li>
-                    <li><a href="signup4.html">Four</a></li>
-                    <li><a class="active"  href="signup4.html" href="signup5.html">Five</a></li>
+                    <li><a  href="signup.html">One</a></li>
+                   
+                    <li><a class="active" href="options.html">Two</a></li>
                 </ul>
             </div>
+            <p class="success">Congratulations, your account has been created successfully!<br /> Next, please configure the options below to make sure you get the most out of Cockpit360.</p>
             <form class="signup-step">
-               <ul>
+                <ul>
+                <h3>Users</h3>
                  <li class="field full">
-                    <input type="radio" name="collect-data" value="auto" id="auto" /><label for="auto">Collect data about my business automatically</label>
+                    <fieldset>
+                        <legend>Check the secondary titles that apply to yourself</legend>
+                        <ul>
+                            <li><input type="checkbox" id="owner"><label for="owner">Owner</label></li>
+                            <li><input type="checkbox" id="coowner"><label for="coowner">Co-Owner</label></li>
+                            <li><input type="checkbox" id="founder"><label for="founder">Founder</label></li>
+                            <li><input type="checkbox" id="cofounder"><label for="cofounder">Co-founder</label></li>
+                            <li><input type="checkbox" id="ce"><label for="ce">Chief Executive</label></li>
+                            <li><input type="checkbox" id="decmaker"><label for="decmaker">Decision-maker</label></li>
+                        </ul>
+                    </fieldset>
                 </li>
+                <li class="field full">
+                    <fieldset>
+                        <legend>Would you like to assign delegates or members?</legend>
+                        <ul>
+                            <li><input type="radio" value="yes" name="delegate" id="delegate-yes"><label for="delegate-yes">Yes</label></li>
+                            <li><input type="radio" value="no" name="delegate" id="no"><label for="no">No</label></li>
+                            <li><input type="radio" value="later" name="delegate" id="later"><label for="later">Later</label></li>
+                        </ul>
+                    </fieldset>
+                </li>
+                <div id="delegate-conditional" class="conditional-field">
+                    <li class="field left"><input type="text" placeholder="Delegate First Name"/></li>
+                    <li class="field right"><input type="email" placeholder="Delegate Email Address"/></li>
+                </div>
+                <h3>Data Collection</h3>
+                <li class="field full">
+                    <ul>
+                    <li><input type="radio" name="collect-data" value="auto" id="auto" /><label for="auto">Upload our data from our financial management solution</label>   
+                    </li><li>             
                 <div class="conditional-field mixed-input field full" id="software-conditional">
                     <fieldset>
                         <legend>I use the following financial management software:</legend>
@@ -60,12 +89,17 @@
                             <li><input type="checkbox" id="sw2"><label for="sw2">Other Software 2</label></li>
                         </ul>
                     </fieldset>
-                </div>
-                <li class="field full">
-                   <input type="radio" name="collect-data" value="manual" id="manual"><label for="manual">Collect data about my business manually</label>
+                </div></li>
+
+                <li>
+                   <input type="radio" name="collect-data" value="manual" id="manual"><label for="manual">Upload our data manually</label></li>
+               </ul>
                 </li>
-            </ul>
-               
+                   
+                </ul>   
+                 
+                  
+                </ul>
                 <p><a href="dashboard.html" class="btn green primary">Finish</a></p>
             </form>
         </div>

@@ -45,19 +45,21 @@
             <label for="prox-input">Proximity</label>
             <div class="range" id="prox-range"></div>
             <input type="text" id="prox-input" class="range-input"/>
-            <label for="location">Miles from</label>
-            <select name="" id="location">
-                <option value="">Your Location</option>
-                <option value="">Specific ZIP</option>
-                <option value="">Nationwide</option>
+            <label for="location-type">Miles from</label>
+            <select name="" id="location-type">
+                <option value="your-loc">Your Location</option>
+                <option value="zip-loc">Specific ZIP</option>
+                <option value="nation-loc">Nationwide</option>
             </select>
+            <input type="text" id="prox-zip-code" placeholder="ZIP Code" />
         </div>
         <input class="searchbox" type="text" placeholder="Search"/>
     </div>
 
     <div class="app">
         <div class="main">
-            <h2 class="title"><span class="highlight">Apple vs Peers</span> From 
+            <h2 class="title">Apple vs Peers </h2>
+            <div class="date-select">
                 <select>
                     <option>Jan</option>
                     <option>Feb</option>
@@ -77,8 +79,8 @@
                     <option>2011</option>
                     <option>2012</option>
                 </select>
-             <span>&nbsp;&nbsp;to </span>
-            <select>
+                <span>to</span>
+                <select>
                     <option>Jan</option>
                     <option>Feb</option>
                     <option>Mar</option>
@@ -97,7 +99,7 @@
                     <option>2011</option>
                     <option>2012</option>
                 </select>
-        </span></h2>
+            </div>
 
         <!-- I imagine you guys will want to implement the tabs using rails & ajax, rather than simple jquery hide/show. Let me know if you'd rather I do this differently next time -->   
 
@@ -159,8 +161,6 @@
                         </div>
                     </li>
                </ul>
-
-           
                
             </div><!-- tab -->
             <div class="tab" id="graph">
@@ -224,34 +224,42 @@
         <aside>
 
             <div class="widget" id="metrics-widget">
-                <h2>Business Metrics</h2>
+                <h2>Basic Measures</h2>
                 <ul class="widget-content" id="metrics">
                     <li>
-                        <label for="rev">Revenue</label><input id="rev" type="radio" name="metrics">
+                        <input id="rev" type="radio" name="metrics"><label for="rev">Revenue</label>
                         <div class="range-slider">
                             <div class="range" id="revenue-range"></div>
                             <input class="range-input" type="text" id="revenue-input" />
                         </div>
                     </li>
-                    <li><label for="cost">Cost</label><input id="cost" type="radio" name="metrics"></li>
-                    <li><label for="an-rev">Annual Revenue</label><input id="an-rev" type="radio" name="metrics"></li>
-                    <li><label for="em-size">Employee Size</label><input id="em-size" type="radio" name="metrics">
+                    <li><input id="cost" type="radio" name="metrics"><label for="cost">Cost</label></li>
+                    <li><input id="an-rev" type="radio" name="metrics"><label for="an-rev">Annual Revenue</label></li>
+                    <li><input id="em-size" type="radio" name="metrics"><label for="em-size">Employee Size</label>
                         <div class="range-slider">
                             <div class="range" id="empl-range"></div>
                             <input class="range-input" type="text" id="empl-input" />
                         </div>
                     </li>
-                    <li><label for="net">Net Profit Margin</label><input id="net" type="radio" name="metrics"></li>
+                    <li><input id="net" type="radio" name="metrics"><label for="net">Net Profit Margin</label></li>
                 </ul>
             </div>
 
             <div class="widget">
-                <h2>Category</h2>
+                <h2>Business Categories</h2>
                  <ul class="widget-content">
-                    <li><label for="1">Construction</label><input id="1" type="checkbox"></li>
-                    <li><label for="2">Education</label><input id="2" type="checkbox"></li>
-                    <li><label for="3">Leisure</label><input id="3" type="checkbox"></li>
-                    <li><label for="4">Entertainment</label><input id="4" type="checkbox"></li>
+                    <li><input id="1" type="checkbox"><label for="1">Construction</label></li>
+                    <li><input id="2" type="checkbox"><label for="2">Education</label></li>
+                    <li><input id="3" type="checkbox"><label for="3">Leisure</label></li>
+                    <li><input id="5" type="checkbox"><label for="5">Retail</label></li>
+                    <li><input id="6" type="checkbox"><label for="6">Foodservice</label></li>
+                    <li><a href="#more-cats" class="highlight show-more">Show More</a></li>
+                    <div id="more-cats" class="more">
+                        <li><input id="7" type="checkbox"><label for="7">Healthcare</label></li>
+                        <li><input id="8" type="checkbox"><label for="8">Technology</label></li>
+                        <li><input id="9" type="checkbox"><label for="9">Auto Care</label></li>
+                        <li><input id="10" type="checkbox"><label for="10">Personal Care</label></li>
+                    </div>
                 </ul>
             </div>
 
