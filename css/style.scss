@@ -51,19 +51,30 @@ fieldset {
 
 textarea {resize: vertical; }
 
-h3 {
+h1 {
+	margin-bottom:25px;
+	color:#717171;
+	font-size:2em;
+}
+
+h2 {
+	text-align:center;
+	font-weight:normal;
+	font-size:1.285714286em;
+}
+
+h3 { 
+	margin-bottom:20px;
 	font-size:1.285714286em;
 }
 
 h4 {
-	font-size: 1.35em;
 	margin-bottom: 20px;
 	color: #9F9F9F;
+	font-size: 1.35em;
 }
 
-p {
-	line-height:1.5;
-}
+p {line-height:1.5; }
 
 .chromeframe {
     margin: 0.2em 0;
@@ -151,6 +162,7 @@ $medgrey: #c8c8c8;
    ========================================================================== */
 
  /** REUSABLES **/
+
 .btn {
 	@extend %inline-block;
 	padding:6px 16px;
@@ -160,14 +172,15 @@ $medgrey: #c8c8c8;
 	color:#8b8b8b;
 	text-decoration:none;
 	font-weight:bold;
+	@include gradient(#fdfdfd, #f6f6f6);
 	&:hover {
-		@include gradient(#fdfdfd, #eeeded);
-		box-shadow: inset 0 -2px 3px #e3e3e3;
+		@include gradient(lighten(#fdfdfd, 1%), lighten(#f6f6f6, 2%));
+		box-shadow: inset 0 -2px 3px lighten(#ededed, 3%);
 		color:#747474;
 	}
 	&:active {
-		background: #eeeded;
-		box-shadow: inset 0 1px 2px #d1d1d1;
+		background: #f6f6f6;
+		box-shadow: inset 0 1px 2px darken(#ededed, 5%);
 	}
 	&.blue {
 		@include gradient(#5dc9f2, #3cb2dd);
@@ -176,12 +189,12 @@ $medgrey: #c8c8c8;
 		color:#fff;
 		text-shadow:0 -1px 1px #2386b0;
 		&:hover {
-			@include gradient(#5dc9f2, #38a1c8);
-			box-shadow: inset 0 -2px 3px #319fc7;
+			@include gradient(lighten(#5dc9f2, 5%), lighten(#3cb2dd, 7%));
+			box-shadow: inset 0 -2px 3px lighten(#3cb2dd, 11%);
 		}
 		&:active {
-			background: #38a1c8;
-			box-shadow: inset 0 1px 2px #2886a8;
+			background: #3cb2dd;
+			box-shadow: inset 0 1px 2px darken(#3cb2dd, 9%);
 		}
 	}
 	&.green {
@@ -191,18 +204,55 @@ $medgrey: #c8c8c8;
 		color:#fff;
 		text-shadow:0 0px 2px rgba(0,0,0,0.4);
 		&:hover {
-			@include gradient(#a7d91e, #9bcb18);
-			box-shadow: inset 0 1px 2px #c1df6f;
+			@include gradient( lighten(#9bcb18, 1%), lighten(#8cc216, 3%));
+			box-shadow: inset 0 1px 2px lighten(#c1df6f, 5%);
 		}
 		&:active {
-			box-shadow: inset 0 1px 2px #75b735;
+			background:#8cc216;
+			box-shadow: inset 0 1px 2px darken(#75b735, 8%);
+		}
+	}
+	&.red {
+		$yred: #D10100;
+		@include gradient(lighten($yred, 15%), $yred);
+		padding:10px 30px;
+		border-color:darken($yred, 10%);
+		box-shadow: inset 0 -2px 6px darken($yred, 5%), inset 0 1px 1px lighten($yred, 40%);
+		color:#fff;
+		text-shadow:0 0px 2px rgba(0,0,0,0.4);
+		&:hover{
+			@include gradient(lighten($yred, 18%), lighten($yred, 4%));
+			box-shadow: inset 0 -2px 6px lighten($yred, 5%);
+			color:#fff;
+		}
+		&:active {
+			background: $yred;
+			box-shadow: inset 0 1px 2px darken($yred, 10%);
+		}
+	}
+	&.altblue {
+		$liblue: #3299CC;
+		@include gradient(lighten($liblue, 15%), $liblue);
+		padding:10px 30px;
+		border-color:darken($liblue, 10%);
+		box-shadow: inset 0 -2px 6px darken($liblue, 5%), inset 0 1px 1px lighten($liblue, 30%);
+		color:#fff;
+		text-align:center;
+		text-shadow:0 0px 2px rgba(0,0,0,0.4);
+		&:hover {
+			@include gradient(lighten($liblue, 18%), lighten($liblue, 4%));
+			box-shadow: inset 0 -2px 6px lighten($liblue, 5%);
+			color:#fff;
+		}
+		&:active {
+			background: $liblue;
+			box-shadow: inset 0 1px 2px darken($liblue, 10%);
 		}
 	}
 	&.primary {
 		display:block;
 		text-align:center;
-	}
-	@include gradient(#fdfdfd, #f6f6f6);
+	}	
 }
 
 .highlight {
@@ -210,16 +260,16 @@ $medgrey: #c8c8c8;
 }
 
 %alert {
+	margin-bottom: 10px;
 	padding: 6px 12px;
 	border-radius: 5px;
-	margin-bottom: 10px;
 }
 
-.error {
+.error, .error a {
 	color: #B94A48;
 }
 
-.success {
+.success, .success a {
 	color: #468847;
 }
 
@@ -253,9 +303,24 @@ p.success {
 
 /** FORM ELEMENTS **/
 
+.selectbox {
+		
+	}
+	.selecttext {
+		/* color: #a5a5a5; */
+		/* text-shadow: none; */
+		/* font-weight:normal; */
+	}
+	.select-arrow {
+		
+	}
+
 .selectbox { 
 	@extend %inline-block;
 	position: relative;
+	border: 1px solid #c8c8c8;
+	border-radius:5px;
+	box-shadow: inset 0 -1px 2px #f1f1f1;
 	select { 
 		position: relative;
 		z-index: 10; 
@@ -276,18 +341,30 @@ p.success {
 	z-index: 9;
 	padding-top: 5px;
 	background: transparent;
-	color: #757f83;
-	font-weight: bold;
+	
 }
 
 .select-arrow {
 	@extend %inline-block;
+	@include gradient(#fafafa, #f2f2f2);
 	position: absolute;
 	top: 0;
 	right: 0;
+	padding: 0 10px;
 	width: 6px;
 	height: 100%;
-	background: url(../img/grey-caret.png) no-repeat right;
+	border-left: 1px solid #c8c8c8;
+	border-radius: 0 5px 5px 0;
+	background-position: center center;
+	&:after {
+		position: absolute;
+		top: 50%;
+		right: 35%;
+		width: 6px;
+		height: 4px;
+		background: url(../img/grey-caret.png) no-repeat right;
+		content: ' ';
+	}
 }
 
 .range {
@@ -457,13 +534,13 @@ legend, .legend {
 
 .app-header {
 	@extend %clearfix;
+	position:relative;
+	z-index: 2;
 	padding:0 25px;
 	border:1px solid $ltgrey;
 	border-radius:5px 5px 0 0;
 	background:#fff;
 	box-shadow: inset 0 -4px 8px #f0f1f2;
-	position:relative;
-	z-index: 2;
 	h1 {
 		float: right;
 		padding-top:18px;
@@ -508,11 +585,11 @@ legend, .legend {
 
 .app-subheader {
 	@extend %clearfix;
+	position:relative;
+	z-index: 2;
 	padding:20px 15px;
 	background:#36444f;
 	color:#cdd2d5;
-	position:relative;
-	z-index: 2;
 	.searchbox {
 		float: right;
 	}
@@ -525,12 +602,16 @@ legend, .legend {
 	box-shadow: inset 0 1px 2px #6d7b85;
 	.selecttext {
 		color: #f4f4f4;
-		text-shadow: 0 -1px 1px #313e48;
-		font-weight: normal;
+		text-shadow: 0 -1px 1px #313e48;		
 	}
 	.select-arrow {
 		width: 26px;
-		background: url(../img/caret.gif) no-repeat 40% 45%;
+		border: none;
+		background: none;
+		&:after {
+			top: 40%;
+			right: 25%;
+		}
 	}
 	select {padding-right:18px;}
 }
@@ -627,12 +708,9 @@ legend, .legend {
 		margin-bottom:25px;
 		color:#717171;
 		text-align:center;
-		text-shadow:inset 0 3px 4px #303030;
 	}
 	h2 {
 		text-align:center;
-		font-weight:normal;
-		font-size:1.285714286em;
 	}
 }
 
@@ -646,30 +724,38 @@ legend, .legend {
 }
 
 .title {
-	font-weight: normal;
-	color:$highlight;
 	display: inline-block;
+	color:$highlight;
+	font-weight: normal;
 }
 
 .date-select {
 	@extend %inline-block;
 	float: right;
 	.selectbox {
-		border: 1px solid #dfdfdf;
-		padding-right:10px;
-		border-radius: 5px 0 0 5px;
 		@include gradient(#ffffff, #f5f5f5);
+		padding-right:10px;
+		border: 1px solid #dfdfdf;
+		border-radius: 5px 0 0 5px;
 	}
 	.selectbox + .selectbox {
 		margin-left: -5px;
 		border-radius: 0 5px 5px 0;
 	}
 	.select-arrow{
+		top:-3px;
 		right:8px;
+		right:0;
+		border:none;
+		background: none;
 	}
 	.selectbox + span {
 		@extend %inline-block;
 		margin: 0 8px;
+	}
+	.selecttext {
+		color: #757f83;
+	font-weight: bold;
 	}
 }
 
@@ -684,10 +770,11 @@ legend, .legend {
 
 .tabs {
 	@extend %clearfix;
+	@extend %h-list;
+	clear: both;
 	margin-top: 40px;
 	margin-left:30px;
 	padding-bottom:4px;
-	clear: both;
 	li {
 		margin-right:0;
 		a {
@@ -716,7 +803,6 @@ legend, .legend {
 			border-right:1px solid $ltltgrey;
 		}
 	}
-	@extend %h-list;
 }
 
 .tab {position: relative; }
@@ -765,7 +851,6 @@ legend, .legend {
 
 .hint {
 	@extend %inline-block;
-	@include gradient(#fefefe, #f3f3f3);
 	padding-top:1px;
 	width:16px;
 	height:15px;
@@ -776,6 +861,7 @@ legend, .legend {
 	text-decoration:none;
 	font-weight:normal;
 	font-size:.785714286em;
+	@include gradient(#fefefe, #f3f3f3);
 }
 
 .ui-tooltip {
@@ -1030,16 +1116,13 @@ legend, .legend {
 			margin-top:15px;
 		}
 	}
-	h3 {
-		margin-bottom:20px;
-	}
 
 }
 
 .field {
 	position: relative;
 	float: left;
-	padding: 0 0 30px 0;
+	padding: 0 0 23px 0;
 	width: 242px;
 	&.full {
 		float: none;
@@ -1066,32 +1149,26 @@ legend, .legend {
 	input[type="radio"] + label {
 		@extend %inline-block;
 		padding-left: 10px;
+	}	
+	ul {
+		margin-top:5px;
+		margin-bottom:10px;
+		margin-left:20px;
 	}
-	.selectbox {
-		border: 1px solid #c8c8c8;
-		border-radius:5px;
-		box-shadow: inset 0 -1px 2px #f1f1f1;
+}
+
+.conditional-field legend {
+	margin-left:20px;
+}
+
+#delegate-conditional {
+	margin-top: -10px;
+	margin-bottom:30px;
+	li {
+		padding-bottom:10px;
 	}
-	.selecttext {
-		color: #a5a5a5;
-		text-shadow: none;
-		font-weight:normal;
-	}
-	.select-arrow {
-		padding: 0 10px;
-		background-position: center center;
-		@include gradient(#fafafa, #f2f2f2);
-		border-left: 1px solid #c8c8c8;
-		border-radius: 0 5px 5px 0;
-		&:after {
-			background: url(../img/grey-caret.png) no-repeat right;
-			content: ' ';
-			width: 6px;
-			height: 4px;
-			position: absolute;
-			right: 35%;
-			top: 50%;
-		}
+	&> p {
+		margin-bottom:10px;
 	}
 }
 
@@ -1134,42 +1211,6 @@ legend, .legend {
 	&.error:after {border-right-color:#ff0000;}
 }
 
-.linkedin {
-	@include gradient(#6ebbdf, #57a6cb);
-	padding:10px 30px;
-	border-color:#1c6384;
-	box-shadow: inset 0 -2px 6px #499ac0, inset 0 1px 1px #a6d7ed;
-	color:#fff;
-	text-align:center;
-	text-shadow:0 0px 2px rgba(0,0,0,0.4);
-	&:hover {
-		@include gradient(#73bfe2, #65b3d7);
-		box-shadow: inset 0 1px 1px #a6d7ed;
-		color:#fff;
-	}
-	&:active {
-		@include gradient(#73bfe2, #65b3d7);
-		box-shadow: inset 0 1px 2px #499ac0;
-	}
-}
-
-.yelp {
-	@include gradient(#e53a3e, #e7383b);
-	box-shadow: inset 0 -2px 6px #e80b0e, inset 0 1px 1px #ef8487;
-	border-color:#a7181a;
-	padding:10px 30px;
-	color:#fff;
-	text-shadow:0 0px 2px rgba(0,0,0,0.4);
-	&:hover{
-		@include gradient(#f24a4e, #f54447);
-		box-shadow: inset 0 1px 1px #ef8487;
-		color:#fff;
-	}
-	&:active {
-		@include gradient(#f24a4e, #f54447);
-		box-shadow: inset 0 1px 2px #c90a0d;
-	}
-}
 
 #category-select > ul {
 	& >li {
@@ -1177,9 +1218,7 @@ legend, .legend {
 		color:#6B6B6B;
 	}
 	ul {
-		margin-top:5px;
-		margin-bottom:10px;
-		margin-left:20px;
+		
 		li {
 			color:#9f9f9f;
 		}
@@ -1226,9 +1265,9 @@ footer {
 	margin-bottom:20px;
 	ul {
 		@extend %h-list;
+		@extend %inline-block;
 		margin-left:24px;
 		vertical-align:middle;
-		@extend %inline-block;
 	}
 	&.container {
 		text-align:center;
@@ -1294,7 +1333,7 @@ footer {
 		@extend %clearfix;
 		padding-top:230px;
 	}
-	input[type="text"] {
+	input[type="text"], .selectbox {
 		@extend %field;
 		display:block;	
 		margin-bottom:15px;
@@ -1305,6 +1344,20 @@ footer {
 		color:#a7a7a7;
 		font-size:1.142857143em;
 	}
+	.selectbox {
+		padding:6px 12px;
+		background:#fff;
+	}
+		select {
+			width: 100%;
+		}
+		.selecttext {
+			left:12px;
+			color:#A7A7A7;
+			font-weight:normal;
+		}
+		
+	
 	h1 {
 		margin-bottom:20px;
 		color:#fff;

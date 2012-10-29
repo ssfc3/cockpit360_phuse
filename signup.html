@@ -9,9 +9,6 @@
     <title>Sign Up</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/vendor/modernizr-2.6.1.min.js"></script>
@@ -19,7 +16,7 @@
 <body>
 <div class="container">
     <header class="page-header">
-        <div class="logo"><img src="img/logo-dark.png" alt=" cockpit 360" /></div>
+        <div class="logo"><a href="index.html"><img src="img/logo-dark.png" alt=" cockpit 360" /></a></div>
         <div class="login">
             <label for="signin">Already have an account?</label>
             <a href="#" id="login-trigger" class="btn blue">Sign In</a>
@@ -40,16 +37,16 @@
                 <h3>Step 1: <span>Create Account</h3>
                 <ul>
                     <li><a class="active" href="signup.html">One</a></li>
-                   
                     <li><a href="options.html">Two</a></li>
                 </ul>
             </div>
             <form class="signup-step">
                 <h4>Optional: Register with a social network</h4>
+                <!-- pre-populates form with data from linkedin/yelp -->
                 <p class="social">
-                    <a href="#" class="btn linkedin">Register with LinkedIn</a>
-                    <a href="#" class="btn yelp">Register with Yelp</a>
-                    <span>Registering with a social network will allow Cockpit360 to import data about your business so you can get started right away.
+                    <a href="#" class="btn altblue">Register with LinkedIn</a>
+                    <a href="#" class="btn red">Register with Yelp</a>
+                    <span>Registering with a social network will allow Cockpit360 to import data about your business so you can get started right away.</span>
                 </p>
                 <h4>Or, create a new account</h4>
                 <ul>
@@ -66,24 +63,26 @@
                         <input type="text" placeholder="Company Name">
                     </li>
                      <li class="field right">
+                        <!-- stan would like this field to be auto-formatted to correct format (inline validation) -->
                         <input type="text" placeholder="Your Organization's Tax ID">
                     </li>
-                   <!--  <li class="field right">
+                    <!-- the 'field-text' element can be used for both error messages or explanatory text. adding the class 'error' makes it red -->
+                    <!--  <li class="field right">
                         <input class="error" type="text" placeholder="Your Organization's Tax ID">
                         <span class="field-text error">Please enter a valid Tax ID</span>
                     </li> -->
                     <li class="field left">
                         <select name="category" id="category">
-                            <option value="">Your Business Type</option>
-                            <option value="">Foodservice</option>
-                            <option value="">Retail</option>
-                            <option value="">Something Else</option>
-                            <option value="">Something Else</option>
+                            <option>Your Business Type</option>
+                            <option>Foodservice</option>
+                            <option>Retail</option>
+                            <option>Something Else</option>
+                            <option>Something Else</option>
                         </select>
                     </li>
                     <li class="field right">
                         <select name="category" id="category">
-                            <option value="">Legal Formation</option>
+                            <option>Legal Formation</option>
                             <option>Sole Proprietorship</option>
                             <option>General Parntership</option>
                             <option>Limited Liability Partnership (LLP)</option>
@@ -95,113 +94,114 @@
                     <li class="field left">
                         <input type="text" placeholder="Primary Zip Code" />
                     </li>
-                    <li class="field right"><input type="text" placeholder="Incorporation Date"></li>
+                    <li class="field right"><input type="text" class="datepicker" placeholder="Incorporation Date"></li>
                 </ul>   
-                 
-                    <fieldset id="category-select">
-                        <legend><strong>Category</strong>&mdash;Check all that apply</legend>
-                        <!-- The show/hide functionality should be easy to integrate: just make sure that the 'data-cat' attribute of the *parent category checkbox* matches the ID of the child UL -->
-                        <ul class="field full">
-                            <li><input type="checkbox" data-cat="pro-services" id="pro-service-cat"/><label for="pro-service-cat">Professional Services</label>
-                                <ul id="pro-services">
-                                    <li><input type="checkbox" id="leg"/><label for="leg">Legal Services</label></li>
-                                    <li><input type="checkbox" id="cpa"/><label for="cpa">CPA</label></li>
-                                    <li><input type="checkbox" id="tax"/><label for="tax">Tax</label></li>
-                                    <li><input type="checkbox" id="adv"/><label for="adv">Advisory</label></li>
-                                    <li><input type="checkbox" id="arch"/><label for="arc">Architecture</label></li>
-                                    <li><input type="checkbox" id="eng"/><label for="eng">Engineering</label></li>
-                                    <li><input type="checkbox" id="conman"/><label for="conman">Construction Management</label></li>
-                                </ul>
-                            </li>
-                            <li><input type="checkbox" data-cat="digital-services" id="digital-services-cat"><label for="digital-services-cat">Digital Products and Services</label>
-                                <ul id="digital-services">
-                                    <li><input type="checkbox"><label>Web Design</label></li>
-                                    <li><input type="checkbox"><label>Web Development</label></li>
-                                    <li><input type="checkbox"><label>Ad Firms</label></li>
-                                    <li><input type="checkbox"><label>Legal (online)</label></li>
-                                    <li><input type="checkbox"><label>Tax (online)</label></li>
-                                    <li><input type="checkbox"><label>Software</label></li>
-                                    <li><input type="checkbox"><label>Internet Software (SaaS)</label></li>
-                                    <li><input type="checkbox"><label>Platform Software (PaaS)</label></li>
-                                    <li><input type="checkbox"><label>IaaS</label></li>
-                                    <li><input type="checkbox" data-cat="ecommerce"><label>ecommerce</label>
-                                        <ul id="ecommerce">
-                                            <li><input type="checkbox"><label>Dating</label></li>
-                                            <li><input type="checkbox"><label>Retail</label></li>
-                                        </ul>
-                                    </li>
-                                </ul>   
-                            </li>
-                            <li><input type="checkbox" data-cat="retail" id="retail-cat"><label for="retail-cat">Retail</label>
-                               <ul id="retail">
-                                    <li><input type="checkbox" id="boutique"><label for="boutique">Boutique</label></li>
-                                    <li><input type="checkbox" id="auto"><label for="boutique">Auto Dealership</label></li>
-                                </ul>
-                            </li>
-                            <li><input type="checkbox" data-cat="healthcare" id="healthcare-cat"><label for="healthcare-cat">Healthcare</label>
-                                <ul id="healthcare">
-                                    <li><input type="checkbox" id=""><label for="">All</label></li>
-                                    <li><input type="checkbox" id=""><label for="">Audiologists</label></li>
-                                    <li><input type="checkbox" id=""><label for="">Allergist</label></li>
-                                    <li><input type="checkbox" id=""><label for="">Andrologist</label></li>
-                                    <li><input type="checkbox" id=""><label for="">Anesthesiologist</label></li>
-                                    <li><input type="checkbox" id=""><label for="">Cardiologist</label></li>
-                                    <li><input type="checkbox" id=""><label for="">Dentist (366)</label></li>
-                                    <li><input type="checkbox" id=""><label for="">Dermatologist</label></li>
-                                    <li><input type="checkbox" id=""><label for="">Family Practitioner</label></li>
-                                    <li><input type="checkbox" id=""><label for="">Geriatrician</label></li>
-                                    <li><input type="checkbox" id=""><label for="">Gynecologists</label></li>
-                                    <li><input type="checkbox" id=""><label for="">Internal Medicine Specialists</label></li>
-                                    <li><input type="checkbox" id=""><label for="">Internists</label></li>
-                                    <li><input type="checkbox" id=""><label for="">Neurologist</label></li>
-                                    <li><input type="checkbox" id=""><label for="">Oncologist</label></li>
-                                    <li><input type="checkbox" id=""><label for="">Ophthalmologist</label></li>
-                                    <li><input type="checkbox" id=""><label for="">Pediatricians</label></li>
-                                    <li><input type="checkbox" id=""><label for="">Physiatrist</label></li>
-                                    <li><input type="checkbox" id=""><label for="">Plastic Surgeon</label></li>
-                                    <li><input type="checkbox" id=""><label for="">Podiatrists</label></li>
-                                    <li><input type="checkbox" id=""><label for="">Psychiatrists</label></li>
-                                    <li><input type="checkbox" id=""><label for="">Urologists</label></li>
-                                    <li><input type="checkbox" id=""><label for="">Veterinarian</label></li>
-                                </ul>
-                            </li>
-                            <li><input type="checkbox" data-cat="homecare" id="homecare-cat"><label for="homecare-cat">Homecare</label></li>
-                            <li><input type="checkbox" data-cat="tech" id="tech-cat"><label for="tech-cat">Technology</label>
-                                <ul id="tech">
-                                    <li><input type="checkbox" id=""><label for="">Web Development</label></li>
-                                    <li><input type="checkbox" id=""><label for="">Web Design</label></li>
-                                    <li><input type="checkbox" id=""><label for="">Software</label></li>
-                                    <li><input type="checkbox" id=""><label for="">Internet Software</label></li>
-                                </ul>
-                            </li>
-                            <li><input type="checkbox" data-cat="restaurant" id="restaurant-cat"><label for="restaurant-cat">Restaurants</label>
-                                <ul id="restaurant">
-                                    <li><input type="checkbox" id=""><label for="">Bakery / Café</label></li>
-                                    <li><input type="checkbox" id=""><label for="">Breakfast</label></li>
-                                    <li><input type="checkbox" id=""><label for="">Coffee / Desserts</label></li>
-                                    <li><input type="checkbox" id=""><label for="">Fast Food</label></li>
-                                    <li><input type="checkbox" id=""><label for=""> Ethnic</label></li>
-                                    <li><input type="checkbox" id=""><label for="">Seafood</label></li>
-                                    <li><input type="checkbox" id=""><label for="">Steakhouse</label></li>
-                                    <li><input type="checkbox" id=""><label for="">Ice cream parlor</label></li>
-                                    <li><input type="checkbox" id=""><label for="">Barbeque</label></li>
-                                    <li><input type="checkbox" id=""><label for="">Pizzeria</label></li>
-                                    <li><input type="checkbox" id=""><label for="">Italian</label></li>
-                                    <li><input type="checkbox" id=""><label for="">Caribbean</label></li>
-                                    <li><input type="checkbox" id=""><label for="">Mexican</label></li>
-                                    <li><input type="checkbox" id=""><label for="">Diner</label></li>
-                                    <li><input type="checkbox" id=""><label for="">Chinese</label></li>
-                                    <li><input type="checkbox" id=""><label for="">Greek</label></li>
-                                    <li><input type="checkbox" id=""><label for="">Indian</label></li>
-                                    <li><input type="checkbox" id=""><label for="">Franchise</label></li>
-                                </ul>
-                            </li>
-                            <li><input type="checkbox" data-cat="real-estate" id="real-estate-cat"><label for="real-estate-cat">Real Estate, Rental and Leasing</label></li>
-                            <li><input type="checkbox" data-cat="auto-care" id="auto-care-cat"><label for="auto-care-cat">Auto Care</label></li>
-                            <li><input type="checkbox" data-cat="personal-care" id="personal-care-cat"><label for="personal-care-cat">Personal Care</label></li>
-                        </ul>
-                    </fieldset>
-                
+
+                <fieldset id="category-select">
+                    <legend><strong>Category</strong>&mdash;Check all that apply</legend>
+                    <!-- The show/hide functionality should be easy to integrate: just make sure that the 'data-cat' attribute of the *parent category checkbox* matches the ID of the child UL -->
+                    <ul class="field full">
+                        <li><input type="checkbox" data-cat="pro-services" id="pro-service-cat"/><label for="pro-service-cat">Professional Services</label>
+                            <ul id="pro-services">
+                                <!-- please make sure all labels match the id of related checkbox so they will be clickable -->
+                                <li><input type="checkbox" id="leg"/><label for="leg">Legal Services</label></li>
+                                <li><input type="checkbox" id="cpa"/><label for="cpa">CPA</label></li>
+                                <li><input type="checkbox" id="tax"/><label for="tax">Tax</label></li>
+                                <li><input type="checkbox" id="adv"/><label for="adv">Advisory</label></li>
+                                <li><input type="checkbox" id="arch"/><label for="arc">Architecture</label></li>
+                                <li><input type="checkbox" id="eng"/><label for="eng">Engineering</label></li>
+                                <li><input type="checkbox" id="conman"/><label for="conman">Construction Management</label></li>
+                            </ul>
+                        </li>
+                        <li><input type="checkbox" data-cat="digital-services" id="digital-services-cat"><label for="digital-services-cat">Digital Products and Services</label>
+                            <ul id="digital-services">
+                                <li><input type="checkbox"><label>Web Design</label></li>
+                                <li><input type="checkbox"><label>Web Development</label></li>
+                                <li><input type="checkbox"><label>Ad Firms</label></li>
+                                <li><input type="checkbox"><label>Legal (online)</label></li>
+                                <li><input type="checkbox"><label>Tax (online)</label></li>
+                                <li><input type="checkbox"><label>Software</label></li>
+                                <li><input type="checkbox"><label>Internet Software (SaaS)</label></li>
+                                <li><input type="checkbox"><label>Platform Software (PaaS)</label></li>
+                                <li><input type="checkbox"><label>IaaS</label></li>
+                                <li><input type="checkbox" data-cat="ecommerce"><label>ecommerce</label>
+                                    <ul id="ecommerce">
+                                        <li><input type="checkbox"><label>Dating</label></li>
+                                        <li><input type="checkbox"><label>Retail</label></li>
+                                    </ul>
+                                </li>
+                            </ul>   
+                        </li>
+                        <li><input type="checkbox" data-cat="retail" id="retail-cat"><label for="retail-cat">Retail</label>
+                           <ul id="retail">
+                                <li><input type="checkbox" id="boutique"><label for="boutique">Boutique</label></li>
+                                <li><input type="checkbox" id="auto"><label for="boutique">Auto Dealership</label></li>
+                            </ul>
+                        </li>
+                        <li><input type="checkbox" data-cat="healthcare" id="healthcare-cat"><label for="healthcare-cat">Healthcare</label>
+                            <ul id="healthcare">
+                                <li><input type="checkbox" id=""><label for="">All</label></li>
+                                <li><input type="checkbox" id=""><label for="">Audiologists</label></li>
+                                <li><input type="checkbox" id=""><label for="">Allergist</label></li>
+                                <li><input type="checkbox" id=""><label for="">Andrologist</label></li>
+                                <li><input type="checkbox" id=""><label for="">Anesthesiologist</label></li>
+                                <li><input type="checkbox" id=""><label for="">Cardiologist</label></li>
+                                <li><input type="checkbox" id=""><label for="">Dentist (366)</label></li>
+                                <li><input type="checkbox" id=""><label for="">Dermatologist</label></li>
+                                <li><input type="checkbox" id=""><label for="">Family Practitioner</label></li>
+                                <li><input type="checkbox" id=""><label for="">Geriatrician</label></li>
+                                <li><input type="checkbox" id=""><label for="">Gynecologists</label></li>
+                                <li><input type="checkbox" id=""><label for="">Internal Medicine Specialists</label></li>
+                                <li><input type="checkbox" id=""><label for="">Internists</label></li>
+                                <li><input type="checkbox" id=""><label for="">Neurologist</label></li>
+                                <li><input type="checkbox" id=""><label for="">Oncologist</label></li>
+                                <li><input type="checkbox" id=""><label for="">Ophthalmologist</label></li>
+                                <li><input type="checkbox" id=""><label for="">Pediatricians</label></li>
+                                <li><input type="checkbox" id=""><label for="">Physiatrist</label></li>
+                                <li><input type="checkbox" id=""><label for="">Plastic Surgeon</label></li>
+                                <li><input type="checkbox" id=""><label for="">Podiatrists</label></li>
+                                <li><input type="checkbox" id=""><label for="">Psychiatrists</label></li>
+                                <li><input type="checkbox" id=""><label for="">Urologists</label></li>
+                                <li><input type="checkbox" id=""><label for="">Veterinarian</label></li>
+                            </ul>
+                        </li>
+                        <li><input type="checkbox" data-cat="homecare" id="homecare-cat"><label for="homecare-cat">Homecare</label></li>
+                        <li><input type="checkbox" data-cat="tech" id="tech-cat"><label for="tech-cat">Technology</label>
+                            <ul id="tech">
+                                <li><input type="checkbox" id=""><label for="">Web Development</label></li>
+                                <li><input type="checkbox" id=""><label for="">Web Design</label></li>
+                                <li><input type="checkbox" id=""><label for="">Software</label></li>
+                                <li><input type="checkbox" id=""><label for="">Internet Software</label></li>
+                            </ul>
+                        </li>
+                        <li><input type="checkbox" data-cat="restaurant" id="restaurant-cat"><label for="restaurant-cat">Restaurants</label>
+                            <ul id="restaurant">
+                                <li><input type="checkbox" id=""><label for="">Bakery / Café</label></li>
+                                <li><input type="checkbox" id=""><label for="">Breakfast</label></li>
+                                <li><input type="checkbox" id=""><label for="">Coffee / Desserts</label></li>
+                                <li><input type="checkbox" id=""><label for="">Fast Food</label></li>
+                                <li><input type="checkbox" id=""><label for=""> Ethnic</label></li>
+                                <li><input type="checkbox" id=""><label for="">Seafood</label></li>
+                                <li><input type="checkbox" id=""><label for="">Steakhouse</label></li>
+                                <li><input type="checkbox" id=""><label for="">Ice cream parlor</label></li>
+                                <li><input type="checkbox" id=""><label for="">Barbeque</label></li>
+                                <li><input type="checkbox" id=""><label for="">Pizzeria</label></li>
+                                <li><input type="checkbox" id=""><label for="">Italian</label></li>
+                                <li><input type="checkbox" id=""><label for="">Caribbean</label></li>
+                                <li><input type="checkbox" id=""><label for="">Mexican</label></li>
+                                <li><input type="checkbox" id=""><label for="">Diner</label></li>
+                                <li><input type="checkbox" id=""><label for="">Chinese</label></li>
+                                <li><input type="checkbox" id=""><label for="">Greek</label></li>
+                                <li><input type="checkbox" id=""><label for="">Indian</label></li>
+                                <li><input type="checkbox" id=""><label for="">Franchise</label></li>
+                            </ul>
+                        </li>
+                        <li><input type="checkbox" data-cat="real-estate" id="real-estate-cat"><label for="real-estate-cat">Real Estate, Rental and Leasing</label></li>
+                        <li><input type="checkbox" data-cat="auto-care" id="auto-care-cat"><label for="auto-care-cat">Auto Care</label></li>
+                        <li><input type="checkbox" data-cat="personal-care" id="personal-care-cat"><label for="personal-care-cat">Personal Care</label></li>
+                    </ul>
+                </fieldset>
+            
                 <h3>About you</h3>
                 <ul>
                     <li class="field left">
@@ -211,14 +211,19 @@
                         <input type="text" placeholder="Last Name">
                     </li>
                     <li class="field left">
-                        <select name="role" id="role">
-                            <option value="">I am the Owner</option>
-                            <option value="">I am the Co-Owner</option>
-                            <option value="">I am the Founder</option>
-                            <option value="">I am the Co-Founder</option>
-                            <option value="">I am the CEO</option>
+                        <select name="role" class="has-other" id="role">
+                            <option>I am the Owner</option>
+                            <option>I am the Co-Owner</option>
+                            <option>I am the Founder</option>
+                            <option>I am the Co-Founder</option>
+                            <option>I am the CEO</option>
+                            <option>I am a member of the management team</option>
+                            <option value="other">Other</option>
                         </select>
                     </li>
+                    <li class="field right other-option">
+                        <input type="text" placeholder="PLease specify role"/>
+                    </li>   
                 </ul>
                 <p><a href="options.html" class="btn green primary">Step 2: Configure Options</a></p>
             </form>

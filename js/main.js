@@ -41,7 +41,7 @@ $(document).ready(function(){
 
     // Hidden stuff
 
-    $("#prox-zip-code, #graph, #metrics-widget, .conditional-field, #category-select ul ul, .more").hide();
+    $("#prox-zip-code, #graph, #metrics-widget, .other-option, .conditional-field, #category-select ul ul, .more").hide();
 
 
     // Conditions for location-switcher dropdown 
@@ -56,6 +56,14 @@ $(document).ready(function(){
         } else {
             $("#prox-zip-code").fadeOut('fast');
             $(".proximity").removeClass("nationwide");
+        }
+    });
+
+    $(".has-other").change(function(){
+        if ($(this).val() === "other") {
+            $(".other-option").fadeIn();
+        } else {
+            $(".other-option").fadeOut();
         }
     });
 
@@ -175,6 +183,24 @@ $(document).ready(function(){
         }
     });
 
+
+    $("#append-delegate").click(function(e){
+        var items = ('<li class="field left"><input type="text" placeholder="First Name"/></li><li class="field right"><input type="text" placeholder="Last Name"/><span class="field-text error"><a href="#" class="remove-field">Remove</a></span></li>');
+        e.preventDefault();
+        $(this).before(items);
+    });
+
+    $(".remove-field").live('click', function(e){
+        e.preventDefault();
+        var liParents = $(this).parent().parent("li");
+        liParents.prev().fadeOut();
+        liParents.fadeOut();
+        if ($("#delegate-conditional li").length === 0) {
+            $("input[name=delegate]").prop('checked', false);
+            $("#delegate-conditional").fadeOut();
+        }
+    });
+
     $("input[name=collect-data]").click(function(){
         var value = $(this).filter(':checked').val();
         if (value === "auto") {
@@ -209,5 +235,9 @@ $(document).ready(function(){
         }
     });
 
+    $(".datepicker").datepicker({
+        changeMonth: true,
+        changeYear: true
+    });
 
 });

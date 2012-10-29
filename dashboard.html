@@ -9,9 +9,6 @@
     <title>Dashboard</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/vendor/modernizr-2.6.1.min.js"></script>
@@ -47,10 +44,12 @@
             <input type="text" id="prox-input" class="range-input"/>
             <label for="location-type">Miles from</label>
             <select name="" id="location-type">
+                <!-- select values determine wheter zip code field is shown and whether range slider is disabled. If you change these values, please also change them in main.js -->
                 <option value="your-loc">Your Location</option>
                 <option value="zip-loc">Specific ZIP</option>
                 <option value="nation-loc">Nationwide</option>
             </select>
+            <!-- hidden by default, showin if "specific ZIP" is selected -->
             <input type="text" id="prox-zip-code" placeholder="ZIP Code" />
         </div>
         <input class="searchbox" type="text" placeholder="Search"/>
@@ -107,7 +106,7 @@
                 <li><a class="active" href="#performance-rank">Performance Ranking</a></li>
                 <li><a href="#graph">Graph</a></li>
             </ul>
-             <div class="tab-container">
+            <div class="tab-container">
             <div class="tab" id="performance-rank">
                <ul class="data-list">
                     <li>
@@ -163,6 +162,7 @@
                </ul>
                
             </div><!-- tab -->
+
             <div class="tab" id="graph">
                 <img src="img/graph.jpg" />
             </div>
@@ -170,112 +170,113 @@
                 <p>Your data is stale, please update to get reliable information</p>
                 <a class="right btn">Update your data</a>
             </div>
+
         </div>
-            <div class="discussion">
-                <div class="comments">
-                    <form id="post-comment">
-                        <textarea></textarea>
-                        <a href="#" class="btn">Post Comment</a>
-                    </form>
-                      <ul class="tabs">
-                        <li><a class="active" href="#">Internal</a></li>
-                        <li><a href="#">External</a></li>
-                    </ul>
-                    <div class="tab-container">
-                        <div class="tab">
-                        <div class="comment">
-                            <h3>John Smith <span class="highlight">64</span><a href="#"><img src="img/thumb-up.jpg" /></a><a href="#"><img src="img/thumb-down.jpg" /></a></h3>
-                            <p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia?</p>
-                        </div>
-                         <div class="comment">
-                            <h3>John Smith <span class="highlight">64</span><a href="#"><img src="img/thumb-up.jpg" /></a><a href="#"><img src="img/thumb-down.jpg" /></a></h3>
-                            <p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia?</p>
-                        </div>
-                         <div class="comment">
-                            <h3>John Smith <span class="highlight">64</span><a href="#"><img src="img/thumb-up.jpg" /></a><a href="#"><img src="img/thumb-down.jpg" /></a></h3>
-                            <p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia?</p>
-                        </div>
-                         <div class="comment">
-                            <h3>John Smith <span class="highlight">64</span><a href="#"><img src="img/thumb-up.jpg" /></a><a href="#"><img src="img/thumb-down.jpg" /></a></h3>
-                            <p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia?</p>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                <div class="members">
-                    <h4>In the conversation</h4>
-                    <ul>
-                        <li>John Smith</li>
-                        <li>Jack Jackson</li>
-                        <li>Colin Colinson</li>
-                        <li>Mary Marison</li>
-                        <li>Time Jones</li>
-                        <li><a href="#" class="highlight">Ask more people + </a></li>
-                    </ul>
-                    <input type="email" placeholder="Their Email" />
-                    <a href="#" class="btn">Ask to Comment</a>
-                    <p class="error">Please enter a valid email address</p>
-                    <p class="success">An email has been sent to example@example.com</p>
-                </div>
-            </div>
-
-        </div><!-- main -->
-
-        <aside>
-
-            <div class="widget" id="metrics-widget">
-                <h2>Basic Measures</h2>
-                <ul class="widget-content" id="metrics">
-                    <li>
-                        <input id="rev" type="radio" name="metrics"><label for="rev">Revenue</label>
-                        <div class="range-slider">
-                            <div class="range" id="revenue-range"></div>
-                            <input class="range-input" type="text" id="revenue-input" />
-                        </div>
-                    </li>
-                    <li><input id="cost" type="radio" name="metrics"><label for="cost">Cost</label></li>
-                    <li><input id="an-rev" type="radio" name="metrics"><label for="an-rev">Annual Revenue</label></li>
-                    <li><input id="em-size" type="radio" name="metrics"><label for="em-size">Employee Size</label>
-                        <div class="range-slider">
-                            <div class="range" id="empl-range"></div>
-                            <input class="range-input" type="text" id="empl-input" />
-                        </div>
-                    </li>
-                    <li><input id="net" type="radio" name="metrics"><label for="net">Net Profit Margin</label></li>
-                </ul>
-            </div>
-
-            <div class="widget">
-                <h2>Business Categories</h2>
-                 <ul class="widget-content">
-                    <li><input id="1" type="checkbox"><label for="1">Construction</label></li>
-                    <li><input id="2" type="checkbox"><label for="2">Education</label></li>
-                    <li><input id="3" type="checkbox"><label for="3">Leisure</label></li>
-                    <li><input id="5" type="checkbox"><label for="5">Retail</label></li>
-                    <li><input id="6" type="checkbox"><label for="6">Foodservice</label></li>
-                    <li><a href="#more-cats" class="highlight show-more">Show More</a></li>
-                    <div id="more-cats" class="more">
-                        <li><input id="7" type="checkbox"><label for="7">Healthcare</label></li>
-                        <li><input id="8" type="checkbox"><label for="8">Technology</label></li>
-                        <li><input id="9" type="checkbox"><label for="9">Auto Care</label></li>
-                        <li><input id="10" type="checkbox"><label for="10">Personal Care</label></li>
-                    </div>
-                </ul>
-            </div>
-
-            <div class="widget">
-                <h2>Invite Others</h2>
-                <form action="" class="widget-content">
-                    <input type="text" placeholder="Their Email">
-                    <input type="text" placeholder="Their Name">
-                    <input type="submit" class="btn blue" value="Invite">
-                    <textarea class="well" placeholder="Add a note..."></textarea>
+        <div class="discussion">
+            <div class="comments">
+                <form id="post-comment">
+                    <textarea></textarea>
+                    <a href="#" class="btn">Post Comment</a>
                 </form>
-
+                  <ul class="tabs">
+                    <li><a class="active" href="#">Internal</a></li>
+                    <li><a href="#">External</a></li>
+                </ul>
+                <div class="tab-container">
+                    <div class="tab">
+                    <div class="comment">
+                        <h3>John Smith <span class="highlight">64</span><a href="#"><img src="img/thumb-up.jpg" /></a><a href="#"><img src="img/thumb-down.jpg" /></a></h3>
+                        <p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia?</p>
+                    </div>
+                     <div class="comment">
+                        <h3>John Smith <span class="highlight">64</span><a href="#"><img src="img/thumb-up.jpg" /></a><a href="#"><img src="img/thumb-down.jpg" /></a></h3>
+                        <p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia?</p>
+                    </div>
+                     <div class="comment">
+                        <h3>John Smith <span class="highlight">64</span><a href="#"><img src="img/thumb-up.jpg" /></a><a href="#"><img src="img/thumb-down.jpg" /></a></h3>
+                        <p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia?</p>
+                    </div>
+                     <div class="comment">
+                        <h3>John Smith <span class="highlight">64</span><a href="#"><img src="img/thumb-up.jpg" /></a><a href="#"><img src="img/thumb-down.jpg" /></a></h3>
+                        <p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia?</p>
+                    </div>
+                </div>
             </div>
-
-        </aside>
+        </div>
+        <div class="members">
+            <h4>In the conversation</h4>
+            <ul>
+                <li>John Smith</li>
+                <li>Jack Jackson</li>
+                <li>Colin Colinson</li>
+                <li>Mary Marison</li>
+                <li>Time Jones</li>
+                <li><a href="#" class="highlight">Ask more people + </a></li>
+            </ul>
+            <input type="email" placeholder="Their Email" />
+            <a href="#" class="btn">Ask to Comment</a>
+            <p class="error">Please enter a valid email address</p>
+            <p class="success">An email has been sent to example@example.com</p>
+        </div>
     </div>
+
+    </div><!-- main -->
+
+    <aside>
+
+        <div class="widget" id="metrics-widget">
+            <h2>Basic Measures</h2>
+            <ul class="widget-content" id="metrics">
+                <li>
+                    <input id="rev" type="radio" name="metrics"><label for="rev">Revenue</label>
+                    <div class="range-slider">
+                        <div class="range" id="revenue-range"></div>
+                        <input class="range-input" type="text" id="revenue-input" />
+                    </div>
+                </li>
+                <li><input id="cost" type="radio" name="metrics"><label for="cost">Cost</label></li>
+                <li><input id="an-rev" type="radio" name="metrics"><label for="an-rev">Annual Revenue</label></li>
+                <li><input id="em-size" type="radio" name="metrics"><label for="em-size">Employee Size</label>
+                    <div class="range-slider">
+                        <div class="range" id="empl-range"></div>
+                        <input class="range-input" type="text" id="empl-input" />
+                    </div>
+                </li>
+                <li><input id="net" type="radio" name="metrics"><label for="net">Net Profit Margin</label></li>
+            </ul>
+        </div>
+
+        <div class="widget">
+            <h2>Business Categories</h2>
+             <ul class="widget-content">
+                <li><input id="1" type="checkbox"><label for="1">Construction</label></li>
+                <li><input id="2" type="checkbox"><label for="2">Education</label></li>
+                <li><input id="3" type="checkbox"><label for="3">Leisure</label></li>
+                <li><input id="5" type="checkbox"><label for="5">Retail</label></li>
+                <li><input id="6" type="checkbox"><label for="6">Foodservice</label></li>
+                <li><a href="#more-cats" class="highlight show-more">Show More</a></li>
+                <div id="more-cats" class="more">
+                    <li><input id="7" type="checkbox"><label for="7">Healthcare</label></li>
+                    <li><input id="8" type="checkbox"><label for="8">Technology</label></li>
+                    <li><input id="9" type="checkbox"><label for="9">Auto Care</label></li>
+                    <li><input id="10" type="checkbox"><label for="10">Personal Care</label></li>
+                </div>
+            </ul>
+        </div>
+
+        <div class="widget">
+            <h2>Invite Others</h2>
+            <form action="" class="widget-content">
+                <input type="text" placeholder="Their Email">
+                <input type="text" placeholder="Their Name">
+                <input type="submit" class="btn blue" value="Invite">
+                <textarea class="well" placeholder="Add a note..."></textarea>
+            </form>
+
+        </div>
+
+    </aside>
+</div>
 
     <footer>
         <div class="links">
