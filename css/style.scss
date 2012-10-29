@@ -321,10 +321,11 @@ p.success {
 	border: 1px solid #c8c8c8;
 	border-radius:5px;
 	box-shadow: inset 0 -1px 2px #f1f1f1;
+	padding-left: 28px;
 	select { 
 		position: relative;
 		z-index: 10; 
-		padding: 7px 0px 7px 28px; 
+		height:30px;
 		outline: none;
 		border: none; 
 		background: none;
@@ -1142,8 +1143,11 @@ legend, .legend {
 	input[type="text"], input[type="email"], input[type="password"], textarea {
 		width: 214px;
 	}
+	.selectbox {
+		width: 212px;
+	}
 	select {
-		width: 238px;
+		width: 100%;
 	}
 	input[type="checkbox"] + label,
 	input[type="radio"] + label {
@@ -1333,30 +1337,6 @@ footer {
 		@extend %clearfix;
 		padding-top:230px;
 	}
-	input[type="text"], .selectbox {
-		@extend %field;
-		display:block;	
-		margin-bottom:15px;
-		padding:12px 12px;
-		width: 324px;
-		border: 1px solid rgba(0,0,0,0.7);
-		box-shadow: 0 1px 1px rgba(255,255,255,0.3);
-		color:#a7a7a7;
-		font-size:1.142857143em;
-	}
-	.selectbox {
-		padding:6px 12px;
-		background:#fff;
-	}
-		select {
-			width: 100%;
-		}
-		.selecttext {
-			left:12px;
-			color:#A7A7A7;
-			font-weight:normal;
-		}
-		
 	
 	h1 {
 		margin-bottom:20px;
@@ -1372,27 +1352,7 @@ footer {
 		width:560px;
 		text-shadow: 0 0 6px rgba(0,0,0,0.5);
 	}
-	.cta {
-		float: right;
-		width: 350px;
-		p {
-			padding:10px;
-			border-radius:5px;
-			background:rgba(0,0,0,0.7);
-			text-align:center;
-			font-size:.857142857em;
-		}
-		.btn {
-			display:block;
-			margin-bottom:15px;
-			padding:12px;
-			text-align:center;
-			img {
-				@extend %inline-block;
-				padding-left:8px;
-			}
-		}
-	}
+	
 
 }
 
@@ -1435,4 +1395,63 @@ footer {
 		text-decoration:none;
 		font-weight:bold;
 	}
+}
+
+.email-form {
+	position: absolute;
+	width:100%;
+	z-index: 10;
+	top: 240px;
+	left: 0;
+}
+
+.cta {
+	float: right;
+	width: 350px;
+	p {
+		padding:10px;
+		border-radius:5px;
+		background:rgba(0,0,0,0.7);
+		text-align:center;
+		font-size:.857142857em;
+	}
+	.btn {
+		display:block;
+		margin-bottom:15px;
+		padding:12px;
+		text-align:center;
+		img {
+			@extend %inline-block;
+			padding-left:8px;
+		}
+	}
+	input[type="text"], .selectbox {
+		@extend %field;
+		display:block;	
+		margin-bottom:15px;
+		padding:12px 12px;
+		width: 324px;
+		border: 1px solid rgba(0,0,0,0.7);
+		box-shadow: 0 1px 1px rgba(255,255,255,0.3);
+		color:#a7a7a7;
+		font-size:1.142857143em;
+	}
+	.selectbox {
+		padding:0;
+		background:#fff;
+		width: 348px;
+
+	}
+		select {
+			width: 100%;
+			height:42px;
+		}
+		.selecttext {
+			left:12px;
+			color:#A7A7A7;
+			font-weight:normal;
+			padding-top:10px;
+		}
+		
+	
 }

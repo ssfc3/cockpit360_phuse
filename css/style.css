@@ -103,20 +103,20 @@ p {
     text-decoration: none; }
 
 .btn, .selectbox, .selecttext, .select-arrow, .login form .highlight, .proximity label, .proximity select, .proximity .prox-slider, #prox-range, .date-select, .date-select .selectbox + span, .hint, .comment h3 span, .comment h3 a, .field input[type="checkbox"] + label,
-.field input[type="radio"] + label, .sub-footer ul, .slide .cta .btn img {
+.field input[type="radio"] + label, .sub-footer ul, .cta .btn img {
   display: inline-block;
   zoom: 1;
   *display: inline; }
 
-.login form input[type="text"], .app input[type="text"], .app input[type="email"], .app textarea, .app input[type="password"], .widget-content input[type="text"], .widget-content input[type="email"], .widget-content textarea, .slide input[type="text"], .slide .selectbox {
+.login form input[type="text"], .app input[type="text"], .app input[type="email"], .app textarea, .app input[type="password"], .widget-content input[type="text"], .widget-content input[type="email"], .widget-content textarea, .cta input[type="text"], .cta .selectbox {
   padding: 8px 12px;
   border: 1px solid #c8c8c8;
   border-radius: 5px;
   box-shadow: inset 0 1px 2px #f1f1f1; }
-  .login form input.error[type="text"], .app input.error[type="text"], .app input.error[type="email"], .app textarea.error, .app input.error[type="password"], .widget-content input.error[type="text"], .widget-content input.error[type="email"], .widget-content textarea.error, .slide input.error[type="text"], .slide .error.selectbox {
+  .login form input.error[type="text"], .app input.error[type="text"], .app input.error[type="email"], .app textarea.error, .app input.error[type="password"], .widget-content input.error[type="text"], .widget-content input.error[type="email"], .widget-content textarea.error, .cta input.error[type="text"], .cta .error.selectbox {
     border-color: #ff0000;
     background-color: #fef7f7; }
-  .login form input.success[type="text"], .app input.success[type="text"], .app input.success[type="email"], .app textarea.success, .app input.success[type="password"], .widget-content input.success[type="text"], .widget-content input.success[type="email"], .widget-content textarea.success, .slide input.success[type="text"], .slide .success.selectbox {
+  .login form input.success[type="text"], .app input.success[type="text"], .app input.success[type="email"], .app textarea.success, .app input.success[type="password"], .widget-content input.success[type="text"], .widget-content input.success[type="email"], .widget-content textarea.success, .cta input.success[type="text"], .cta .success.selectbox {
     border-color: #13a1d5;
     background-color: #e3f6fc; }
 
@@ -271,11 +271,12 @@ p.success {
   position: relative;
   border: 1px solid #c8c8c8;
   border-radius: 5px;
-  box-shadow: inset 0 -1px 2px #f1f1f1; }
+  box-shadow: inset 0 -1px 2px #f1f1f1;
+  padding-left: 28px; }
   .selectbox select {
     position: relative;
     z-index: 10;
-    padding: 7px 0px 7px 28px;
+    height: 30px;
     outline: none;
     border: none;
     background: none;
@@ -940,8 +941,10 @@ legend, .legend {
     padding-left: 36px; }
   .field input[type="text"], .field input[type="email"], .field input[type="password"], .field textarea {
     width: 214px; }
+  .field .selectbox {
+    width: 212px; }
   .field select {
-    width: 238px; }
+    width: 100%; }
   .field input[type="checkbox"] + label,
   .field input[type="radio"] + label {
     padding-left: 10px; }
@@ -1080,24 +1083,6 @@ footer {
     -moz-opacity: 1; }
   .slide .container {
     padding-top: 230px; }
-  .slide input[type="text"], .slide .selectbox {
-    display: block;
-    margin-bottom: 15px;
-    padding: 12px 12px;
-    width: 324px;
-    border: 1px solid rgba(0, 0, 0, 0.7);
-    box-shadow: 0 1px 1px rgba(255, 255, 255, 0.3);
-    color: #a7a7a7;
-    font-size: 1.142857143em; }
-  .slide .selectbox {
-    padding: 6px 12px;
-    background: #fff; }
-  .slide select {
-    width: 100%; }
-  .slide .selecttext {
-    left: 12px;
-    color: #A7A7A7;
-    font-weight: normal; }
   .slide h1 {
     margin-bottom: 20px;
     color: #fff;
@@ -1109,22 +1094,6 @@ footer {
     float: left;
     width: 560px;
     text-shadow: 0 0 6px rgba(0, 0, 0, 0.5); }
-  .slide .cta {
-    float: right;
-    width: 350px; }
-    .slide .cta p {
-      padding: 10px;
-      border-radius: 5px;
-      background: rgba(0, 0, 0, 0.7);
-      text-align: center;
-      font-size: .857142857em; }
-    .slide .cta .btn {
-      display: block;
-      margin-bottom: 15px;
-      padding: 12px;
-      text-align: center; }
-      .slide .cta .btn img {
-        padding-left: 8px; }
 
 #slide1 {
   background: url(../img/slide1.jpg) no-repeat 50% 50%; }
@@ -1165,3 +1134,48 @@ footer {
     color: #209be2;
     text-decoration: none;
     font-weight: bold; }
+
+.email-form {
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  top: 240px;
+  left: 0; }
+
+.cta {
+  float: right;
+  width: 350px; }
+  .cta p {
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    font-size: .857142857em; }
+  .cta .btn {
+    display: block;
+    margin-bottom: 15px;
+    padding: 12px;
+    text-align: center; }
+    .cta .btn img {
+      padding-left: 8px; }
+  .cta input[type="text"], .cta .selectbox {
+    display: block;
+    margin-bottom: 15px;
+    padding: 12px 12px;
+    width: 324px;
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    box-shadow: 0 1px 1px rgba(255, 255, 255, 0.3);
+    color: #a7a7a7;
+    font-size: 1.142857143em; }
+  .cta .selectbox {
+    padding: 0;
+    background: #fff;
+    width: 348px; }
+  .cta select {
+    width: 100%;
+    height: 42px; }
+  .cta .selecttext {
+    left: 12px;
+    color: #A7A7A7;
+    font-weight: normal;
+    padding-top: 10px; }

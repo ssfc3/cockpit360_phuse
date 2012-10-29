@@ -168,7 +168,22 @@ $(document).ready(function(){
         	theSlide = $(this).attr("href");
         	$(theSlide).addClass('active');
         	return false;
-        })
+        });
+        setInterval(function(){
+            var cur = $('.slide-nav .active-nav').parent("li").next("li").children("a");
+            var target = $(cur).attr("href");
+            $('.slide-nav a').removeClass('active-nav');
+            if (target === undefined) {
+                nextSlide = $("#slide1");
+                $(".slide-nav li:first-child a").addClass("active-nav");
+            } else {
+                nextSlide = $(target);
+                cur.addClass('active-nav');
+            }
+            slides.removeClass('active');
+            nextSlide.addClass('active');
+            console.log(cur);
+        }, 4000);
     });
 
 
