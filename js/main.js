@@ -182,8 +182,7 @@ $(document).ready(function(){
             }
             slides.removeClass('active');
             nextSlide.addClass('active');
-            console.log(cur);
-        }, 4000);
+        }, 13000);
     });
 
 
