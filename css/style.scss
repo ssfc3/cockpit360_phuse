@@ -850,6 +850,30 @@ legend, .legend {
 	}
 }
 
+.data-legend {
+	@extend %clearfix;
+	margin:20px 0;
+	ul {
+		list-style:none;
+		float: right;
+		li {
+			margin-bottom:12px;
+			color:#bdbdbd;
+		}
+		.color {
+			width:12px;
+			height:12px;
+			@extend %inline-block;
+			margin-right:10px;
+			background:#00aeef;
+			border-radius:3px;
+			&.competitors {
+				background: #f26522;
+			}
+		}
+	}
+}
+
 .hint {
 	@extend %inline-block;
 	padding-top:1px;

@@ -75,12 +75,12 @@ p {
 /* ==========================================================================
    mixins and placeholders
    ========================================================================== */
-.page-header, .app-header, .app-subheader, .app, .tabs, .data-list li, .alert, .discussion, #post-comment, .signup-step > ul, footer, .slide .container {
+.page-header, .app-header, .app-subheader, .app, .tabs, .data-list li, .data-legend, .alert, .discussion, #post-comment, .signup-step > ul, footer, .slide .container {
   *zoom: 1; }
-  .page-header:before, .app-header:before, .app-subheader:before, .app:before, .tabs:before, .data-list li:before, .alert:before, .discussion:before, #post-comment:before, .signup-step > ul:before, footer:before, .slide .container:before, .page-header:after, .app-header:after, .app-subheader:after, .app:after, .tabs:after, .data-list li:after, .alert:after, .discussion:after, #post-comment:after, .signup-step > ul:after, footer:after, .slide .container:after {
+  .page-header:before, .app-header:before, .app-subheader:before, .app:before, .tabs:before, .data-list li:before, .data-legend:before, .alert:before, .discussion:before, #post-comment:before, .signup-step > ul:before, footer:before, .slide .container:before, .page-header:after, .app-header:after, .app-subheader:after, .app:after, .tabs:after, .data-list li:after, .data-legend:after, .alert:after, .discussion:after, #post-comment:after, .signup-step > ul:after, footer:after, .slide .container:after {
     display: table;
     content: " "; }
-  .page-header:after, .app-header:after, .app-subheader:after, .app:after, .tabs:after, .data-list li:after, .alert:after, .discussion:after, #post-comment:after, .signup-step > ul:after, footer:after, .slide .container:after {
+  .page-header:after, .app-header:after, .app-subheader:after, .app:after, .tabs:after, .data-list li:after, .data-legend:after, .alert:after, .discussion:after, #post-comment:after, .signup-step > ul:after, footer:after, .slide .container:after {
     clear: both; }
 
 .page-header nav, .login, #post-comment .btn {
@@ -102,7 +102,7 @@ p {
   .data-list a, .members ul a, .widget-content a, footer .links ul a {
     text-decoration: none; }
 
-.btn, .selectbox, .selecttext, .select-arrow, .login form .highlight, .proximity label, .proximity select, .proximity .prox-slider, #prox-range, .date-select, .date-select .selectbox + span, .hint, .comment h3 span, .comment h3 a, .field input[type="checkbox"] + label,
+.btn, .selectbox, .selecttext, .select-arrow, .login form .highlight, .proximity label, .proximity select, .proximity .prox-slider, #prox-range, .date-select, .date-select .selectbox + span, .data-legend ul .color, .hint, .comment h3 span, .comment h3 a, .field input[type="checkbox"] + label,
 .field input[type="radio"] + label, .sub-footer ul, .cta .btn img {
   display: inline-block;
   zoom: 1;
@@ -712,6 +712,23 @@ legend, .legend {
     text-align: center; }
     .data-list .value p {
       font-weight: bold; }
+
+.data-legend {
+  margin: 20px 0; }
+  .data-legend ul {
+    list-style: none;
+    float: right; }
+    .data-legend ul li {
+      margin-bottom: 12px;
+      color: #bdbdbd; }
+    .data-legend ul .color {
+      width: 12px;
+      height: 12px;
+      margin-right: 10px;
+      background: #00aeef;
+      border-radius: 3px; }
+      .data-legend ul .color.competitors {
+        background: #f26522; }
 
 .hint {
   padding-top: 1px;

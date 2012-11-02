@@ -165,6 +165,13 @@
 
             <div class="tab" id="graph">
                 <img src="img/graph.png" />
+                <div class="data-legend">
+                    <!-- if we need to have colors determined dynamically talk to me and we'll implement something using data-attributes and javascript -->
+                    <ul>
+                        <li><span class="color your-company"></span>Your Company</li>
+                        <li><span class="color competitors"></span>Competitors</li>
+                    </ul>
+                </div>
             </div>
              <div class="alert warning">
                 <p>Your data is stale, please update to get reliable information</p>
@@ -229,18 +236,18 @@
             <ul class="widget-content" id="metrics">
                 <li>
                     <input id="rev" type="radio" name="metrics"><label for="rev">Revenue</label>
-                    <div class="range-slider">
+                    <!-- <div class="range-slider">
                         <div class="range" id="revenue-range"></div>
                         <input class="range-input" type="text" id="revenue-input" />
-                    </div>
+                    </div> -->
                 </li>
                 <li><input id="cost" type="radio" name="metrics"><label for="cost">Cost</label></li>
                 <li><input id="an-rev" type="radio" name="metrics"><label for="an-rev">Annual Revenue</label></li>
                 <li><input id="em-size" type="radio" name="metrics"><label for="em-size">Employee Size</label>
-                    <div class="range-slider">
+                    <!-- <div class="range-slider">
                         <div class="range" id="empl-range"></div>
                         <input class="range-input" type="text" id="empl-input" />
-                    </div>
+                    </div> -->
                 </li>
                 <li><input id="net" type="radio" name="metrics"><label for="net">Net Profit Margin</label></li>
             </ul>
