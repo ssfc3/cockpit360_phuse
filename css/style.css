@@ -108,15 +108,15 @@ p {
   zoom: 1;
   *display: inline; }
 
-.login form input[type="text"], .app input[type="text"], .app input[type="email"], .app textarea, .app input[type="password"], .widget-content input[type="text"], .widget-content input[type="email"], .widget-content textarea, .cta input[type="text"], .cta .selectbox {
+.login form input[type="text"], .app input[type="text"], .app input[type="email"], .app textarea, .app input[type="password"], .widget-content input[type="text"], .widget-content input[type="email"], .widget-content textarea, .cta input[type="text"], .cta input[type="email"], .cta .selectbox {
   padding: 8px 12px;
   border: 1px solid #c8c8c8;
   border-radius: 5px;
   box-shadow: inset 0 1px 2px #f1f1f1; }
-  .login form input.error[type="text"], .app input.error[type="text"], .app input.error[type="email"], .app textarea.error, .app input.error[type="password"], .widget-content input.error[type="text"], .widget-content input.error[type="email"], .widget-content textarea.error, .cta input.error[type="text"], .cta .error.selectbox {
+  .login form input.error[type="text"], .app input.error[type="text"], .app input.error[type="email"], .app textarea.error, .app input.error[type="password"], .widget-content input.error[type="text"], .widget-content input.error[type="email"], .widget-content textarea.error, .cta input.error[type="text"], .cta input.error[type="email"], .cta .error.selectbox {
     border-color: #ff0000;
     background-color: #fef7f7; }
-  .login form input.success[type="text"], .app input.success[type="text"], .app input.success[type="email"], .app textarea.success, .app input.success[type="password"], .widget-content input.success[type="text"], .widget-content input.success[type="email"], .widget-content textarea.success, .cta input.success[type="text"], .cta .success.selectbox {
+  .login form input.success[type="text"], .app input.success[type="text"], .app input.success[type="email"], .app textarea.success, .app input.success[type="password"], .widget-content input.success[type="text"], .widget-content input.success[type="email"], .widget-content textarea.success, .cta input.success[type="text"], .cta input.success[type="email"], .cta .success.selectbox {
     border-color: #13a1d5;
     background-color: #e3f6fc; }
 
@@ -1057,7 +1057,8 @@ footer {
   position: relative;
   width: 100%;
   height: 650px;
-  background: #000; }
+  background: #000;
+  margin: 0 auto; }
 
 .slide-nav {
   position: absolute;
@@ -1113,16 +1114,16 @@ footer {
     text-shadow: 0 0 6px rgba(0, 0, 0, 0.5); }
 
 #slide1 {
-  background: url(../img/slide1.jpg) no-repeat 50% top; }
+  background: url(../img/slide1.jpg) no-repeat 50% 50%; }
 
 #slide2 {
-  background: url(../img/slide2.jpg) no-repeat 50% top; }
+  background: url(../img/slide2.jpg) no-repeat 50% 50%; }
 
 #slide3 {
-  background: url(../img/slide3.jpg) no-repeat 50% top; }
+  background: url(../img/slide3.jpg) no-repeat 50% 50%; }
 
 #slide4 {
-  background: url(../img/slide4.jpg) no-repeat 50% top; }
+  background: url(../img/slide4.jpg) no-repeat 50% 50%; }
 
 .prelaunch-twitter {
   margin: 115px auto;
@@ -1175,7 +1176,7 @@ footer {
     text-align: center; }
     .cta .btn img {
       padding-left: 8px; }
-  .cta input[type="text"], .cta .selectbox {
+  .cta input[type="text"], .cta input[type="email"], .cta .selectbox {
     display: block;
     margin-bottom: 15px;
     padding: 12px 12px;

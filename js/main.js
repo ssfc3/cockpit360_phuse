@@ -1,5 +1,10 @@
 $(document).ready(function(){
 
+    $("#mc-embedded-subscribe").click(function(e){
+        e.preventDefault();
+        $(this).parent("form").submit();
+    });
+
     // set placeholder fallbacks for IE
 
     if(!Modernizr.input.placeholder){
