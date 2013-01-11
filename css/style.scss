@@ -1447,7 +1447,7 @@ footer {
 			padding-left:8px;
 		}
 	}
-	input[type="text"], input[type="email"], .selectbox {
+	input, .selectbox {
 		@extend %field;
 		display:block;	
 		margin-bottom:15px;
