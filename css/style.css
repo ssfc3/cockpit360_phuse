@@ -31,7 +31,7 @@ hr {
   padding: 0;
   height: 1px;
   border: 0;
-  border-top: 1px solid #ccc; }
+  border-top: 1px solid #cccccc; }
 
 img {
   vertical-align: middle; }
@@ -102,7 +102,7 @@ p {
   .data-list a, .members ul a, .widget-content a, footer .links ul a {
     text-decoration: none; }
 
-.btn, .selectbox, .selecttext, .select-arrow, .login form .highlight, .proximity label, .proximity select, .proximity .prox-slider, #prox-range, .date-select, .date-select .selectbox + span, .data-legend ul .color, .hint, .comment h3 span, .comment h3 a, .field input[type="checkbox"] + label,
+.btn, .selectbox, .selecttext, .select-arrow, .login form .highlight, .proximity label, .proximity select, .proximity .prox-slider, #prox-range, .date-select, #basic-measures .selectbox + span, .date-select .selectbox + span, .data-legend ul .color, .hint, .comment h3 span, .comment h3 a, .field input[type="checkbox"] + label,
 .field input[type="radio"] + label, .sub-footer ul, .cta .btn img {
   display: inline-block;
   zoom: 1;
@@ -126,7 +126,7 @@ p {
 /** REUSABLES **/
 .btn {
   padding: 6px 16px;
-  border: 1px solid #d3d3d3;
+  border: 1px solid lightgrey;
   border-radius: 5px;
   box-shadow: inset 0 -2px 3px #ededed;
   color: #8b8b8b;
@@ -242,11 +242,11 @@ p.error, p.success {
   color: #468847; }
 
 p.error {
-  border: 1px solid #E6B4B3;
+  border: 1px solid #e6b4b3;
   background: #F2DEDE; }
 
 p.success {
-  border: 1px solid #B3D8B4;
+  border: 1px solid #b3d8b4;
   background: #DFF0D8; }
 
 .center {
@@ -254,7 +254,7 @@ p.success {
 
 .well {
   background: #f4f4f4;
-  box-shadow: inset 0 1px 2px #ddd; }
+  box-shadow: inset 0 1px 2px #dddddd; }
 
 .container {
   position: relative;
@@ -473,7 +473,7 @@ legend, .legend {
     line-height: 1; }
   .app-header .btn {
     float: left;
-    margin: 12px 0 0 0; }
+    margin: 12px 12px 0 0; }
 
 .profile-progress {
   float: left;
@@ -618,28 +618,29 @@ legend, .legend {
 
 .date-select {
   float: right; }
-  .date-select .selectbox {
-    background-color: white;
-    background-image: -moz-linear-gradient(top, white, whitesmoke);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, white), color-stop(1, whitesmoke));
-    background-image: linear-gradient(top, white, whitesmoke);
-    padding-right: 10px;
-    border: 1px solid #dfdfdf;
-    border-radius: 5px 0 0 5px; }
-  .date-select .selectbox + .selectbox {
-    margin-left: -5px;
-    border-radius: 0 5px 5px 0; }
-  .date-select .select-arrow {
-    top: -3px;
-    right: 8px;
-    right: 0;
-    border: none;
-    background: none; }
-  .date-select .selectbox + span {
-    margin: 0 8px; }
-  .date-select .selecttext {
-    color: #757f83;
-    font-weight: bold; }
+
+#basic-measures .selectbox, .date-select .selectbox {
+  background-color: white;
+  background-image: -moz-linear-gradient(top, white, whitesmoke);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, white), color-stop(1, whitesmoke));
+  background-image: linear-gradient(top, white, whitesmoke);
+  padding-right: 10px;
+  border: 1px solid #dfdfdf;
+  border-radius: 5px 0 0 5px; }
+#basic-measures .selectbox + .selectbox, .date-select .selectbox + .selectbox {
+  margin-left: -5px;
+  border-radius: 0 5px 5px 0; }
+#basic-measures .select-arrow, .date-select .select-arrow {
+  top: -3px;
+  right: 8px;
+  right: 0;
+  border: none;
+  background: none; }
+#basic-measures .selectbox + span, .date-select .selectbox + span {
+  margin: 0 8px; }
+#basic-measures .selecttext, .date-select .selecttext {
+  color: #757f83;
+  font-weight: bold; }
 
 /** $TABS **/
 .tab-container {
@@ -649,9 +650,8 @@ legend, .legend {
   border-radius: 5px; }
 
 .tabs {
-  clear: both;
-  margin-top: 40px;
   margin-left: 30px;
+  margin-top: 40px;
   padding-bottom: 4px; }
   .tabs li {
     margin-right: 0; }
@@ -681,11 +681,20 @@ legend, .legend {
 .tab {
   position: relative; }
 
+#basic-measures {
+  display: block;
+  float: right;
+  clear: both;
+  margin-top: 15px; }
+  #basic-measures .selectbox {
+    border-radius: 5px;
+    padding-right: 30px; }
+
 .data-list {
   width: 100%; }
   .data-list li {
     margin-bottom: 17px;
-    border: 1px solid #ECECEC;
+    border: 1px solid #ececec;
     border-radius: 5px; }
     .data-list li h3 {
       position: relative;
@@ -703,7 +712,7 @@ legend, .legend {
   .data-list .key {
     padding-right: 15px;
     width: 313px;
-    border-right: 1px dashed #ECECEC; }
+    border-right: 1px dashed #ececec; }
     .data-list .key p {
       color: #A8A8A8;
       font-size: .857142857em; }
@@ -997,7 +1006,7 @@ legend, .legend {
     height: 0;
     border-top: 3px solid transparent;
     border-bottom: 3px solid transparent;
-    border-left: 6px solid #444;
+    border-left: 6px solid #444444;
     content: ' '; }
   .field-text.error:after {
     border-left-color: #ff0000; }
@@ -1009,7 +1018,7 @@ legend, .legend {
   .right .field-text:after {
     right: auto;
     left: -10px;
-    border-right: 6px solid #444;
+    border-right: 6px solid #444444;
     border-left: none; }
   .right .field-text.error:after {
     border-right-color: #ff0000; }

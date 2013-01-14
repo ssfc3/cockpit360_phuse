@@ -34,25 +34,14 @@
             <span>60%</span>
         </div>
         <a href="#" class="btn">Finish profile</a>
+        <a href="#" class="btn">Print or Email</a>
         <h1>YC Bakery</h1>
     </div>
 
     <div class="app-subheader">
-        <div class="proximity">
-            <label for="prox-input">Proximity</label>
-            <div class="range" id="prox-range"></div>
-            <input type="text" id="prox-input" class="range-input"/>
-            <label for="location-type">Miles from</label>
-            <select name="" id="location-type">
-                <!-- select values determine wheter zip code field is shown and whether range slider is disabled. If you change these values, please also change them in main.js -->
-                <option value="your-loc">Your Location</option>
-                <option value="zip-loc">Specific ZIP</option>
-                <option value="nation-loc">Nationwide</option>
-            </select>
-            <!-- hidden by default, showin if "specific ZIP" is selected -->
-            <input type="text" id="prox-zip-code" placeholder="ZIP Code" />
-        </div>
-        <input class="searchbox" type="text" placeholder="Search"/>
+        <ul class="month-select">
+            <li><a href="#" class="year-back"><</a><a href="#" class="year-select">2012</a><a href="#" class="year-next">></a></li>
+        </ul>
     </div>
 
     <div class="app">
@@ -100,22 +89,12 @@
                 </select>
             </div>
 
-            <div id="basic-measures">
-                <select>
-                    <option value="">Select...</option>
-                    <option value="">Revenue</option>
-                    <option value="">Cost</option>
-                    <option value="">Anuual Revenue</option>
-                    <option value="">Employee Size</option>
-                    <option value="">Net Profit Margin</option>
-                </select>
-            </div>
-            
+        <!-- I imagine you guys will want to implement the tabs using ajax, rather than simple jquery hide/show. Let me know if you'd rather I do this differently next time -->   
+
             <ul class="tabs">
                 <li><a class="active" href="#performance-rank">Performance Ranking</a></li>
                 <li><a href="#graph">Performance Trends</a></li>
             </ul>
-           
             <div class="tab-container">
             <div class="tab" id="performance-rank">
                <ul class="data-list">
