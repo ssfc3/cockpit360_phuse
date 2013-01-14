@@ -1,0 +1,83 @@
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    background: #fff url(../img/bg-tile.jpg) repeat;
+    color:#9f9f9f;
+    font-size:.875em;
+    font-family: Arial, sans-serif;
+    line-height: 1.4;
+}
+
+a {
+  color:#9f9f9f;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    margin: 1em 0;
+    padding: 0;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+
+img {vertical-align: middle; }
+
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+textarea {resize: vertical; }
+
+h1 {
+  margin-bottom:25px;
+  color:#717171;
+  font-size:2em;
+}
+
+h2 {
+ // text-align:center;
+  font-weight:normal;
+  font-size:1.285714286em;
+  margin-bottom: 1em;
+}
+
+h3 { 
+  margin-bottom:20px;
+  font-size:1.285714286em;
+}
+
+h4 {
+  margin-bottom: 20px;
+  color: #9F9F9F;
+  font-size: 1.35em;
+}
+
+p {line-height:1.5; }
+
+.chromeframe {
+    margin: 0.2em 0;
+    padding: 0.2em 0;
+    background: #ccc;
+    color: #000;
+}

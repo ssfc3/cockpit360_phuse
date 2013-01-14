@@ -34,221 +34,81 @@
             <span>60%</span>
         </div>
         <a href="#" class="btn">Finish profile</a>
-        <a href="#" class="btn">Print or Email</a>
         <h1>YC Bakery</h1>
     </div>
 
     <div class="app-subheader">
-        <ul class="month-select">
+        <ul id="month-select">
             <li><a href="#" class="year-back"><</a><a href="#" class="year-select">2012</a><a href="#" class="year-next">></a></li>
+            <li><a class="active" href="#">Jan</a></li>
+            <li><a href="#">Feb</a></li>
+            <li><a href="#">Mar</a></li>
+            <li><a href="#">Apr</a></li>
+            <li><a href="#">May</a></li>
+            <li><a href="#">Jun</a></li>
+            <li><a href="#">Jul</a></li>
+            <li><a href="#">Aug</a></li>
+            <li><a href="#">Sep</a></li>
+            <li><a href="#">Oct</a></li>
+            <li><a href="#">Nov</a></li>
+            <li><a href="#">Dec</a></li>
         </ul>
+        <a href="#" class="btn">Mass Entry Form</a>
+        <a class="hint" title="How was this calculated?" href="#">?</a>
     </div>
 
     <div class="app">
         <div class="main">
-            <h2 class="title">YC Bakery vs Peers </h2>
-            <div class="date-select">
-                <select>
-                    <option>Jan</option>
-                    <option>Feb</option>
-                    <option>Mar</option>
-                    <option>Apr</option>
-                    <option>May</option>
-                    <option>Jun</option>
-                    <option>Jul</option>
-                    <option>Aug</option>
-                    <option>Sep</option>
-                    <option>Oct</option>
-                    <option>Nov</option>
-                    <option>Dec</option>
-                </select>
-                <select>
-                    <option>2010</option>
-                    <option>2011</option>
-                    <option>2012</option>
-                </select>
-                <span>to</span>
-                <select>
-                    <option>Jan</option>
-                    <option>Feb</option>
-                    <option>Mar</option>
-                    <option>Apr</option>
-                    <option>May</option>
-                    <option>Jun</option>
-                    <option>Jul</option>
-                    <option>Aug</option>
-                    <option>Sep</option>
-                    <option>Oct</option>
-                    <option>Nov</option>
-                    <option>Dec</option>
-                </select>
-                <select>
-                    <option>2010</option>
-                    <option>2011</option>
-                    <option>2012</option>
-                </select>
-            </div>
-
-        <!-- I imagine you guys will want to implement the tabs using ajax, rather than simple jquery hide/show. Let me know if you'd rather I do this differently next time -->   
-
-            <ul class="tabs">
-                <li><a class="active" href="#performance-rank">Performance Ranking</a></li>
-                <li><a href="#graph">Performance Trends</a></li>
-            </ul>
-            <div class="tab-container">
-            <div class="tab" id="performance-rank">
-               <ul class="data-list">
-                    <li>
-                        <div class="key">
-                            <h3>Revenue <a class="hint" title="How was this calculated?" href="#">?</a></h3>
-                            <p>How much money did we make during this time period?</p>
-                        </div>
-                        <div class="value">
-                            <h3>25th <span>out of 255</span></h3>
-                            <p class="highlight">For Revenue</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="key">
-                            <h3>Cost of Sales <a class="hint" title="How was this calculated?" href="#">?</a></h3>
-                            <p>What is the cost we incurred to provide our products and services?</p>
-                        </div>
-                        <div class="value">
-                            <h3>19th <span>out of 255</span></h3>
-                            <p class="highlight">For Cost of Sales</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="key">
-                            <h3>Net Profit Margin <a class="hint" title="How was this calculated?" href="#">?</a></h3>
-                            <p>How profitable, or not, are we?</p>
-                        </div>
-                        <div class="value">
-                            <h3>3rd <span>out of 255</span></h3>
-                            <p class="highlight">For Net Profit Margin</p>
-                        </div>
-                    </li>
-               </ul>
-               
-            </div><!-- tab -->
-
-            <div class="tab" id="graph">
-                <img src="img/graph.png" />
-                <div class="data-legend">
-                    <!-- if we need to have colors determined dynamically talk to me and we'll implement something using data-attributes and javascript -->
-                    <ul>
-                        <li><span class="color your-company"></span>Your Company</li>
-                        <li><span class="color competitors"></span>Your Peers</li>
-                    </ul>
-                </div>
-            </div>
-             <div class="alert warning">
-                <p>Your data is stale, please update to get reliable information</p>
-                <a class="right btn">Update your data</a>
-            </div>
-
-        </div>
-        <div class="discussion">
-            <div class="comments">
-                <form id="post-comment">
-                    <textarea></textarea>
-                    <a href="#" class="btn">Post Comment</a>
-                </form>
-                  <ul class="tabs">
-                    <li><a class="active" href="#">Internal</a></li>
-                    <li><a href="#">External</a></li>
-                </ul>
-                <div class="tab-container">
-                    <div class="tab">
-                    <div class="comment">
-                        <h3>John Smith <span class="highlight">64</span><a href="#"><img src="img/thumb-up.jpg" /></a><a href="#"><img src="img/thumb-down.jpg" /></a></h3>
-                        <p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia?</p>
+        
+           <h2><small>Monthly Totals:</small> <span class="highlight">January 2013</span></h2>
+           <ul class="data-list">
+                <li>
+                    <div class="key">
+                        <h3>Revenue <div class="popover"><a href="#" class="tag assignment unassigned">Unassigned</a></div></h3>
+                        <h4>Income received during this period</h4>
+                        <p>Other terms that apply are: <strong>income</strong>, <strong>sales</strong>, <strong>proceeds</strong></p>
                     </div>
-                     <div class="comment">
-                        <h3>John Smith <span class="highlight">64</span><a href="#"><img src="img/thumb-up.jpg" /></a><a href="#"><img src="img/thumb-down.jpg" /></a></h3>
-                        <p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia?</p>
+                    <div class="value">
+                        <input type="text"><a href="#" class="add-note"><img src="img/comment.png" alt="add a note" /></a>
                     </div>
-                     <div class="comment">
-                        <h3>John Smith <span class="highlight">64</span><a href="#"><img src="img/thumb-up.jpg" /></a><a href="#"><img src="img/thumb-down.jpg" /></a></h3>
-                        <p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia?</p>
+                </li>
+                <li>
+                    <div class="key">
+                        <h3>Variable Costs <div class="popover"><a href="#" class="tag assignment">John Doe</a></div></h3>
+                        <h4>Expenses that vary based on services rendered or products delivered</h4>
+                        <p>Other terms that apply are: <strong>marginal costs</strong></p>
                     </div>
-                     <div class="comment">
-                        <h3>John Smith <span class="highlight">64</span><a href="#"><img src="img/thumb-up.jpg" /></a><a href="#"><img src="img/thumb-down.jpg" /></a></h3>
-                        <p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia?</p>
+                    <div class="value">
+                        <input type="text"><a href="#" class="add-note"><img src="img/comment.png" alt="add a note" /></a>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="members">
-            <h4>In the conversation</h4>
-            <ul>
-                <li>John Smith</li>
-                <li>Jack Jackson</li>
-                <li>Colin Colinson</li>
-                <li>Mary Marison</li>
-                <li>Time Jones</li>
-                <li><a href="#" class="highlight">Ask more people + </a></li>
-            </ul>
-            <input type="email" placeholder="Their Email" />
-            <a href="#" class="btn">Ask to Comment</a>
-            <p class="error">Please enter a valid email address</p>
-            <p class="success">An email has been sent to example@example.com</p>
-        </div>
-    </div>
+                </li>
+                <li>
+                    <div class="key">
+                        <h3>Fixed Costs (excluding wages and salaries) <div class="popover"><a href="#" class="unassigned tag assignment">Unassigned</a></div></h3>
+                        <h4>Expenses that don't change based on production or sales volumes like rent, insurance, etc.</h4>
+                        <p>Other terms that apply are: <strong>fixed overheads</strong>, <strong>insurance</strong>, <strong>depreciation</strong>, <strong>rent</strong></p>
+                    </div>
+                    <div class="value">
+                        <input type="text"><a href="#" class="add-note"><img src="img/comment.png" alt="add a note" /></a>
+                    </div>                
+                </li>
+           </ul>
+           
+           <p class="form-actions">
+               <a href="#" class="btn blue">Submit Data</a>
+               <a href="#" class="btn">Save as Draft</a>
+               <a href="#">or cancel</a>
+           </p>
+     
 
     </div><!-- main -->
 
     <aside>
 
-        <div class="widget" id="metrics-widget">
-            <h2>Basic Measures</h2>
-            <ul class="widget-content" id="metrics">
-                <li>
-                    <input id="rev" type="radio" name="metrics"><label for="rev">Revenue</label>
-                    <!-- <div class="range-slider">
-                        <div class="range" id="revenue-range"></div>
-                        <input class="range-input" type="text" id="revenue-input" />
-                    </div> -->
-                </li>
-                <li><input id="cost" type="radio" name="metrics"><label for="cost">Cost</label></li>
-                <li><input id="an-rev" type="radio" name="metrics"><label for="an-rev">Annual Revenue</label></li>
-                <li><input id="em-size" type="radio" name="metrics"><label for="em-size">Employee Size</label>
-                    <!-- <div class="range-slider">
-                        <div class="range" id="empl-range"></div>
-                        <input class="range-input" type="text" id="empl-input" />
-                    </div> -->
-                </li>
-                <li><input id="net" type="radio" name="metrics"><label for="net">Net Profit Margin</label></li>
-            </ul>
-        </div>
-
-        <div class="widget">
-            <h2>Business Categories</h2>
-             <ul class="widget-content">
-                <li><input id="1" type="checkbox"><label for="1">Construction</label></li>
-                <li><input id="2" type="checkbox"><label for="2">Education</label></li>
-                <li><input id="3" type="checkbox"><label for="3">Leisure</label></li>
-                <li><input id="5" type="checkbox"><label for="5">Retail</label></li>
-                <li><input id="6" type="checkbox"><label for="6">Foodservice</label></li>
-                <li><a href="#more-cats" class="highlight show-more">Show More</a></li>
-                <div id="more-cats" class="more">
-                    <li><input id="7" type="checkbox"><label for="7">Healthcare</label></li>
-                    <li><input id="8" type="checkbox"><label for="8">Technology</label></li>
-                    <li><input id="9" type="checkbox"><label for="9">Auto Care</label></li>
-                    <li><input id="10" type="checkbox"><label for="10">Personal Care</label></li>
-                </div>
-            </ul>
-        </div>
-
-        <div class="widget">
-            <h2>Invite Others</h2>
-            <form action="" class="widget-content">
-                <input type="text" placeholder="Their Email">
-                <input type="text" placeholder="Their Name">
-                <input type="submit" class="btn blue" value="Invite">
-                <textarea class="well" placeholder="Add a note..."></textarea>
-            </form>
-
+        <div class="helpful-hint">
+            <h3>Helpful Hints</h3>
+            <p>Click a desired month to enter new data or go back in time to edit old data. Clicking the year will allow you to update figures for the entire year to date.</p>
+            <a href="#">Next</a>
         </div>
 
     </aside>
@@ -294,7 +154,7 @@
     </div>
 
 </div>
-<div class="stripe"></div>
+<div id="overlay"></div>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 <script src="js/jquery-ui-1.9.0.custom.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.0.min.js"><\/script>')</script>

@@ -46,7 +46,7 @@ $(document).ready(function(){
 
     // Hidden stuff
 
-    $("#prox-zip-code, #graph, #metrics-widget, .other-option, .conditional-field, #category-select ul ul, .more").hide();
+    $("#prox-zip-code, #graph, #metrics-widget, .other-option, .conditional-field, #category-select ul ul, .more, #basic-measures").hide();
 
 
     // Conditions for location-switcher dropdown 
@@ -129,9 +129,9 @@ $(document).ready(function(){
     	$(tab).show();
     	e.preventDefault();
         if ($("#graph").css("display") === "block") {
-            $("#metrics-widget").fadeIn('slow');
+            $("#basic-measures").fadeIn('slow');
         } else {
-            $("#metrics-widget").hide();
+            $("#basic-measures").fadeOut();
         }
     });
 
@@ -147,6 +147,7 @@ $(document).ready(function(){
   	$("#overlay").click(function(){
   		$(this).fadeOut();
   		$("#prelaunch-login").hide();
+        $(".modal").remove();
   	});
 
   	$(".page-header").click(function(){
@@ -158,6 +159,19 @@ $(document).ready(function(){
   		event.stopPropagation();
   	});
 
+
+    $(".add-note").click(function(e){
+        e.preventDefault();
+        $("#overlay").fadeToggle();
+        $("body").append("<div class='modal'></div>");
+        $(".modal").load("_note_form.html", function(){
+            console.log("called");
+        });
+    });
+
+    $("#overlay").click(function(){
+        
+    });
 
     // Home page slider
 
@@ -257,6 +271,26 @@ $(document).ready(function(){
     $(".datepicker").datepicker({
         changeMonth: true,
         changeYear: true
+    });
+
+    // I'm thinking this could go in a partial or be loaded in via ajax? Cause this'll be a form right?
+    var assign_user = "<div class ='assign-user popover-content'><label>Assign to:</label><select><option>Unassigned</option><option>John Doe</option></select></div>";
+
+    $(".assignment").click(function(e){
+        if ($(".assign-user").length === 0) {
+            $(this).after(assign_user);
+        }
+        e.preventDefault();
+    });
+
+    $("html").click(function(e){
+         if ( !($(e.target).parents(".popover").length > 0)) {
+            $(".assign-user").remove();
+         }
+    });
+
+    $(".popover").on("change", "select", function(){
+        $(".assign-user").remove();
     });
 
 });

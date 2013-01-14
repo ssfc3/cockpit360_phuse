@@ -1,0 +1,178 @@
+/** $SIGNUP **/
+.signup {
+  h3 {
+    color:#6e6e6e;
+    font-size:1.714285714em;
+    span {
+      color:#A8A8A8;
+    }
+  }
+  .success {
+    margin-bottom: 20px;
+  }
+}
+.steps {
+  overflow: hidden;
+  margin-top:65px;
+  margin-bottom:65px;
+  text-align:center;
+  
+  ul {
+    @extend %h-list;
+    margin-top:40px;
+    list-style:none;
+    text-align:center;
+    li {
+      margin:0 2px;
+    }
+    a {
+      display:block;
+      width:254px;
+      height:11px;
+      border: 1px solid #404648;
+      
+      background:#363636;
+      box-shadow: inset 0 2px 2px #2d3133;
+      text-indent:-9999px;
+      &.active {
+        @include gradient(#fefeff, #d9dbdd);
+        border-color:#d9dbdd;
+        box-shadow: none;
+      }
+    }
+    li:first-child a {border-radius:6px 0 0 6px;}
+    li:last-child a {border-radius:0 6px 6px 0;}
+  }
+}
+
+.signup-step {
+  input[type="text"], input[type="email"], input[type="password"] {
+    &:focus {
+      outline:none;
+      border-color:#3fb3de;
+      background: #F9FDFF;
+    }
+  }
+  > ul {@extend %clearfix; }
+  ul {
+    list-style: none;
+    li {margin-bottom:7px; }
+  }
+  p {
+    margin-bottom:30px; 
+    &.social span {
+      display: block;
+      margin-top:15px;
+    }
+  }
+
+}
+
+.field {
+  position: relative;
+  float: left;
+  padding: 0 0 23px 0;
+  width: 242px;
+  &.full {
+    float: none;
+    clear:both;
+    width: 100%;
+    input[type="text"], input[type="email"], input[type="password"], textarea{
+      width: 492px;
+    }
+  }
+  &.left {
+    clear:left;
+  }
+  &.right {
+    float: right;
+    padding-left:36px;
+  }
+  input[type="text"], input[type="email"], input[type="password"], textarea {
+    width: 214px;
+  }
+  .selectbox {
+    width: 212px;
+  }
+  select {
+    width: 100%;
+  }
+  input[type="checkbox"] + label,
+  input[type="radio"] + label {
+    @extend %inline-block;
+    padding-left: 10px;
+  } 
+  ul {
+    margin-top:5px;
+    margin-bottom:10px;
+    margin-left:20px;
+  }
+}
+
+.conditional-field legend {
+  margin-left:20px;
+}
+
+#delegate-conditional {
+  margin-top: -10px;
+  margin-bottom:30px;
+  li {
+    padding-bottom:10px;
+  }
+  &> p {
+    margin-bottom:10px;
+  }
+}
+
+.field-text {
+  position: absolute;
+  top: 7px;
+  left: -240px;
+  width: 220px;
+  text-align:right;
+  font-size:.9em;
+  &:after {
+    position: absolute;
+    top: 6px;
+    right:-10px;
+    display:block;
+    width: 0;
+    height: 0;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-left: 6px solid #444;
+    content: ' ';
+  }
+  &.error {
+    &:after {
+      border-left-color:#ff0000;
+    }
+  }
+}
+
+.right .field-text {
+  right: -240px;
+  left: auto;
+  text-align:left;
+  &:after {
+    right: auto;
+    left: -10px;
+    border-right:6px solid #444;
+    border-left: none;
+  }
+  &.error:after {border-right-color:#ff0000;}
+}
+
+
+#category-select > ul {
+  & >li {
+    margin-bottom:10px;
+    color:#6B6B6B;
+  }
+  ul {
+    
+    li {
+      color:#9f9f9f;
+    }
+  }
+}

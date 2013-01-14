@@ -1,0 +1,23 @@
+/*
+Errno::ENOENT: No such file or directory - style
+
+Backtrace:
+/Users/tessathornton/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/plugin/compiler.rb:339:in `read'
+/Users/tessathornton/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/plugin/compiler.rb:339:in `update_stylesheet'
+/Users/tessathornton/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/plugin/compiler.rb:203:in `block in update_stylesheets'
+/Users/tessathornton/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/plugin/compiler.rb:201:in `each'
+/Users/tessathornton/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/plugin/compiler.rb:201:in `update_stylesheets'
+/Users/tessathornton/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/plugin/compiler.rb:235:in `watch'
+/Users/tessathornton/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/plugin.rb:107:in `method_missing'
+/Users/tessathornton/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/exec.rb:444:in `watch_or_update'
+/Users/tessathornton/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/exec.rb:307:in `process_result'
+/Users/tessathornton/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/exec.rb:41:in `parse'
+/Users/tessathornton/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.5/lib/sass/exec.rb:21:in `parse!'
+/Users/tessathornton/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/sass-3.2.5/bin/sass:8:in `<top (required)>'
+/Users/tessathornton/.rbenv/versions/1.9.3-p125/bin/sass:23:in `load'
+/Users/tessathornton/.rbenv/versions/1.9.3-p125/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Errno::ENOENT: No such file or directory - style"; }
