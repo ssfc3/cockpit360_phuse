@@ -164,7 +164,7 @@ $(document).ready(function(){
         e.preventDefault();
         $("#overlay").fadeToggle();
         $("body").append("<div class='modal'></div>");
-        $(".modal").load("_note_form.html", function(){
+        $(".modal").load("note_form.html", function(){
             console.log("called");
         });
     });
