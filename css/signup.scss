@@ -47,11 +47,7 @@
 
 .signup-step {
   input[type="text"], input[type="email"], input[type="password"] {
-    &:focus {
-      outline:none;
-      border-color:#3fb3de;
-      background: #F9FDFF;
-    }
+    
   }
   > ul {@extend %clearfix; }
   ul {

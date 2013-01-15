@@ -108,7 +108,7 @@ $(document).ready(function(){
 
     // Tooltips
 
-    $("#performance-rank").tooltip({
+    $(document).tooltip({
     	 position: {
             my: "center top+10",
             at: "center bottom",
@@ -165,13 +165,14 @@ $(document).ready(function(){
         $("#overlay").fadeToggle();
         $("body").append("<div class='modal'></div>");
         $(".modal").load("note_form.html", function(){
-            console.log("called");
+            $(".dismiss").on("click", function(){
+                $(".modal").remove();
+                $("#overlay").fadeOut();
+            });
         });
     });
 
-    $("#overlay").click(function(){
-        
-    });
+   
 
     // Home page slider
 
