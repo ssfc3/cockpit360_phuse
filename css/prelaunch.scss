@@ -5,7 +5,7 @@
 .slider {
   position: relative;
   width:100%;
-  height:650px;
+  height:690px;
   background:#000;
   margin: 0 auto;
 }
@@ -13,7 +13,7 @@
 .slide-nav {
   @extend %h-list;
   position: absolute;
-  bottom: 50px;
+  bottom: 70px;
   left:45%;
   z-index: 5;
   li {
@@ -57,7 +57,7 @@
   }
   .container {
     @extend %clearfix;
-    padding-top:230px;
+    padding-top:190px;
   }
   
   h1 {
@@ -71,7 +71,7 @@
   }
   .hero {
     float: left;
-    width:560px;
+    width:500px;
     text-shadow: 0 0 6px rgba(0,0,0,0.5);
   } 
 }
@@ -83,6 +83,16 @@
 #slide3 {background:url(../img/slide3.jpg) no-repeat 50% 50%; }
 
 #slide4 {background:url(../img/slide4.jpg) no-repeat 50% 50%; }
+
+.dental-slides {
+  #slide1 {background:url(../img/dental3.jpg) no-repeat 50% 50%; }
+
+  #slide2 {background:url(../img/dental2.jpg) no-repeat 50% 50%; }
+
+  #slide3 {background:url(../img/dental1.jpg) no-repeat 50% 50%; }
+
+  #slide4 {background:url(../img/dental4.jpg) no-repeat 50% 50%; }
+}
 
 .prelaunch-twitter {
   margin:115px auto;
@@ -121,13 +131,18 @@
   position: absolute;
   width:100%;
   z-index: 10;
-  top: 240px;
+  top: 200px;
   left: 0;
 }
 
 .cta {
   float: right;
-  width: 350px;
+  width: 410px;
+  h3 {
+    color: #fff;
+    font-size: 21px;
+    text-shadow: 0 0 6px rgba(0,0,0,0.5);
+  }
   p {
     padding:10px;
     border-radius:5px;
@@ -147,20 +162,27 @@
   }
   input, .selectbox {
     @extend %field;
-    display:block;  
     margin-bottom:15px;
     padding:12px 12px;
-    width: 324px;
     border: 1px solid rgba(0,0,0,0.7);
     box-shadow: 0 1px 1px rgba(255,255,255,0.3);
     color:#a7a7a7;
     font-size:1.142857143em;
+    vertical-align: top;
+  }
+  input[type="text"], input[type="password"], .selectbox {
+    
+    width: 175px;
+    @extend %inline-block;
+    
+  }
+  input[type="email"] {
+    width: 384px;
   }
   .selectbox {
-    padding:0;
+    padding:0 0 12px 0;
     background:#fff;
-    width: 348px;
-
+    width: 197px;
   }
     select {
       width: 100%;
