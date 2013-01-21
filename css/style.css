@@ -232,7 +232,8 @@ p.error, p.success {
   float: none;
   width: 100%;
   height: 200px;
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  color: #777; }
 
 html,
 button,
