@@ -29,65 +29,96 @@
                 <a href="#" class="highlight">Having trouble?</a>
                 <input type="submit" class="btn" value="Go" />
             </form>
-        </div>
+        </div>s
     </header>
 
     <div class="app signup">
         <div class="narrow">
-            <h1>Sign up to Cockpit360 for free today!</h1>
-            <h2 class="highlight">Organization Administrator / Business Owner Information</h2>
+            <h1>Create a free account today!</h1>
             <div class="steps">
-                <h3>Step 2 <span>of 5</h3>
                 <ul>
-                    <li><a  href="signup1.html">One</a></li>
-                    <li><a class="active" href="signup2.html">Two</a></li>
-                    <li><a href="signup3.html">Three</a></li>
-                    <li><a href="signup4.html">Four</a></li>
-                    <li><a href="signup5.html">Five</a></li>
+                    <li>Your Information</li>
+                    <li class="active">Describe Your Business</li>
+                    <li>Code of Conduct</li>
                 </ul>
             </div>
             <form class="signup-step">
+                <p><strong>Classify your business or practice:</strong></p>
                 <ul>
+                    <li class="field full">
+                        <input type="text" placeholder="What keywords best describe your business or practice (select up to 5)">
+                    </li>
                     <li class="field left">
-                    <input type="text" placeholder="First Name">
-                </li>
-                <li class="field right">
-                    <input type="text" placeholder="Last Name">
-                </li>
-                <li class="field full">
-                    <fieldset>
-                        <legend>Check the secondary titles that apply</legend>
+                        <select name="category" id="category">
+                            <option value="">Business Category</option>
+                            <option value="">Foodservice</option>
+                            <option value="">Retail</option>
+                            <option value="">Something Else</option>
+                            <option value="">Something Else</option>
+                        </select>
+                    </li>
+                    <li class="field right">
+                        <input type="text" placeholder="If Other, Please Describe">
+                    </li>
+                     <li class="field left">
+                        <select name="category" id="category">
+                            <option value="">Customers pay for our...</option>
+                            <option value="">Services</option>
+                            <option value="">Goods</option>
+                    
+                        </select>
+                    </li>
+                    <li class="field right">
+                        <input type="text" placeholder="If Other, Please Describe">
+                    </li>
+                    <li class="field full">
+                        <input type="text" placeholder="Formal name of your business or practice">
+                    </li>
+                    <li class="field left">
+                        <select name="category" id="category">
+                            <option value="">Legal Formation Type</option>
+                            <option value="">Corporation</option>
+                            <option value="">-</option>
+                        </select>
+                    </li>
+                    <li class="field right">
+                        <input type="text" placeholder="Tax ID">
+                    </li>
+                    <li class="field left">
+                        <input type="text" placeholder="Established on (DD/MM/YYYY)">
+                        <!-- <input class="error" type="text" placeholder="Your Organization's Tax ID">
+                              <span class="field-text error">Please enter a valid Tax ID</span> -->
+                    </li>
+                    <li class="field right">
+                        <input type="text" placeholder="Primary ZIP">
+                    </li>
+                    
+                    <li class="field left">
+                        <input type="checkbox" id="franchise"><label for="franchise">Is the business a franchise?</label>
+                    </li>
+                    <li class="field right"><input type="text" placeholder="Name of Franchise" disabled></li>
+                    <li class="field full">
+                        <p>Which accounting method is used to track your business's revenue and expenses?</p>
                         <ul>
-                            <li><input type="checkbox" id="owner"><label for="owner">Owner</label></li>
-                            <li><input type="checkbox" id="coowner"><label for="coowner">Co-Owner</label></li>
-                            <li><input type="checkbox" id="founder"><label for="founder">Founder</label></li>
-                            <li><input type="checkbox" id="cofounder"><label for="cofounder">Co-founder</label></li>
-                            <li><input type="checkbox" id="ce"><label for="ce">Chief Executive</label></li>
-                            <li><input type="checkbox" id="decmaker"><label for="decmaker">Decision-maker</label></li>
+                            <li><input type="radio" name="method" id="cash"><label for="cash">
+                                    <h4>Cash Method</h4>
+                                    <p>Under the cash method, revenue is not counted until cash (or a 
+check) is actually received, and expenses are not counted until they 
+are actually paid.</p>
+                                </label></li>
+                            <li><input type="radio" name="method" id="accrual"><label for="accrual">
+                                    <h4>Accrual Method</h4>
+                                    <p>Under the accrual method, transactions are counted when the order 
+is made, the item is delivered, or the services occur, regardless of 
+when the money for them (receivables) is actually received or paid.
+See more</p>
+                                </label></li>
                         </ul>
-                    </fieldset>
-                </li>
-                <li class="field full">
-                    <fieldset>
-                        <legend>Would you like to assign delegates or members?</legend>
-                        <ul>
-                            <li><input type="radio" value="yes" name="delegate" id="delegate-yes"><label for="delegate-yes">Yes</label></li>
-                            <li><input type="radio" value="no" name="delegate" id="no"><label for="no">No</label></li>
-                            <li><input type="radio" value="later" name="delegate" id="later"><label for="later">Later</label></li>
-                        </ul>
-                    </fieldset>
-                </li>
-                <div id="delegate-conditional" class="conditional-field">
-                    <li class="field left"><input type="text" placeholder="Delegate First Name"/></li>
-                    <li class="field right"><input type="email" placeholder="Delegate Email Address"/></li>
-                </div>
-                <li class="field full">
-                    <label for="desc" class="legend">Description of Business</label>
-                    <textarea id="desc"></textarea>
-                </li>
-            </ul>
+                    </li>
+                </ul>   
+                
                 <p><a href="signup3.html" class="btn green primary">Continue to Step 3</a></p>
-                <p>If you want to skip the next few steps and get going now, then <a href="dashboard.html" class="btn">Skip for Now</a></p>
+                <p>Want to go straight to MarketRadar instead? <a href="dashboard.html" class="btn">Save &amp; Finish Later</a></p>
             </form>
         </div>
         

@@ -82,34 +82,42 @@ p.error, p.success {
 
 .steps {
   overflow: hidden;
-  margin-top: 65px;
-  margin-bottom: 65px;
+  margin-top: 35px;
+  margin-bottom: 45px;
   text-align: center; }
   .steps ul {
     margin-top: 40px;
     list-style: none;
     text-align: center; }
     .steps ul li {
-      margin: 0 2px; }
-    .steps ul a {
-      display: block;
-      width: 254px;
-      height: 11px;
-      border: 1px solid #404648;
-      background: #363636;
-      box-shadow: inset 0 2px 2px #2d3133;
-      text-indent: -9999px; }
-      .steps ul a.active {
-        background-color: #fefeff;
-        background-image: -moz-linear-gradient(top, #fefeff, #d9dbdd);
-        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fefeff), color-stop(1, #d9dbdd));
-        background-image: linear-gradient(top, #fefeff, #d9dbdd);
-        border-color: #d9dbdd;
-        box-shadow: none; }
-    .steps ul li:first-child a {
-      border-radius: 6px 0 0 6px; }
-    .steps ul li:last-child a {
-      border-radius: 0 6px 6px 0; }
+      display: inline-block;
+      width: 33%;
+      text-align: center;
+      margin-right: 0;
+      position: relative; }
+      .steps ul li.active {
+        color: #17c2e7; }
+        .steps ul li.active:before {
+          background: #17c2e7; }
+      .steps ul li:before {
+        content: " ";
+        width: 15px;
+        height: 15px;
+        background: #e6e6e6;
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        border-radius: 50%; }
+      .steps ul li:after {
+        content: " ";
+        width: 152px;
+        height: 2px;
+        background: #e6e6e6;
+        position: absolute;
+        top: -25px;
+        left: 60%; }
+      .steps ul li:last-child:after {
+        background: none; }
 
 .signup-step ul {
   list-style: none; }
@@ -150,6 +158,21 @@ p.error, p.success {
     margin-top: 5px;
     margin-bottom: 10px;
     margin-left: 20px; }
+  .field li {
+    overflow: hidden; }
+    .field li input[type="radio"] {
+      display: block;
+      float: left;
+      margin-left: 8px;
+      width: 30px; }
+    .field li input[type="radio"] + label {
+      display: block;
+      float: left;
+      width: 450px; }
+    .field li h4 {
+      font-size: 1.1em;
+      margin-bottom: 15px;
+      line-height: 1; }
 
 .conditional-field legend {
   margin-left: 20px; }
@@ -200,6 +223,13 @@ p.error, p.success {
   color: #6B6B6B; }
 #category-select > ul ul li {
   color: #9f9f9f; }
+
+#agreement {
+  display: block;
+  float: none;
+  width: 100%;
+  height: 200px;
+  margin-bottom: 15px; }
 
 html,
 button,
