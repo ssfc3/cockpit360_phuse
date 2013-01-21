@@ -39,16 +39,24 @@
 
     <div class="app-subheader">
         <div class="proximity">
-            <label for="prox-input">Proximity</label>
-            <div class="range" id="prox-range"></div>
-            <input type="text" id="prox-input" class="range-input"/>
-            <label for="location-type">Miles from</label>
-            <select name="" id="location-type">
+            <h3 >Proximity</h3>
+             <select name="" id="location-type">
                 <!-- select values determine wheter zip code field is shown and whether range slider is disabled. If you change these values, please also change them in main.js -->
-                <option value="your-loc">Your Location</option>
-                <option value="zip-loc">Specific ZIP</option>
+                <option value="nearby">Nearby</option>
+                <option value="zip-loc">Neighbourhood</option>
+                <option value="nation-loc">Zip Code</option>
+                <option value="nation-loc">Citywide</option>
+                <option value="nation-loc">Statewide</option>
                 <option value="nation-loc">Nationwide</option>
             </select>
+            <div class="nearby">
+                <label for="prox-input">Range</label>
+                <div class="range" id="prox-range"></div>
+                <input type="text" id="prox-input" class="range-input"/>
+                <label for="location-type">Miles</label>
+            </div>
+            
+           
             <!-- hidden by default, showin if "specific ZIP" is selected -->
             <input type="text" id="prox-zip-code" placeholder="ZIP Code" />
         </div>
@@ -262,14 +270,9 @@
         </div>
 
         <div class="widget">
-            <h2>Invite Others</h2>
-            <form action="" class="widget-content">
-                <input type="text" placeholder="Their Email">
-                <input type="text" placeholder="Their Name">
-                <input type="submit" class="btn blue" value="Invite">
-                <textarea class="well" placeholder="Add a note..."></textarea>
-            </form>
-
+            <a href="#" class="btn">Download View as PDF</a>
+            <a href="#" class="btn">Print View</a>
+            <a href="#" id="invite-button" class="btn blue">Invite Others</a>
         </div>
 
     </aside>
@@ -315,6 +318,7 @@
     </div>
 
 </div>
+<div id="overlay"></div>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 <script src="js/jquery-ui-1.9.0.custom.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.0.min.js"><\/script>')</script>

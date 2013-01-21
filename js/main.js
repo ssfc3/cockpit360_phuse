@@ -52,15 +52,10 @@ $(document).ready(function(){
     // Conditions for location-switcher dropdown 
 
     $("#location-type").change(function(){
-        if ($(this).val() === "zip-loc") {
-            $("#prox-zip-code").fadeIn('fast');
-            $(".proximity").removeClass("nationwide");
-        } else if ($(this).val() === "nation-loc") {
-            $("#prox-zip-code").fadeOut('fast');
-            $(".proximity").addClass("nationwide");
+        if ($(this).val() === "nearby") {
+            $(".nearby").fadeIn();
         } else {
-            $("#prox-zip-code").fadeOut('fast');
-            $(".proximity").removeClass("nationwide");
+            $(".nearby").fadeOut();
         }
     });
 
@@ -162,15 +157,24 @@ $(document).ready(function(){
 
     $(".add-note").click(function(e){
         e.preventDefault();
+        modal("note_form.html");
+    });
+
+    function modal(load) {
         $("#overlay").fadeToggle();
         $("body").append("<div class='modal'></div>");
-        $(".modal").load("note_form.html", function(){
+        $(".modal").load(load, function(){
             $(".dismiss").on("click", function(){
                 $(".modal").remove();
                 $("#overlay").fadeOut();
             });
         });
-    });
+    }
+
+    $("#invite-button").click(function(e){
+        e.preventDefault();
+        modal("invite_form.html");
+    })
 
    
 
@@ -303,12 +307,12 @@ $(document).ready(function(){
             $(".app-header").css({
                 "position": "fixed",
                 "top": "0",
-                "z-index" : "2000"
+                "z-index" : "5"
             });
             $(".app-subheader").css({
                 "position" : "fixed",
                 "top" : headHeight,
-                "z-index" : "2000",
+                "z-index" : "5",
                 "box-shadow" : "0 1px 5px rgba(0, 0, 0, 0.5)"
             });
         } else {

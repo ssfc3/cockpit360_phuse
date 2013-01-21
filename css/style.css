@@ -35,19 +35,19 @@ footer .links ul, .data-list, .members ul, .widget-content {
   zoom: 1;
   *display: inline; }
 
-.login form input[type="text"], .cta input, .cta .selectbox, .app input[type="text"], .app input[type="email"], .app textarea, .app input[type="password"], .value input[type="text"], .widget-content input[type="text"], .widget-content input[type="email"], .widget-content textarea, #note-form input[type="text"], #note-form textarea {
+.login form input[type="text"], .cta input, .cta .selectbox, .app input[type="text"], .app input[type="email"], .app textarea, .app input[type="password"], .value input[type="text"], .widget-content input[type="text"], .widget-content input[type="email"], .widget-content textarea, .modal-form input[type="email"], .modal-form input[type="text"], .modal-form textarea {
   padding: 8px 12px;
   border: 1px solid #c8c8c8;
   border-radius: 5px;
   box-shadow: inset 0 1px 2px #f1f1f1; }
-  .login form input[type="text"]:focus, .cta input:focus, .cta .selectbox:focus, .app input[type="text"]:focus, .app input[type="email"]:focus, .app textarea:focus, .app input[type="password"]:focus, .value input[type="text"]:focus, .widget-content input[type="text"]:focus, .widget-content input[type="email"]:focus, .widget-content textarea:focus, #note-form input[type="text"]:focus, #note-form textarea:focus {
+  .login form input[type="text"]:focus, .cta input:focus, .cta .selectbox:focus, .app input[type="text"]:focus, .app input[type="email"]:focus, .app textarea:focus, .app input[type="password"]:focus, .value input[type="text"]:focus, .widget-content input[type="text"]:focus, .widget-content input[type="email"]:focus, .widget-content textarea:focus, .modal-form input[type="email"]:focus, .modal-form input[type="text"]:focus, .modal-form textarea:focus {
     outline: none;
     border-color: #3fb3de;
     background: #F9FDFF; }
-  .login form input.error[type="text"], .cta input.error, .cta .error.selectbox, .app input.error[type="text"], .app input.error[type="email"], .app textarea.error, .app input.error[type="password"], .value input.error[type="text"], .widget-content input.error[type="text"], .widget-content input.error[type="email"], .widget-content textarea.error, #note-form input.error[type="text"], #note-form textarea.error {
+  .login form input.error[type="text"], .cta input.error, .cta .error.selectbox, .app input.error[type="text"], .app input.error[type="email"], .app textarea.error, .app input.error[type="password"], .value input.error[type="text"], .widget-content input.error[type="text"], .widget-content input.error[type="email"], .widget-content textarea.error, .modal-form input.error[type="email"], .modal-form input.error[type="text"], .modal-form textarea.error {
     border-color: #ff0000;
     background-color: #fef7f7; }
-  .login form input.success[type="text"], .cta input.success, .cta .success.selectbox, .app input.success[type="text"], .app input.success[type="email"], .app textarea.success, .app input.success[type="password"], .value input.success[type="text"], .widget-content input.success[type="text"], .widget-content input.success[type="email"], .widget-content textarea.success, #note-form input.success[type="text"], #note-form textarea.success {
+  .login form input.success[type="text"], .cta input.success, .cta .success.selectbox, .app input.success[type="text"], .app input.success[type="email"], .app textarea.success, .app input.success[type="password"], .value input.success[type="text"], .widget-content input.success[type="text"], .widget-content input.success[type="email"], .widget-content textarea.success, .modal-form input.success[type="email"], .modal-form input.success[type="text"], .modal-form textarea.success {
     border-color: #13a1d5;
     background-color: #e3f6fc; }
 
@@ -595,19 +595,25 @@ p.success {
   width: 1010px; }
   .app-subheader .searchbox {
     float: right; }
+  .app-subheader h3 {
+    display: inline-block;
+    margin-bottom: 0;
+    padding-right: 10px; }
 
-.app-subheader .selectbox .selecttext {
-  color: #f4f4f4;
-  text-shadow: 0 -1px 1px #313e48; }
-.app-subheader .selectbox .select-arrow {
-  width: 26px;
-  border: none;
-  background: none; }
-  .app-subheader .selectbox .select-arrow:after {
-    top: 40%;
-    right: 25%; }
-.app-subheader .selectbox select {
-  padding-right: 18px; }
+.app-subheader .selectbox {
+  margin-right: 10px; }
+  .app-subheader .selectbox .selecttext {
+    color: #f4f4f4;
+    text-shadow: 0 -1px 1px #313e48; }
+  .app-subheader .selectbox .select-arrow {
+    width: 26px;
+    border: none;
+    background: none; }
+    .app-subheader .selectbox .select-arrow:after {
+      top: 40%;
+      right: 25%; }
+  .app-subheader .selectbox select {
+    padding-right: 18px; }
 
 .proximity {
   float: left; }
@@ -627,6 +633,9 @@ p.success {
     border: 5px solid #f1f5f7;
     background: #b9b9b9;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.8); }
+
+.nearby {
+  display: inline-block; }
 
 .nationwide #prox-range {
   background: #404C55;
@@ -1290,6 +1299,10 @@ legend, .legend {
     border-radius: 5px 5px 0 0;
     text-align: center;
     font-size: 1em; }
+  .widget .btn {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: normal; }
 
 .widget-content {
   padding: 20px;
@@ -1352,21 +1365,33 @@ legend, .legend {
   left: 50%;
   margin-left: -250px; }
 
-#note-form {
+.modal-form {
   background: #FFF;
   padding: 20px;
   border-radius: 10px; }
-  #note-form label {
+  .modal-form label {
     float: left;
     font-size: 1.2em;
     font-weight: bold; }
-  #note-form input[type="text"] {
+  .modal-form input[type="email"] {
+    float: left; }
+  .modal-form input[type="text"] {
     float: right; }
-  #note-form textarea {
+  .modal-form textarea {
     clear: both;
-    margin: 50px 0 20px 0;
+    margin: 0 0 20px 0;
     display: block;
     width: 435px; }
-  #note-form .btn {
+  .modal-form .btn {
     clear: both;
     display: inline-block; }
+  .modal-form p {
+    margin-bottom: 15px;
+    clear: both; }
+
+#add-invitee {
+  display: block;
+  padding-top: 10px; }
+
+#note-form textarea {
+  margin-top: 50px; }

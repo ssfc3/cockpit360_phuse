@@ -536,6 +536,11 @@ legend, .legend {
 		text-align:center;
 		font-size:1em;
 	}
+	.btn {
+		display:block;
+		margin-bottom: 15px;
+		font-weight: normal;
+	}
 }
 
 .widget-content {
@@ -595,6 +600,7 @@ legend, .legend {
 			font-size:.9em;
 		}
 	}
+
 }
 
 .helpful-hint {
@@ -618,7 +624,7 @@ legend, .legend {
 	margin-left: -250px;
 }
 
-#note-form {
+.modal-form {
 	background: #FFF;
 	padding: 20px;
 	border-radius: 10px;
@@ -627,6 +633,10 @@ legend, .legend {
 		font-size: 1.2em;
 		font-weight: bold;
 	}
+	input[type="email"] {
+		float: left;
+		@extend %field;
+	}
 	input[type="text"] {
 		float: right;
 		@extend %field;
@@ -634,7 +644,7 @@ legend, .legend {
 	textarea {
 		@extend %field;
 		clear: both;
-		margin: 50px 0 20px 0;
+		margin: 0 0 20px 0;
 		display: block;
 		width: 435px;
 	}
@@ -642,4 +652,17 @@ legend, .legend {
 		clear: both;
 		display: inline-block;
 	}
+	p {
+		margin-bottom: 15px;
+		clear: both;
+	}
+}
+
+#add-invitee {
+	display: block;
+	padding-top: 10px;
+}
+
+#note-form textarea {
+	margin-top: 50px;
 }
