@@ -799,6 +799,8 @@ footer {
     float: left;
     width: 500px;
     text-shadow: 0 0 6px rgba(0, 0, 0, 0.5); }
+    .slide .hero .btn {
+      margin-top: 10px; }
 
 #slide1 {
   background: url(../img/slide1.jpg) no-repeat 50% 50%; }
