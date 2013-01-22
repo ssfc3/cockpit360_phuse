@@ -666,3 +666,23 @@ legend, .legend {
 #note-form textarea {
 	margin-top: 50px;
 }
+
+.page {
+	h2 {
+		font-size: 2em;
+		font-weight: bold;
+	}
+	h2, h3, h4 {
+		color: #666;
+	}
+	p {
+		margin-bottom: 15px;
+	}
+	ul {
+		margin-bottom: 15px;
+		margin-left: 15px;
+	}
+	li {
+		margin-bottom: 5px;
+	}
+}

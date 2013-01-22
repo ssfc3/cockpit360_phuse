@@ -887,10 +887,11 @@ footer {
 
 .email-form {
   position: absolute;
-  width: 100%;
+  width: 410px;
   z-index: 10;
   top: 200px;
-  left: 0; }
+  left: 110px;
+  pointer-events: none; }
 
 .cta {
   float: right;
@@ -1452,3 +1453,16 @@ legend, .legend {
 
 #note-form textarea {
   margin-top: 50px; }
+
+.page h2 {
+  font-size: 2em;
+  font-weight: bold; }
+.page h2, .page h3, .page h4 {
+  color: #666; }
+.page p {
+  margin-bottom: 15px; }
+.page ul {
+  margin-bottom: 15px;
+  margin-left: 15px; }
+.page li {
+  margin-bottom: 5px; }

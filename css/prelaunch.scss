@@ -132,10 +132,11 @@
 
 .email-form {
   position: absolute;
-  width:100%;
+  width:410px;
   z-index: 10;
   top: 200px;
-  left: 0;
+  left:110px;
+  pointer-events:none;
 }
 
 .cta {
