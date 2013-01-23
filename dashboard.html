@@ -43,7 +43,7 @@
              <select name="" id="location-type">
                 <!-- select values determine wheter zip code field is shown and whether range slider is disabled. If you change these values, please also change them in main.js -->
                 <option value="nearby">Nearby</option>
-                <option value="zip-loc">Neighbourhood</option>
+                <option value="neighborhood">Neighborhood</option>
                 <option value="nation-loc">Zip Code</option>
                 <option value="nation-loc">Citywide</option>
                 <option value="nation-loc">Statewide</option>
@@ -54,6 +54,25 @@
                 <div class="range" id="prox-range"></div>
                 <input type="text" id="prox-input" class="range-input"/>
                 <label for="location-type">Miles</label>
+            </div>
+            <div class="popover-wrapper">
+            <a id="neighborhood-trigger" href="#" class="btn">Select Neighborhood</a>
+            <div class="popover-content" id="neighborhood-select">
+                <ul>
+                   <li><input type="checkbox"><label>Ansley Park</label></li>
+                    <li><input type="checkbox"><label>Atlantic Station</label></li>
+                    <li><input type="checkbox"><label>Brookhaven</label></li>
+                    <li><input type="checkbox"><label>Buckhead</label></li>
+                    <li><input type="checkbox"><label>Cabbagetown</label></li>
+                    <li><input type="checkbox"><label>Candler Park</label></li>
+                    <li><input type="checkbox"><label>Castleberry Hill</label></li>
+                    <li><input type="checkbox"><label>Centennial Place</label></li>
+                    <li><input type="checkbox"><label>Decatur</label></li>
+                    <li><input type="checkbox"><label>Downtown</label></li>
+                    <li><input type="checkbox"><label>Druid Hills</label></li>
+                    <li><input type="checkbox"><label>East Atlanta Village</label></li>
+                </ul>
+            </div>
             </div>
             
            
@@ -166,7 +185,7 @@
                 <div class="data-legend">
                     <!-- if we need to have colors determined dynamically talk to me and we'll implement something using data-attributes and javascript -->
                     <ul>
-                        <li><span class="color your-company"></span>Your Company</li>
+                        <li><span class="color your-company"></span>Your Practice</li>
                         <li><span class="color competitors"></span>Your Peers</li>
                     </ul>
                 </div>
@@ -252,20 +271,23 @@
         </div> -->
 
         <div class="widget">
-            <h2>Business Categories</h2>
+            <h2>Categories</h2>
              <ul class="widget-content">
-                <li><input id="1" type="checkbox"><label for="1">Construction</label></li>
-                <li><input id="2" type="checkbox"><label for="2">Education</label></li>
-                <li><input id="3" type="checkbox"><label for="3">Leisure</label></li>
-                <li><input id="5" type="checkbox"><label for="5">Retail</label></li>
-                <li><input id="6" type="checkbox"><label for="6">Foodservice</label></li>
-                <li><a href="#more-cats" class="highlight show-more">Show More</a></li>
+                <li><input id="1" type="checkbox"><label for="1">General</label></li>
+                <li><input id="2" type="checkbox"><label for="2">Endodontics</label></li>
+                <li><input id="3" type="checkbox"><label for="3">Orthodontics</label></li>
+                <li><input id="5" type="checkbox"><label for="5">Pediatric Dentistry</label></li>
+                <li><input id="6" type="checkbox"><label for="6">Periodontics</label></li>
+                <li><input id="7" type="checkbox"><label for="7">Prosthodontics</label></li>
+                <li><input id="8" type="checkbox"><label for="8">Oral &amp; Maxillofacial</label></li>
+                <li><input id="9" type="checkbox"><label for="9">Cosmetic</label></li>
+                <!-- <li><a href="#more-cats" class="highlight show-more">Show More</a></li>
                 <div id="more-cats" class="more">
                     <li><input id="7" type="checkbox"><label for="7">Healthcare</label></li>
                     <li><input id="8" type="checkbox"><label for="8">Technology</label></li>
                     <li><input id="9" type="checkbox"><label for="9">Auto Care</label></li>
                     <li><input id="10" type="checkbox"><label for="10">Personal Care</label></li>
-                </div>
+                </div> -->
             </ul>
         </div>
 

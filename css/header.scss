@@ -162,7 +162,6 @@
 
 .app-subheader {
   @extend %clearfix;
-  position:relative;
   z-index: 2;
   padding:20px 15px;
   background:#36444f;
@@ -199,6 +198,7 @@
 
 .proximity {
   float: left;
+  position: relative;
   label, select, .prox-slider {
     @extend %inline-block;
   }

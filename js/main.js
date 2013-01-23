@@ -17,7 +17,7 @@ $(document).ready(function(){
         }).blur(function() {
           var input = $(this);
           if (input.val() == '' || input.val() == input.attr('placeholder')) {
-            input.addClass('placeholder');
+            input.addCldass('placeholder');
             input.val(input.attr('placeholder'));
           }
         }).blur();
@@ -48,14 +48,19 @@ $(document).ready(function(){
 
     $("#prox-zip-code, #graph, #metrics-widget, .other-option, .conditional-field, #category-select ul ul, .more, #basic-measures").hide();
 
-
+    
     // Conditions for location-switcher dropdown 
 
     $("#location-type").change(function(){
         if ($(this).val() === "nearby") {
+            $("#neighborhood-trigger").hide();
             $(".nearby").fadeIn();
+        } else if ($(this).val() === "neighborhood") {
+            $("#neighborhood-trigger").fadeIn();
+            $(".nearby").hide();
         } else {
             $(".nearby").fadeOut();
+            $("#neighborhood-trigger").fadeOut();
         }
     });
 
@@ -73,9 +78,9 @@ $(document).ready(function(){
     $( "#prox-range" ).slider({
         range: true,
         min: 0,
-        max: 100,
-        values: [ 0, 50 ],
-        step: 10,
+        max: 15,
+        values: [ 0, 15 ],
+        step: 5,
         slide: function( event, ui ) {$( "#prox-input" ).val( ui.values[ 0 ] + " - " + ui.values[ 1 ] ); }
     });
     $( "#prox-input" ).val( $( "#prox-range" ).slider( "values", 0 ) + $( "#prox-range" ).slider( "values", 1 ) );
@@ -288,15 +293,25 @@ $(document).ready(function(){
         e.preventDefault();
     });
 
+    $("#neighborhood-trigger").click(function(e) {
+        $("#neighborhood-select").show();
+        e.preventDefault();
+    })
+
     $("html").click(function(e){
          if ( !($(e.target).parents(".popover").length > 0)) {
             $(".assign-user").remove();
+         } 
+         if ( !($(e.target).parents(".popover-wrapper").length > 0)){
+            $("#neighborhood-select").hide();
          }
     });
 
     $(".popover").on("change", "select", function(){
         $(".assign-user").remove();
     });
+
+    
 
     var itemPos = $(".app-header").offset();
     var headHeight = $(".app-header").css("height");

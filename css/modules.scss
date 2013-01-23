@@ -149,6 +149,8 @@ p.success {
   box-shadow: 0 2px 9px rgba(0,0,0,0.2);
   border: 1px solid #C8C8C8;
   border-radius: 5px;
+  color: #888;
+  z-index: 5;
   &:before {
     position: absolute;
     left: -10px;
@@ -178,4 +180,30 @@ p.success {
     font-size: 14px;
     margin-bottom: 10px;
   }
+}
+
+.popover-wrapper {
+  display: inline-block;
+}
+#neighborhood-select {
+  display: none;
+  width: 350px;
+    left: 105%;
+  ul {
+    list-style: none;
+  }
+  li {
+    display: inline-block;
+    width: 49%;
+  }
+  input, label {
+    display: inline-block;
+  }
+  label {
+    padding-left: 8px;
+  }
+}
+
+#neighborhood-trigger {
+  display: none;
 }
