@@ -243,7 +243,7 @@ textarea {
   color: #222; }
 
 body {
-  background: white url(../img/bg-tile.jpg) repeat;
+  background: white url(../assets/bg-tile.jpg) repeat;
   color: #9f9f9f;
   font-size: .875em;
   font-family: Arial, sans-serif;
@@ -792,7 +792,7 @@ footer {
     display: block;
     width: 28px;
     height: 28px;
-    background: url(../img/slider-nav.png) no-repeat top right;
+    background: url(../assets/slider-nav.png) no-repeat top right;
     text-indent: -9999px; }
     .slide-nav a.active-nav {
       background-position: top left; }
@@ -837,30 +837,30 @@ footer {
       margin-top: 10px; }
 
 #slide1 {
-  background: url(../img/slide1.jpg) no-repeat 50% 50%; }
+  background: url(../assets/slide1.jpg) no-repeat 50% 50%; }
 
 #slide2 {
-  background: url(../img/slide2.jpg) no-repeat 50% 50%; }
+  background: url(../assets/slide2.jpg) no-repeat 50% 50%; }
 
 #slide3 {
-  background: url(../img/slide3.jpg) no-repeat 50% 50%; }
+  background: url(../assets/slide3.jpg) no-repeat 50% 50%; }
 
 #slide4 {
-  background: url(../img/slide4.jpg) no-repeat 50% 50%; }
+  background: url(../assets/slide4.jpg) no-repeat 50% 50%; }
 
 .dental-slides #slide1 {
-  background: url(../img/dental3.jpg) no-repeat 50% 50%; }
+  background: url(../assets/dental3.jpg) no-repeat 50% 50%; }
 .dental-slides #slide2 {
-  background: url(../img/dental2.jpg) no-repeat 50% 50%; }
+  background: url(../assets/dental2.jpg) no-repeat 50% 50%; }
 .dental-slides #slide3 {
-  background: url(../img/dental1.jpg) no-repeat 50% 50%; }
+  background: url(../assets/dental1.jpg) no-repeat 50% 50%; }
 .dental-slides #slide4 {
-  background: url(../img/dental4.jpg) no-repeat 50% 50%; }
+  background: url(../assets/dental4.jpg) no-repeat 50% 50%; }
 
 .prelaunch-twitter {
   margin: 115px auto;
   padding-bottom: 25px;
-  background: url(../img/tweet.png) no-repeat bottom center;
+  background: url(../assets/tweet.png) no-repeat bottom center;
   text-align: center;
   font-size: 1.285714286em; }
   .prelaunch-twitter p {
@@ -878,7 +878,7 @@ footer {
       display: block;
       width: 15px;
       height: 10px;
-      background: url(../img/fff-bordered-caret.png) no-repeat top left;
+      background: url(../assets/fff-bordered-caret.png) no-repeat top left;
       content: ' '; }
   .prelaunch-twitter a {
     color: #209be2;
@@ -986,7 +986,7 @@ footer {
     right: 35%;
     width: 6px;
     height: 4px;
-    background: url(../img/grey-caret.png) no-repeat right;
+    background: url(../assets/grey-caret.png) no-repeat right;
     content: ' '; }
 
 .range {
@@ -1328,7 +1328,7 @@ legend, .legend {
   .members h4 {
     margin-bottom: 30px;
     padding-left: 27px;
-    background: url(../img/user.png) no-repeat left 4px;
+    background: url(../assets/user.png) no-repeat left 4px;
     font-size: 1.142857143em; }
   .members ul {
     padding-left: 27px; }
