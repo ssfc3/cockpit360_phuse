@@ -233,7 +233,7 @@ $(document).ready(function(){
         $(this).before(items);
     });
 
-    $(".remove-field").live('click', function(e){
+    $('.app').on('click', '.remove-field', function(e){
         e.preventDefault();
         var liParents = $(this).parent().parent("li");
         liParents.prev().fadeOut();
