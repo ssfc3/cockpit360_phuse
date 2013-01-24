@@ -131,6 +131,8 @@ p.error, p.success {
 .signup-step h4 {
   font-size: 1em;
   color: #666; }
+.signup-step label p {
+  margin-bottom: 0; }
 
 .field {
   position: relative;

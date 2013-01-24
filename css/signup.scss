@@ -85,6 +85,9 @@
     font-size: 1em;
     color: #666;
   }
+  label p {
+    margin-bottom: 0;
+  }
 }
 
 .field {
@@ -200,7 +203,6 @@
   }
   &.error:after {border-right-color:#ff0000;}
 }
-
 
 #category-select > ul {
   & >li {
