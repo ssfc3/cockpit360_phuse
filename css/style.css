@@ -879,6 +879,19 @@ footer {
 .dental-slides #slide4 {
   background: url(../assets/dental4.jpg) no-repeat 50% 50%; }
 
+.medical-slides #slide1 {
+  background: url(../assets/medical1.jpg) no-repeat 50% 50%; }
+.medical-slides #slide2 {
+  background: url(../assets/medical2.jpg) no-repeat 50% 50%; }
+.medical-slides #slide3 {
+  background: url(../assets/medical3.jpg) no-repeat 50% 50%; }
+.medical-slides #slide4 {
+  background: url(../assets/medical4.jpg) no-repeat 50% 50%; }
+.medical-slides #slide5 {
+  background: url(../assets/medical5.jpg) no-repeat 50% 50%; }
+.medical-slides #slide6 {
+  background: url(../assets/medical6.jpg) no-repeat 50% 50%; }
+
 .prelaunch-twitter {
   margin: 115px auto;
   padding-bottom: 25px;
