@@ -71,11 +71,14 @@
   }
   .hero {
     float: left;
-    width:500px;
+    width:570px;
     text-shadow: 0 0 6px rgba(0,0,0,0.5);
     .btn {
       margin-top: 10px;
     }
+     @media screen and (max-width: 960px) {
+    width: 350px;
+  }
   } 
 }
 
@@ -149,6 +152,7 @@
   z-index: 5;
   top: 200px;
   right:110px;
+ 
 }
 
 .cta {

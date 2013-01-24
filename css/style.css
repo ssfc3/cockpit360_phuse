@@ -855,10 +855,13 @@ footer {
     font-size: 1.5em; }
   .slide .hero {
     float: left;
-    width: 500px;
+    width: 570px;
     text-shadow: 0 0 6px rgba(0, 0, 0, 0.5); }
     .slide .hero .btn {
       margin-top: 10px; }
+    @media screen and (max-width: 960px) {
+      .slide .hero {
+        width: 350px; } }
 
 #slide1 {
   background: url(../assets/slide1.jpg) no-repeat 50% 50%; }
