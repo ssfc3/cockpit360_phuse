@@ -18,8 +18,13 @@
 <body>
 <header class="page-header pre-launch">
    <div class="container">
+<<<<<<< HEAD
+        <div class="logo"><img src="img/logo-dental.png" alt=" cockpit 360" /></div>
+        <div class="login">
+=======
         <div class="logo"><img src="assets/logo-light.png" alt=" cockpit 360" /></div>
         <!-- <div class="login">
+>>>>>>> c716b86bfbe10627829ce6e30b5f0c6d843f8fa1
             <label for="signin">Already have an account?</label>
             <a href="#" id="login-trigger" class="btn">Sign In</a>
             <form id="prelaunch-login" action="dashboard.html">
@@ -28,11 +33,12 @@
                 <a href="#" class="highlight">Having trouble?</a>
                 <input type="submit" class="btn" value="Go" />
             </form>
-        </div>-->
+        </div>
    </div>
 </header>
 <div class="slider">
 <div class="email-form">
+    <div class="container wide">
         <form class="cta">
         <h3>Create a free account today!</h3>
         <input type="email" value="" name="EMAIL" placeholder="Your Email Address" class="email">
@@ -69,6 +75,7 @@
         <input type="text" placeholder="If Other, Please Describe">
         <a href="#" class="btn green" >Get Started!<img src="assets/email-light.png" /></a>
     </form>
+    </div>
 </div>
 <div class="dental-slides">
  <div class="slide active" id="slide1">
