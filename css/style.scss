@@ -428,7 +428,7 @@ legend, .legend {
 	}
 }
 
-.alert {
+.alert, .notice {
 	@extend %clearfix;
 	margin-top:15px;
 	text-transform:uppercase;
