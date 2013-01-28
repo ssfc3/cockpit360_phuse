@@ -84,8 +84,12 @@ $(document).ready(function(){
         max: 50,
         values: [ currentMin, currentMax ],
         step: 10,
-        slide: function( event, ui ) {$( "#prox-input" ).val( ui.values[ 0 ] + " - " + ui.values[ 1 ] ); },
-        stop: function(event,ui){ window.reload_proximity(ui.values[0], ui.values[1]); }
+        slide: function( event, ui ) {
+          $( "#prox-input" ).val( ui.values[ 0 ] + " - " + ui.values[ 1 ] ); 
+          $('input[name="minimum_proximity"]').val(ui.values[0]);
+          $('input[name="maximum_proximity"]').val(ui.values[1]);
+        },
+        stop: function(){ $('#filter_form').submit() }
     });
     $( "#prox-input" ).val( $( "#prox-range" ).slider( "values", 0 ).toString() + ' - ' + $( "#prox-range" ).slider( "values", 1 ) );
 
