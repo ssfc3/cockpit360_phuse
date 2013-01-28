@@ -75,8 +75,8 @@ $(document).ready(function(){
 
     // Range Sliders
     var proxRange = $('#prox-range');
-    var currentMin = proxRange.data('minimum-proximity') || 0;
-    var currentMax = proxRange.data('maximum-proximity') || 20;
+    var currentMin = proxRange.data('minimum-proximity');
+    var currentMax = proxRange.data('maximum-proximity');
 
     proxRange.slider({
         range: true,
