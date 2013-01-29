@@ -81,9 +81,9 @@ $(document).ready(function(){
     proxRange.slider({
         range: true,
         min: 0,
-        max: 50,
+        max: 25,
         values: [ currentMin, currentMax ],
-        step: 10,
+        step: 5,
         slide: function( event, ui ) {
           $( "#prox-input" ).val( ui.values[ 0 ] + " - " + ui.values[ 1 ] ); 
           $('input[name="minimum_proximity"]').val(ui.values[0]);
