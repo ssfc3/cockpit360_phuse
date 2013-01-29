@@ -81,6 +81,7 @@ $(document).ready(function(){
     proxRange.slider({
         range: 'min',
         max: 25,
+        min: 5,
         value: currentMax,
         step: 5,
         slide: function( event, ui ) {
