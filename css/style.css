@@ -1,13 +1,12 @@
-@import url(smoothness/jquery-ui-1.9.0.custom.min.css);
 /* ==========================================================================
    mixins and placeholders
    ========================================================================== */
-.signup-step > ul, .page-header, .app-header, .app-subheader, footer, .slide .container, .app, .tabs, .data-list li, .data-legend, .alert, .discussion, #post-comment {
+.signup-step > ul, .page-header, .app-header, .app-subheader, footer, .slide .container, .app, .tabs, .data-list li, .data-legend, .alert, .notice, .discussion, #post-comment {
   *zoom: 1; }
-  .signup-step > ul:before, .page-header:before, .app-header:before, .app-subheader:before, footer:before, .slide .container:before, .app:before, .tabs:before, .data-list li:before, .data-legend:before, .alert:before, .discussion:before, #post-comment:before, .signup-step > ul:after, .page-header:after, .app-header:after, .app-subheader:after, footer:after, .slide .container:after, .app:after, .tabs:after, .data-list li:after, .data-legend:after, .alert:after, .discussion:after, #post-comment:after {
+  .signup-step > ul:before, .page-header:before, .app-header:before, .app-subheader:before, footer:before, .slide .container:before, .app:before, .tabs:before, .data-list li:before, .data-legend:before, .alert:before, .notice:before, .discussion:before, #post-comment:before, .signup-step > ul:after, .page-header:after, .app-header:after, .app-subheader:after, footer:after, .slide .container:after, .app:after, .tabs:after, .data-list li:after, .data-legend:after, .alert:after, .notice:after, .discussion:after, #post-comment:after {
     display: table;
     content: " "; }
-  .signup-step > ul:after, .page-header:after, .app-header:after, .app-subheader:after, footer:after, .slide .container:after, .app:after, .tabs:after, .data-list li:after, .data-legend:after, .alert:after, .discussion:after, #post-comment:after {
+  .signup-step > ul:after, .page-header:after, .app-header:after, .app-subheader:after, footer:after, .slide .container:after, .app:after, .tabs:after, .data-list li:after, .data-legend:after, .alert:after, .notice:after, .discussion:after, #post-comment:after {
     clear: both; }
 
 .page-header nav, .login, #post-comment .btn {
@@ -35,19 +34,19 @@ footer .links ul, .data-list, .members ul, .widget-content {
   zoom: 1;
   *display: inline; }
 
-.login form input[type="text"], .cta input, .cta .selectbox, .app input[type="text"], .app input[type="email"], .app textarea, .app input[type="password"], .value input[type="text"], .widget-content input[type="text"], .widget-content input[type="email"], .widget-content textarea, .modal-form input[type="email"], .modal-form input[type="text"], .modal-form textarea {
+.login form input[type="text"], .login form input[type="password"], .login form input[type="email"], .cta input, .cta .selectbox, .app input[type="text"], .app input[type="email"], .app textarea, .app input[type="password"], .value input[type="text"], .widget-content input[type="text"], .widget-content input[type="email"], .widget-content textarea, .modal-form input[type="email"], .modal-form input[type="text"], .modal-form textarea {
   padding: 8px 12px;
   border: 1px solid #c8c8c8;
   border-radius: 5px;
   box-shadow: inset 0 1px 2px #f1f1f1; }
-  .login form input[type="text"]:focus, .cta input:focus, .cta .selectbox:focus, .app input[type="text"]:focus, .app input[type="email"]:focus, .app textarea:focus, .app input[type="password"]:focus, .value input[type="text"]:focus, .widget-content input[type="text"]:focus, .widget-content input[type="email"]:focus, .widget-content textarea:focus, .modal-form input[type="email"]:focus, .modal-form input[type="text"]:focus, .modal-form textarea:focus {
+  .login form input[type="text"]:focus, .login form input[type="password"]:focus, .login form input[type="email"]:focus, .cta input:focus, .cta .selectbox:focus, .app input[type="text"]:focus, .app input[type="email"]:focus, .app textarea:focus, .app input[type="password"]:focus, .value input[type="text"]:focus, .widget-content input[type="text"]:focus, .widget-content input[type="email"]:focus, .widget-content textarea:focus, .modal-form input[type="email"]:focus, .modal-form input[type="text"]:focus, .modal-form textarea:focus {
     outline: none;
     border-color: #3fb3de;
     background: #F9FDFF; }
-  .login form input.error[type="text"], .cta input.error, .cta .error.selectbox, .app input.error[type="text"], .app input.error[type="email"], .app textarea.error, .app input.error[type="password"], .value input.error[type="text"], .widget-content input.error[type="text"], .widget-content input.error[type="email"], .widget-content textarea.error, .modal-form input.error[type="email"], .modal-form input.error[type="text"], .modal-form textarea.error {
+  .login form input.error[type="text"], .login form input.error[type="password"], .login form input.error[type="email"], .cta input.error, .cta .error.selectbox, .app input.error[type="text"], .app input.error[type="email"], .app textarea.error, .app input.error[type="password"], .value input.error[type="text"], .widget-content input.error[type="text"], .widget-content input.error[type="email"], .widget-content textarea.error, .modal-form input.error[type="email"], .modal-form input.error[type="text"], .modal-form textarea.error {
     border-color: #ff0000;
     background-color: #fef7f7; }
-  .login form input.success[type="text"], .cta input.success, .cta .success.selectbox, .app input.success[type="text"], .app input.success[type="email"], .app textarea.success, .app input.success[type="password"], .value input.success[type="text"], .widget-content input.success[type="text"], .widget-content input.success[type="email"], .widget-content textarea.success, .modal-form input.success[type="email"], .modal-form input.success[type="text"], .modal-form textarea.success {
+  .login form input.success[type="text"], .login form input.success[type="password"], .login form input.success[type="email"], .cta input.success, .cta .success.selectbox, .app input.success[type="text"], .app input.success[type="email"], .app textarea.success, .app input.success[type="password"], .value input.success[type="text"], .widget-content input.success[type="text"], .widget-content input.success[type="email"], .widget-content textarea.success, .modal-form input.success[type="email"], .modal-form input.success[type="text"], .modal-form textarea.success {
     border-color: #13a1d5;
     background-color: #e3f6fc; }
 
@@ -576,7 +575,7 @@ p.success {
       border-bottom: 5px solid #f3f3f2;
       border-left: 5px solid transparent;
       content: ' '; }
-    .login form input[type="text"] {
+    .login form input[type="text"], .login form input[type="password"], .login form input[type="email"] {
       margin-bottom: 15px;
       width: 137px; }
     .login form .highlight {
@@ -1034,7 +1033,7 @@ footer {
     background: url(../assets/grey-caret.png) no-repeat right;
     content: ' '; }
 
-.range {
+.nearby .range {
   margin-right: 5px;
   margin-left: 11px;
   height: 11px;
@@ -1045,14 +1044,14 @@ footer {
   background: #f7f7f7;
   box-shadow: inset 0 2px 3px #ebebeb;
   *overflow: hidden; }
-  .range .ui-widget-header {
+  .nearby .range .ui-widget-header {
     background-color: #90a9ba;
     background-image: -moz-linear-gradient(top, #90a9ba, #5e6d78);
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #90a9ba), color-stop(1, #5e6d78));
     background-image: linear-gradient(top, #90a9ba, #5e6d78);
     top: 3px;
     height: 5px; }
-  .range .ui-slider-handle {
+  .nearby .range .ui-slider-handle {
     top: -2px;
     width: 4px;
     height: 4px;
@@ -1060,7 +1059,7 @@ footer {
     border-radius: 6px;
     background: #bebfc0;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); }
-    .range .ui-slider-handle:focus {
+    .nearby .range .ui-slider-handle:focus {
       outline: none; }
 
 .range-input {
@@ -1323,17 +1322,17 @@ legend, .legend {
     border-color: transparent transparent black transparent;
     content: " "; }
 
-.alert {
+.alert, .notice {
   margin-top: 15px;
   text-transform: uppercase;
   font-weight: bold;
   font-size: .857142857em; }
-  .alert.warning {
+  .alert.warning, .notice.warning {
     color: #e8b59e; }
-  .alert p {
+  .alert p, .notice p {
     float: left;
     padding-top: 6px; }
-  .alert .btn {
+  .alert .btn, .notice .btn {
     float: right; }
 
 .form-actions a:last-child {
