@@ -1,0 +1,27 @@
+* {
+  box-shadow: none!important; 
+  -webkit-box-shadow: none!important;
+  border-radius: 0;
+}
+
+body, .app-subheader {
+  background: #FFF;
+  color: #222;
+}
+
+nav, .app aside, ul.tabs, .hint, footer, .searchbox, .profile-progress, .app-header .btn {
+  display: none;
+}
+
+.main {
+  width: auto;
+  float: none; 
+}
+
+.key, .value {
+  width: 400px;
+}
+
+.tab {
+  display: block!important;
+}

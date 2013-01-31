@@ -318,7 +318,53 @@ $(document).ready(function(){
         $(".assign-user").remove();
     });
 
-    
+    $(function() {
+    var availableTags = [
+      "General Dentistry",
+"Orthodontics",
+"Periodontics",
+"Cosmetic Dentistry",
+"Pediatric Dentistry",
+"Endodontics",
+"Oral & Maxillofacial Surgery",
+"Prosthodontics"
+
+    ];
+    function split( val ) {
+      return val.split( /,\s*/ );
+    }
+    function extractLast( term ) {
+      return split( term ).pop();
+    }
+ 
+    $( "#tags" )
+      .bind( "keydown", function( event ) {
+        if ( event.keyCode === $.ui.keyCode.TAB &&
+            $( this ).data( "autocomplete" ).menu.active ) {
+          event.preventDefault();
+        }
+      })
+      .autocomplete({
+        minLength: 0,
+        autoFocus: true,
+        source: function( request, response ) {
+          response( $.ui.autocomplete.filter(
+            availableTags, extractLast( request.term ) ) );
+        },
+        focus: function() {
+          return false;
+        },
+
+        select: function( event, ui ) {
+          var terms = split( this.value );
+          terms.pop();
+          terms.push( ui.item.value );
+          terms.push( "" );
+          this.value = terms.join( ", " );
+          return false;
+        }
+      });
+  });
 
   
 
