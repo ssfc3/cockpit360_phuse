@@ -74,16 +74,23 @@ $(document).ready(function(){
 
 
     // Range Sliders
+    var proxRange = $('#prox-range');
+    var currentMin = proxRange.data('minimum-proximity');
+    var currentMax = proxRange.data('maximum-proximity');
 
-    $( "#prox-range" ).slider({
-        range: true,
-        min: 0,
-        max: 15,
-        values: [ 0, 15 ],
+    proxRange.slider({
+        range: 'min',
+        max: 25,
+        min: 5,
+        value: currentMax,
         step: 5,
-        slide: function( event, ui ) {$( "#prox-input" ).val( ui.values[ 0 ] + " - " + ui.values[ 1 ] ); }
+        slide: function( event, ui ) {
+          $( "#prox-input" ).val( ui.value ); 
+          $('input[name="maximum_proximity"]').val(ui.value);
+        },
+        stop: function(){ $('#filter_form').submit() }
     });
-    $( "#prox-input" ).val( $( "#prox-range" ).slider( "values", 0 ) + $( "#prox-range" ).slider( "values", 1 ) );
+    $( "#prox-input" ).val( $( "#prox-range" ).slider( "value").toString());
 
     $("#revenue-range").slider({
     	range: true,
