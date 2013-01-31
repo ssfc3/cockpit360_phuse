@@ -9,8 +9,12 @@ body, .app-subheader {
   color: #222;
 }
 
-nav, .app aside, ul.tabs, .hint, footer, .searchbox, .profile-progress, .app-header .btn {
+nav, .app aside, ul.tabs, .hint, footer, .searchbox, .profile-progress, .app-header .btn, .page-header {
   display: none;
+}
+
+.app-header, .app-subheader {
+  position: static!important;
 }
 
 .main {
