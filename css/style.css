@@ -1209,6 +1209,8 @@ legend, .legend {
       .data-list li h3 .hint {
         position: absolute;
         right: 0; }
+      .data-list li h3 a {
+        color: #6e6e6e; }
     .data-list li h4 {
       font-size: 1.1em;
       font-weight: normal;
@@ -1296,14 +1298,14 @@ legend, .legend {
   text-align: center;
   text-decoration: none;
   font-weight: normal;
-  font-size: .785714286em;
+  font-size: .6em;
   background-color: #fefefe;
   background-image: -moz-linear-gradient(top, #fefefe, #f3f3f3);
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fefefe), color-stop(1, #f3f3f3));
   background-image: linear-gradient(top, #fefefe, #f3f3f3); }
 
 .ui-tooltip {
-  max-width: 105px;
+  max-width: 205px;
   border: none;
   border-radius: 3px;
   background: rgba(0, 0, 0, 0.7);

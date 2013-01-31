@@ -320,15 +320,14 @@ $(document).ready(function(){
 
     $(function() {
     var availableTags = [
-      "General Dentistry",
-"Orthodontics",
-"Periodontics",
-"Cosmetic Dentistry",
-"Pediatric Dentistry",
-"Endodontics",
-"Oral & Maxillofacial Surgery",
-"Prosthodontics"
-
+    "General Dentistry",
+    "Orthodontics",
+    "Periodontics",
+    "Cosmetic Dentistry",
+    "Pediatric Dentistry",
+    "Endodontics",
+    "Oral & Maxillofacial Surgery",
+    "Prosthodontics"
     ];
     function split( val ) {
       return val.split( /,\s*/ );
