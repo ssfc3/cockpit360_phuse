@@ -80,6 +80,10 @@
     width: 350px;
   }
   } 
+  @media screen and (max-width: 968px) {
+    position: relative;
+    opacity: 1;
+  }
 }
 
 #slide1 {background:url(../assets/slide1.jpg) no-repeat 50% 50%; }
@@ -152,7 +156,10 @@
   z-index: 5;
   top: 200px;
   right:110px;
- 
+  @media screen and (max-width: 968px) {
+    position: relative;
+
+  }
 }
 
 .cta {

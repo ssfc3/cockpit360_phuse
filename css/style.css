@@ -862,6 +862,10 @@ footer {
     @media screen and (max-width: 960px) {
       .slide .hero {
         width: 350px; } }
+  @media screen and (max-width: 968px) {
+    .slide {
+      position: relative;
+      opacity: 1; } }
 
 #slide1 {
   background: url(../assets/slide1.jpg) no-repeat 50% 50%; }
@@ -930,6 +934,9 @@ footer {
   z-index: 5;
   top: 200px;
   right: 110px; }
+  @media screen and (max-width: 968px) {
+    .email-form {
+      position: relative; } }
 
 .cta {
   float: right;
