@@ -970,11 +970,11 @@ footer {
   .cta input[type="text"], .cta input[type="password"], .cta .selectbox {
     width: 175px; }
   .cta input[type="email"] {
-    width: 384px; }
+    width: 381px; }
   .cta .selectbox {
     padding: 0 0 12px 0;
     background: #fff;
-    width: 197px; }
+    width: 405px; }
   .cta select {
     width: 100%;
     height: 42px; }
