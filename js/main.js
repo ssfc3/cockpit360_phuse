@@ -287,7 +287,8 @@ $(document).ready(function(){
 
     $(".datepicker").datepicker({
         changeMonth: true,
-        changeYear: true
+        changeYear: true,
+        yearRange: '1960:+0'
     });
 
     // I'm thinking this could go in a partial or be loaded in via ajax? Cause this'll be a form right?
