@@ -137,6 +137,7 @@ $(document).ready(function(){
     	e.preventDefault();
         if ($("#graph").css("display") === "block") {
             $("#basic-measures").fadeIn('slow');
+            window.display_graph();
         } else {
             $("#basic-measures").fadeOut();
         }
