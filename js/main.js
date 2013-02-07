@@ -88,7 +88,13 @@ $(document).ready(function(){
           $( "#prox-input" ).val( ui.value ); 
           $('input[name="maximum_proximity"]').val(ui.value);
         },
-        stop: function(){ $('#filter_form').submit() }
+        stop: function(){
+                if ($('#graph').css('display') == 'block') {
+                  window.display_graph();
+                }else{
+                  $('#filter_form').submit();
+                }
+              }
     });
     $( "#prox-input" ).val( $( "#prox-range" ).slider( "value").toString());
 
