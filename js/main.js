@@ -295,6 +295,7 @@ $(document).ready(function(){
     $(".datepicker").datepicker({
         changeMonth: true,
         changeYear: true,
+        dateFormat: 'dd/mm/yy',
         yearRange: '1960:+0'
     });
 
