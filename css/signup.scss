@@ -24,7 +24,7 @@
     text-align:center;
     li {
       display: inline-block;
-      width: 33%;
+      width: 25%;
       text-align: center;
       margin-right: 0;
       position: relative;
@@ -47,12 +47,12 @@
       }
       &:after {
         content: " ";
-        width: 152px;
+        width: 124px;
         height: 2px;
         background: $ltgrey;
         position: absolute;
         top: -25px;
-        left: 60%;
+        left: 62%;
       }
       &:last-child {
         &:after {
